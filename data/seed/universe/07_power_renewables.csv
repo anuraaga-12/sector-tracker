@@ -1,0 +1,36 @@
+symbol,name,primary,secondary,indirect,exposure,position,model,business,customers,confidence
+NTPC,NTPC,PW_THERMAL,PW_HYDRO|RE_IPP|PW_NUCLEAR,,Majority,L,UTIL,Largest power generator (coal / gas / hydro); renewables via NTPC Green,State discoms,H
+NTPCGREEN,NTPC Green Energy,RE_IPP,RE_H2,,Pure-play,L,UTIL,Renewable IPP arm of NTPC,SECI; discoms,H
+TATAPOWER,Tata Power Company,PW_DIST,PW_THERMAL|RE_IPP|RE_MODULE|RE_CELL|RE_EPC|PW_TRANS,,Significant,L,UTIL,Integrated utility: generation; distribution (Delhi / Odisha / Mumbai); solar manufacturing and rooftop EPC,Discoms; consumers,H
+ADANIPOWER,Adani Power,PW_THERMAL,,,Pure-play,L,UTIL,Largest private thermal generator,Discoms; merchant; Bangladesh,H
+JSWENERGY,JSW Energy,RE_IPP,PW_THERMAL|PW_HYDRO|RE_BESS,,Significant,L,UTIL,Thermal / hydro / wind / solar generation and storage,Discoms; C&I,H
+TORNTPOWER,Torrent Power,PW_DIST,PW_THERMAL|RE_IPP,,Significant,L,UTIL,Integrated utility (Gujarat discoms); gas power; renewables,Consumers; discoms,H
+CESC,CESC,PW_DIST,PW_THERMAL|RE_IPP,,Majority,E,UTIL,Kolkata / Noida distribution; thermal generation; renewables,Consumers,H
+NHPC,NHPC,PW_HYDRO,RE_IPP,,Majority,L,UTIL,Largest hydro generator,Discoms,H
+SJVN,SJVN,PW_HYDRO,RE_IPP|PW_THERMAL,,Majority,E,UTIL,Hydro power and renewables,Discoms,H
+NLCINDIA,NLC India,PW_THERMAL,OG_COAL|RE_IPP,,Majority,E,UTIL,Lignite mining and power; renewables,Discoms,H
+POWERGRID,Power Grid Corporation of India,PW_TRANS,,,Pure-play,L,UTIL,Central transmission utility owner / operator,Grid users (pooled),H
+ADANIENSOL,Adani Energy Solutions,PW_TRANS,PW_DIST|PW_METER,,Majority,L,UTIL,Transmission lines; Mumbai distribution; smart metering,Grid; consumers,H
+INDIGRID,IndiGrid InvIT,PW_TRANS,,,Pure-play,E,UTIL,Transmission InvIT (listed units),Grid users,M
+RPOWER,Reliance Power,PW_THERMAL,,,Pure-play,N,UTIL,Thermal power assets,Discoms,M
+PTC,PTC India,PW_TRADE,FS_INFRAFIN,,Majority,E,SVC,Power trading,Discoms; generators,H
+GIPCL,Gujarat Industries Power,PW_THERMAL,RE_IPP,,Majority,N,UTIL,Lignite / gas power and renewables (Gujarat),Gujarat discoms,M
+WAAREEENER,Waaree Energies,RE_MODULE,RE_CELL|RE_EPC|RE_BESS,,Majority,L,MFG,Largest solar module maker; cells; US manufacturing; storage plans,IPPs; EPCs; US exports,H
+PREMIERENE,Premier Energies,RE_CELL,RE_MODULE,,Pure-play,E,MFG,Integrated solar cells and modules,IPPs; EPCs,H
+WEBELSOLAR,Websol Energy System,RE_CELL,RE_MODULE,,Pure-play,N,MFG,Solar cells and modules,Module makers; EPCs,M
+VIKRAMSOLR,Vikram Solar,RE_MODULE,RE_CELL,,Pure-play,E,MFG,Solar modules and cells (listed 2025),IPPs; EPCs,L
+SAATVIKGL,Saatvik Green Energy,RE_MODULE,,,Pure-play,N,MFG,Solar modules (listed 2025),IPPs; EPCs,L
+EMMVEE,Emmvee Photovoltaic Power,RE_MODULE,RE_CELL,,Pure-play,N,MFG,Solar modules and cells (listed 2025),IPPs; EPCs,L
+SWSOLAR,Sterling and Wilson Renewable Energy,RE_EPC,,,Pure-play,E,EPC,Utility-scale solar EPC (India / international),IPPs,H
+KPIGREEN,KPI Green Energy,RE_IPP,RE_EPC,,Majority,N,UTIL,Captive / C&I solar-wind hybrid IPP (Gujarat),C&I customers,M
+KPEL,K.P. Energy,RE_WIND,RE_EPC,,Majority,N,EPC,Wind balance-of-plant EPC and O&M,Wind developers,L
+ACMESOLAR,ACME Solar Holdings,RE_IPP,RE_BESS,,Pure-play,E,UTIL,Renewable IPP incl. FDRE / storage projects,SECI; discoms,M
+ADANIGREEN,Adani Green Energy,RE_IPP,,,Pure-play,L,UTIL,Largest renewable IPP,SECI; discoms,H
+SUZLON,Suzlon Energy,RE_WIND,,,Pure-play,L,MFG,Wind turbine OEM with O&M services,IPPs; C&I,H
+INOXWIND,Inox Wind,RE_WIND,,,Pure-play,E,MFG,Wind turbine OEM,IPPs; C&I,H
+INOXGREEN,Inox Green Energy Services,RE_WIND,,,Pure-play,N,SVC,Wind farm O&M,Wind asset owners,M
+BORORENEW,Borosil Renewables,RE_ANC,,,Pure-play,N,MFG,Solar glass,Module makers,H
+GRWRHITECH,Garware Hi-Tech Films,DV_PACK,,,Pure-play,N,MFG,Window / paint-protection films,Auto aftermarket; exports,L
+INA,Insolation Energy,RE_MODULE,,,Pure-play,N,MFG,Solar modules (migrated from SME),EPCs,L
+SOLEX,Solex Energy,RE_MODULE,,,Pure-play,N,MFG,Solar modules,EPCs,L
+GENSOL,Gensol Engineering,RE_EPC,AU_EV,,Majority,N,EPC,Solar EPC (governance issues; check listing status),IPPs,L

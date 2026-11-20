@@ -1,0 +1,251 @@
+sector:
+  id: CAPGOODS
+  name: Capital Goods & Industrial Manufacturing
+  priority: 1
+  benchmark: ^CRSLDX
+  description: >-
+    Manufacturers of electrical and mechanical equipment, components and engineered systems used
+    by utilities, industry, infrastructure and data centres. Equipment makers only — EPC
+    contractors live under Infrastructure; utilities live under Power.
+  value_chain: "Raw materials (copper, aluminium, CRGO, steel) → Components (laminations, bushings, winding wire) → Equipment (transformers, switchgear, motors, pumps) → EPC / System integrators → Utilities / Industry"
+subsectors:
+  - id: CG_XFMR
+    name: Transformers
+    what: Power and distribution transformers, reactors and HVDC equipment for utilities, renewables, industry and data centres.
+    chain: Equipment manufacturer (mid-stream)
+    customers: Transmission utilities (PGCIL, state utilities), renewable developers, industrials, data centres, exports
+    inputs: CRGO electrical steel, copper, transformer oil, bushings
+    economics: Moderately capital-intensive; order-book driven; margins recovered strongly in the 2023–26 upcycle on tight capacity. Increasing export share.
+    barriers: Testing / type approvals, utility vendor registration and track record at high voltages (400kV+); leaders have 765kV / HVDC capability.
+    drivers: [Transmission capex for renewable integration, Data centre power demand, Global transformer shortage and export opportunity, Replacement of ageing grids]
+    nature: Structural capex cycle — but historically cyclical industry; watch for capacity additions.
+    risks: [Capacity overbuild, CRGO availability, Fixed-price contract margin risk, Order-execution delays]
+    rate: "growth:H competition:M barriers:M pricing:M margins:M roce:H custconc:M cyclicality:H regulation:M export:M structural:H"
+  - id: CG_XFANC
+    name: Transformer Ancillaries & Power-Quality Components
+    what: Components feeding transformer / grid equipment — winding wires, laminations / CRGO processing, bushings, insulators, transformer oil, reactors and power-quality devices.
+    chain: Component supplier (upstream of transformer OEMs)
+    customers: Transformer and switchgear OEMs, utilities
+    inputs: Copper, aluminium, electrical steel, base oils, ceramics / polymers
+    economics: Mix of commodity pass-through (wires, oil) and engineered niches (bushings, reactors); margins depend on value-add.
+    barriers: OEM qualification; engineered components have higher barriers than commodity wires.
+    drivers: [Transformer capacity expansion, Grid modernisation, HVDC build-out]
+    nature: Rides the same structural transmission capex cycle as transformers.
+    risks: [Commodity pass-through lags, Customer concentration, Cycle reversal]
+    rate: "growth:H competition:M barriers:M pricing:L margins:M roce:M custconc:H cyclicality:H regulation:L export:M structural:H"
+  - id: CG_TXEQ
+    name: Power Transmission & Grid Equipment (HV / GIS / HVDC)
+    what: High-voltage switchgear, gas-insulated substations, HVDC systems, grid automation and protection.
+    chain: Equipment / systems (mid-stream)
+    customers: Transmission utilities, renewable developers, industry
+    inputs: Engineering talent, parent technology (many are MNC subsidiaries), steel / copper
+    economics: Technology-led; high ROCE when order books are strong; parent-company technology access matters.
+    barriers: High — technology, references, testing.
+    drivers: [Inter-state transmission (ISTS) build-out, HVDC corridors, Renewable integration]
+    nature: Structural capex cycle.
+    risks: [Lumpy orders, Royalty to parents, Competition from Chinese bidders where allowed]
+    rate: "growth:H competition:M barriers:H pricing:M margins:M roce:H custconc:M cyclicality:M regulation:M export:M structural:H"
+  - id: CG_SWGR
+    name: Switchgear & Low-Voltage Electricals
+    what: Low and medium-voltage switchgear, circuit breakers, MCBs, panels and distribution boards.
+    chain: Equipment / components
+    customers: Real estate, industry, utilities, data centres, retail electricians
+    inputs: Copper, silver, plastics, electronics
+    economics: Moderately asset-light; brand and channel drive margins in LV; MV tied to capex.
+    barriers: Brand / channel in LV, approvals in MV.
+    drivers: [Real-estate cycle, Industrial and data-centre capex, Electrification]
+    nature: Mixed — structural electrification plus real-estate cyclicality.
+    risks: [Price competition, Commodity costs, Real-estate slowdown]
+    rate: "growth:M competition:H barriers:M pricing:M margins:M roce:H custconc:L cyclicality:M regulation:L export:L structural:H"
+  - id: CG_CABLE
+    name: Wires & Cables
+    what: Building wires, power cables (LT / HT / EHV), instrumentation, communication and specialty cables.
+    chain: Copper / aluminium → conductors → cables → distributors / EPC / utilities
+    customers: Real estate (via retail), utilities, EPC, industry, renewables, exports
+    inputs: Copper, aluminium, PVC / XLPE compounds
+    economics: Working-capital intensive; commodity pass-through; margins 9–14% for leaders; EHV and exports lift margins.
+    barriers: Brand in retail wires; approvals and capacity in EHV.
+    drivers: [Power T&D capex, Real estate, Renewable & data-centre build-out, Exports]
+    nature: Mixed — structural demand, cyclical commodity and real-estate exposure.
+    risks: [Copper volatility, New entrants (large conglomerates entering wires), Working capital]
+    rate: "growth:H competition:H barriers:M pricing:M margins:M roce:H custconc:L cyclicality:M regulation:L export:M structural:H"
+  - id: CG_CONDUCT
+    name: Conductors & Overhead Line Hardware
+    what: Aluminium / alloy conductors (ACSR, HTLS) and transmission line hardware.
+    chain: Aluminium rod → conductors → transmission EPC / utilities
+    customers: Transmission utilities, EPC contractors, exports
+    inputs: Aluminium, steel wire
+    economics: Commodity pass-through with value-add in HTLS / specialty conductors.
+    barriers: Utility approvals, HTLS technology.
+    drivers: [Transmission line additions, Re-conductoring]
+    nature: Structural transmission cycle.
+    risks: [Aluminium prices, Tender pricing]
+    rate: "growth:H competition:M barriers:M pricing:L margins:L roce:M custconc:M cyclicality:M regulation:M export:M structural:H"
+  - id: CG_BEARING
+    name: Bearings
+    what: Ball, roller and specialty bearings for automotive, industrial and railway use.
+    chain: Steel → bearing components → OEMs / aftermarket
+    customers: Auto OEMs, industrial machinery, railways, aftermarket
+    inputs: Bearing-grade steel
+    economics: Capital-intensive precision manufacturing; MNC subsidiaries dominate.
+    barriers: Precision, OEM approvals, brand in aftermarket.
+    drivers: [Industrial capex, Railways, Localisation]
+    nature: Cyclical with auto / industrial cycles.
+    risks: [Chinese imports, Steel prices, Auto cycle]
+    rate: "growth:M competition:M barriers:M pricing:M margins:M roce:H custconc:M cyclicality:M regulation:L export:M structural:M"
+  - id: CG_PUMP
+    name: Pumps & Fluid Handling
+    what: Agricultural, residential and industrial pumps, valves and fluid-handling systems.
+    chain: Castings / motors → pumps → farmers / builders / industry / water projects
+    customers: Agriculture (incl. solar pumps), water projects, industry, real estate
+    inputs: Castings, copper, motors
+    economics: Moderate capital; solar-pump government schemes drive volume swings.
+    barriers: Brand and distribution in agri / residential; engineering in industrial.
+    drivers: [PM-KUSUM solar pumps, Jal Jeevan Mission, Industrial capex]
+    nature: Mixed — scheme-driven demand is lumpy.
+    risks: [Government scheme delays, Receivables, Competition]
+    rate: "growth:M competition:H barriers:M pricing:M margins:M roce:M custconc:M cyclicality:M regulation:M export:M structural:M"
+  - id: CG_MOTOR
+    name: Motors, Generators & Rotating Machines
+    what: Electric motors, alternators, generators and drives.
+    chain: Laminations / copper → motors → OEMs / industry
+    customers: Industry, OEMs, railways, power
+    inputs: Electrical steel, copper
+    economics: Capital-moderate; efficiency regulations push premiumisation.
+    barriers: Engineering, approvals.
+    drivers: [Energy-efficiency norms (IE3/IE4), Railways electrification, Industrial capex]
+    nature: Cyclical industrial.
+    risks: [Imports, Commodity costs]
+    rate: "growth:M competition:M barriers:M pricing:M margins:M roce:M custconc:M cyclicality:M regulation:L export:M structural:M"
+  - id: CG_ENGINE
+    name: Engines, Compressors & Gensets
+    what: Diesel / gas engines, generator sets, air and gas compressors.
+    chain: Equipment manufacturer
+    customers: Data centres, real estate, industry, infrastructure, exports
+    inputs: Castings, steel, electronics
+    economics: Moderate capital; strong brands earn high ROCE.
+    barriers: Technology, service network.
+    drivers: [Data-centre backup power, Industrial capex, Emission-norm upgrades (CPCB IV+)]
+    nature: Mixed.
+    risks: [Shift to batteries/BESS for backup, Industrial slowdown]
+    rate: "growth:M competition:M barriers:M pricing:M margins:M roce:H custconc:L cyclicality:M regulation:M export:M structural:M"
+  - id: CG_AUTOMATION
+    name: Industrial Automation & Instrumentation
+    what: Drives, PLCs, process automation, instrumentation, robotics and control systems.
+    chain: Technology / systems integrator
+    customers: Process industries, discrete manufacturing, utilities
+    inputs: Electronics, software, engineers
+    economics: Asset-light, high ROCE; MNC subsidiaries dominate.
+    barriers: Technology and installed base.
+    drivers: [Manufacturing capex, Labour cost / quality needs, Industry 4.0]
+    nature: Structural.
+    risks: [Capex slowdown, Parent-company royalty]
+    rate: "growth:H competition:M barriers:H pricing:M margins:M roce:H custconc:L cyclicality:M regulation:L export:M structural:H"
+  - id: CG_ELEQ
+    name: Diversified Electrical Equipment
+    what: Diversified electrical equipment makers spanning several product lines (motors, drives, transformers, switchgear).
+    chain: Equipment manufacturer
+    customers: Utilities, industry, railways
+    inputs: Copper, steel, electronics
+    economics: Mixed; diversification smooths cycles.
+    barriers: Moderate.
+    drivers: [Power and industrial capex]
+    nature: Cyclical capex.
+    risks: [Execution, Commodity costs]
+    rate: "growth:M competition:M barriers:M pricing:M margins:M roce:M custconc:M cyclicality:M regulation:L export:M structural:M"
+  - id: CG_HEAVY
+    name: Heavy Engineering & Process Equipment
+    what: Boilers, pressure vessels, heat exchangers, turbines, process plant equipment.
+    chain: Fabrication / engineered equipment
+    customers: Refineries, chemicals, power, fertiliser, nuclear
+    inputs: Steel plate, special alloys, skilled welders
+    economics: Capital-intensive, order-driven, lumpy margins.
+    barriers: Engineering capability, ASME / nuclear certification.
+    drivers: [Refinery / chemical capex, Nuclear power push, Exports]
+    nature: Cyclical capex.
+    risks: [Fixed-price contracts, Order lumpiness, Working capital]
+    rate: "growth:M competition:M barriers:H pricing:M margins:L roce:M custconc:H cyclicality:H regulation:M export:M structural:M"
+  - id: CG_MHE
+    name: Material Handling & Construction Equipment
+    what: Cranes, forklifts, conveyors, earthmovers and construction machinery.
+    chain: Equipment manufacturer
+    customers: Infrastructure contractors, mining, warehouses, industry
+    inputs: Steel, engines, hydraulics
+    economics: Cyclical; financing availability matters.
+    barriers: Dealer network, product range.
+    drivers: [Infrastructure spend, Warehousing growth, Mining]
+    nature: Cyclical.
+    risks: [Infra spending slowdown, Emission-norm cost increases]
+    rate: "growth:M competition:H barriers:M pricing:L margins:M roce:M custconc:L cyclicality:H regulation:M export:L structural:M"
+  - id: CG_VALVE
+    name: Industrial Valves & Flow Control
+    what: Valves, actuators and flow-control equipment.
+    chain: Castings / forgings → valves → EPC / process plants
+    customers: Oil & gas, chemicals, power, water
+    inputs: Castings, forgings, alloys
+    economics: Moderate capital; engineered niches earn good margins.
+    barriers: Approvals with oil & gas majors.
+    drivers: [Process-industry capex, Exports]
+    nature: Cyclical capex.
+    risks: [Oil & gas capex cycles]
+    rate: "growth:M competition:M barriers:M pricing:M margins:M roce:M custconc:M cyclicality:M regulation:L export:M structural:M"
+  - id: CG_FORGE
+    name: Industrial Forgings, Castings & Precision Components
+    what: Non-auto forgings, castings and machined precision parts for industrial, energy, aerospace and rail. (Auto-focused forgers sit under Auto Ancillaries.)
+    chain: Steel / alloys → forgings / castings → machined components → OEMs
+    customers: Industrial, energy, mining, aerospace, railways, exports
+    inputs: Steel, scrap, alloys, energy
+    economics: Capital-intensive; export orientation is common.
+    barriers: Metallurgy and customer qualification.
+    drivers: [China+1 sourcing of castings, Aerospace / defence localisation]
+    nature: Mixed.
+    risks: [Global industrial cycle, Raw-material costs, Export demand]
+    rate: "growth:M competition:M barriers:M pricing:L margins:M roce:M custconc:M cyclicality:H regulation:L export:H structural:M"
+  - id: CG_MACHTOOL
+    name: Machine Tools & Welding
+    what: CNC machines, machine tools, welding equipment and consumables.
+    chain: Capital equipment for manufacturers
+    customers: Auto, general engineering, defence
+    inputs: Castings, electronics, controllers
+    economics: Cyclical capex; small Indian market.
+    barriers: Technology.
+    drivers: [Manufacturing capex, Import substitution]
+    nature: Cyclical.
+    risks: [Imports from Japan / Taiwan / China, Capex slowdown]
+    rate: "growth:M competition:H barriers:M pricing:L margins:M roce:M custconc:L cyclicality:H regulation:L export:L structural:M"
+  - id: CG_HVAC
+    name: Industrial Cooling, HVAC & Data-Centre Infrastructure
+    what: Central air-conditioning, chillers, cooling towers, clean rooms and data-centre cooling / power-backup systems.
+    chain: Equipment + projects
+    customers: Commercial real estate, data centres, pharma, industry
+    inputs: Compressors, copper, electronics
+    economics: Mix of products and project execution.
+    barriers: Engineering and service network.
+    drivers: [Data-centre build-out, Commercial real estate, Pharma clean rooms]
+    nature: Structural for data centres; cyclical for real estate.
+    risks: [Project execution, Competition]
+    rate: "growth:H competition:M barriers:M pricing:M margins:M roce:M custconc:M cyclicality:M regulation:L export:L structural:H"
+  - id: CG_TIC
+    name: Testing, Inspection & Measurement
+    what: Test & measurement instruments, inspection services, metering equipment.
+    chain: Instruments / services
+    customers: Industry, utilities, labs
+    inputs: Electronics, engineers
+    economics: Asset-light niches.
+    barriers: Accreditation, technology.
+    drivers: [Quality-control orders, Smart metering]
+    nature: Structural niches.
+    risks: [Small addressable market]
+    rate: "growth:M competition:M barriers:M pricing:M margins:M roce:M custconc:M cyclicality:L regulation:M export:L structural:M"
+  - id: CG_DIVENG
+    name: Diversified Engineering Conglomerates
+    what: Large diversified engineering groups spanning EPC, equipment, defence, and services.
+    chain: Multiple stages
+    customers: Government, utilities, industry
+    inputs: Engineering talent, balance sheet
+    economics: Diversified; order inflow and execution drive earnings.
+    barriers: Scale and track record.
+    drivers: [Government and private capex, Middle-East orders, Defence]
+    nature: Structural capex cycle.
+    risks: [Execution, Working capital]
+    rate: "growth:M competition:M barriers:H pricing:M margins:M roce:M custconc:M cyclicality:M regulation:M export:M structural:H"

@@ -1,0 +1,73 @@
+symbol,name,primary,secondary,indirect,exposure,position,model,business,customers,confidence
+TARIL,Transformers & Rectifiers (India),CG_XFMR,CG_XFANC,,Pure-play,E,MFG,Power / distribution / furnace transformers up to 765kV; reactors,Utilities; renewables; industry; exports,H
+VOLTAMP,Voltamp Transformers,CG_XFMR,,,Pure-play,E,MFG,Distribution and power transformers for industrial / utility customers,Industry; utilities; data centres,H
+SHILCTECH,Shilchar Technologies,CG_XFMR,,,Pure-play,N,MFG,Distribution / power transformers with high export share (renewables),Renewable developers; exports,L
+INDOTECH,Indo Tech Transformers,CG_XFMR,,,Pure-play,N,MFG,Power and distribution transformers,Utilities; industry,M
+POWERINDIA,Hitachi Energy India,CG_TXEQ,CG_XFMR|CG_AUTOMATION,,Pure-play,L,MFG,HVDC; transformers; grid automation and power-quality systems,PGCIL; utilities; railways; data centres,H
+GVT&D,GE Vernova T&D India,CG_TXEQ,CG_XFMR|CG_SWGR,,Pure-play,L,MFG,Power transformers; GIS / switchgear; grid automation,Utilities; renewable developers; exports,H
+ENRIN,Siemens Energy India,CG_TXEQ,CG_XFMR|CG_HEAVY,,Pure-play,L,MFG,Transmission products / HVDC and power-generation equipment demerged from Siemens Ltd,Utilities; industry,M
+QPOWER,Quality Power Electrical Equipments,CG_XFANC,CG_TXEQ,,Pure-play,M,MFG,Reactors; HVDC / FACTS components and power-quality equipment; exports,Utilities and OEMs globally,M
+PRECWIRE,Precision Wires India,CG_XFANC,CG_MOTOR,,Pure-play,N,MFG,Enamelled copper winding wires for transformers and motors,Transformer / motor OEMs,H
+RAMRAT,Ram Ratna Wires,CG_XFANC,CG_CABLE,,Majority,N,MFG,Enamelled copper winding wires; cables via subsidiary,Motor / transformer OEMs,M
+PITTIENG,Pitti Engineering,CG_MOTOR,CG_XFANC|CG_FORGE,,Majority,N,MFG,Electrical steel laminations / stampings and machined components for motors and generators,Motor / generator OEMs; exports,M
+BBL,Bharat Bijlee,CG_ELEQ,CG_XFMR|CG_MOTOR|CG_AUTOMATION,,Significant,N,MFG,Power transformers; motors; elevator drives and automation,Utilities; industry,H
+CGPOWER,CG Power and Industrial Solutions,CG_ELEQ,CG_XFMR|CG_MOTOR|CG_SWGR|IN_ROLLING|EM_SEMI,,Significant,L,MFG,Industrial motors; power transformers / switchgear; railway equipment; OSAT semiconductor venture,Industry; utilities; railways,H
+SCHNEIDER,Schneider Electric Infrastructure,CG_SWGR,CG_XFMR|CG_AUTOMATION,,Majority,E,MFG,MV switchgear; distribution transformers; grid automation,Utilities; industry; data centres,H
+SIEMENS,Siemens,CG_AUTOMATION,CG_SWGR|IN_ROLLING|IN_SIGNAL,,Significant,L,MFG,Digital industries (automation); smart infrastructure; mobility (rail),Industry; railways; infrastructure,H
+ABB,ABB India,CG_AUTOMATION,CG_SWGR|CG_MOTOR,,Significant,L,MFG,Electrification products; motion (motors / drives); process automation; robotics,Industry; data centres; utilities,H
+HONAUT,Honeywell Automation India,CG_AUTOMATION,CG_TIC,,Pure-play,E,MFG,Process automation; building technologies; test & measurement,Process industries; buildings,H
+BHEL,Bharat Heavy Electricals,CG_HEAVY,CG_XFMR|IN_ROLLING|PW_NUCLEAR|DF_PLATFORM,,Majority,L,MFG,Thermal / hydro / nuclear power equipment; transformers; rail propulsion; defence,NTPC; state gencos; railways,H
+TRITURBINE,Triveni Turbine,CG_HEAVY,,,Pure-play,N,MFG,Industrial steam turbines up to 100MW incl. exports,Process industries; IPPs,H
+THERMAX,Thermax,CG_HEAVY,CG_HVAC|RE_IPP|CH_WATER,RE_H2,Significant,E,MIX,Boilers / heating; cooling; water treatment; specialty chemicals; green-power IPP,Industry; utilities,H
+ISGEC,Isgec Heavy Engineering,CG_HEAVY,AG_SUGAR,,Majority,N,MIX,Process plant equipment; boilers; EPC; sugar mills,Refineries; power; sugar industry,M
+INOXINDIA,INOX India,CG_HEAVY,,RE_H2,Pure-play,N,MFG,Cryogenic tanks and equipment (LNG / industrial gases / beverage kegs),Industrial gas and LNG users; exports,M
+PRAJIND,Praj Industries,CG_HEAVY,AG_SUGAR,RE_H2,Majority,E,EPC,Bio-energy (ethanol) plants; engineered process equipment; CBG / SAF technologies,Distilleries; process industries,H
+LT,Larsen & Toubro,CG_DIVENG,IN_CIVIL|IN_TDEPC|IN_METRO|CG_HEAVY|DF_SHIP|DF_PLATFORM|IT_LARGE,FS_INFRAFIN,Majority,L,EPC,India's largest E&C conglomerate; infra / energy / hi-tech manufacturing; IT services subsidiaries,Government; PSUs; Middle East; industry,H
+CUMMINSIND,Cummins India,CG_ENGINE,,,Pure-play,L,MFG,Diesel / gas engines and gensets; data-centre power; exports,Data centres; real estate; industry,H
+KIRLOSENG,Kirloskar Oil Engines,CG_ENGINE,FS_RETAILNBFC,AU_TRACTOR,Majority,E,MFG,Engines and gensets; water pumps; Arka Fincap NBFC,Industry; agriculture,H
+KIRLPNU,Kirloskar Pneumatic,CG_ENGINE,CG_HVAC,,Pure-play,N,MFG,Air / gas compressors and refrigeration systems,Oil & gas; process industries; railways,H
+ELGIEQUIP,Elgi Equipments,CG_ENGINE,,,Pure-play,E,MFG,Air compressors with global presence,Industry worldwide,H
+INGERRAND,Ingersoll-Rand (India),CG_ENGINE,,,Pure-play,E,MFG,Air compressors,Industry,H
+GREAVESCOT,Greaves Cotton,CG_ENGINE,AU_EV|AU_3W,,Significant,N,MFG,Engines for small CVs / gensets; EV two- and three-wheelers via Greaves Electric Mobility,Auto OEMs; consumers,M
+TDPOWERSYS,TD Power Systems,CG_MOTOR,IN_ROLLING,,Pure-play,N,MFG,Generators and large motors; railway traction motors,Turbine OEMs globally; railways,H
+POLYCAB,Polycab India,CG_CABLE,CD_ELEC,,Majority,L,MFG,Wires & cables market leader; FMEG,Distributors; EPC; utilities,H
+KEI,KEI Industries,CG_CABLE,,,Pure-play,L,MFG,Power cables up to EHV and housing wires; EPC,Utilities; EPC; retail,H
+FINCABLES,Finolex Cables,CG_CABLE,TC_EQUIP,,Majority,E,MFG,Electrical wires and communication cables / optical fibre,Retail electricians; telecom,H
+RRKABEL,R R Kabel,CG_CABLE,CD_ELEC,,Majority,E,MFG,Wires & cables with consumer electricals,Retail; industry,H
+UNIVCABLES,Universal Cables,CG_CABLE,,,Pure-play,N,MFG,Power and EHV cables (MP Birla group),Utilities; EPC,M
+PARACABLES,Paramount Communications,CG_CABLE,,,Pure-play,N,MFG,Power and telecom cables; exports,Utilities; railways; exports,M
+CORDSCABLE,Cords Cable Industries,CG_CABLE,,,Pure-play,N,MFG,Instrumentation and control cables,Process industries,L
+DIACABS,Diamond Power Infrastructure,CG_CONDUCT,CG_CABLE,,Pure-play,M,MFG,Conductors and cables (revived after insolvency),Utilities; EPC,L
+APARINDS,Apar Industries,CG_CONDUCT,CG_CABLE|CG_XFANC|OG_LUBE,,Significant,L,MFG,Conductors (HTLS); specialty cables; transformer / specialty oils,Utilities; EPC; transformer OEMs; exports,H
+TIMKEN,Timken India,CG_BEARING,,,Pure-play,E,MFG,Tapered roller bearings for rail / industrial / auto,Railways; industry; exports,H
+SKFINDIA,SKF India,CG_BEARING,,,Pure-play,L,MFG,Bearings for auto and industrial (industrial arm being demerged),Auto OEMs; industry; aftermarket,M
+SCHAEFFLER,Schaeffler India,CG_BEARING,AU_SYSTEMS,,Majority,L,MFG,Bearings; auto components (transmission / engine) and industrial,Auto OEMs; industry,H
+NRBBEARING,NRB Bearings,CG_BEARING,,,Pure-play,N,MFG,Needle and roller bearings mainly for auto,Auto OEMs; exports,H
+MENONBE,Menon Bearings,CG_BEARING,,,Pure-play,N,MFG,Engine bearings / bushes,Auto and engine OEMs,L
+HARSHA,Harsha Engineers International,CG_BEARING,CG_FORGE,,Majority,N,MFG,Bearing cages and precision components; solar EPC,Global bearing makers,M
+KSB,KSB,CG_PUMP,CG_VALVE,PW_NUCLEAR,Pure-play,E,MFG,Industrial / agri pumps and valves incl. nuclear pumps,Industry; power; agriculture,H
+KIRLOSBROS,Kirloskar Brothers,CG_PUMP,IN_WATER|CG_VALVE,,Pure-play,L,MFG,Pumps and fluid-handling systems; water projects,Agriculture; water projects; industry,H
+SHAKTIPUMP,Shakti Pumps (India),CG_PUMP,RE_ANC,,Pure-play,N,MFG,Solar and submersible pumps (PM-KUSUM); EV motors,State agencies; farmers,H
+WPIL,WPIL,CG_PUMP,IN_WATER,,Majority,N,MIX,Pumps and water infrastructure projects,Water utilities,M
+ROTO,Roto Pumps,CG_PUMP,,,Pure-play,N,MFG,Positive-displacement pumps,Industry; exports,M
+OSWALPUMPS,Oswal Pumps,CG_PUMP,RE_ANC,,Pure-play,M,MFG,Solar pumps and motors (PM-KUSUM),Farmers; state agencies,L
+TECHNOE,Techno Electric & Engineering,IN_TDEPC,IT_DC|PW_METER,,Majority,E,EPC,Power T&D EPC; smart-metering AMISP; data-centre development,PGCIL; discoms; data centres,H
+HPL,HPL Electric & Power,PW_METER,CG_SWGR|CD_ELEC,,Majority,N,MFG,Smart meters; switchgear; lighting,Discoms; retail,M
+GENUSPOWER,Genus Power Infrastructures,PW_METER,,,Pure-play,L,MFG,Smart meters and AMISP contracts,State discoms,H
+SALZERELEC,Salzer Electronics,CG_SWGR,CG_CABLE,,Pure-play,N,MFG,Switchgear and wires; smart-meter components,OEMs; utilities,M
+ACE,Action Construction Equipment,CG_MHE,AU_TRACTOR,DF_PLATFORM,Pure-play,L,MFG,Mobile and tower cranes; material handling; tractors,Infra contractors; industry,H
+BEML,BEML,CG_MHE,IN_ROLLING|DF_PLATFORM,,Significant,E,MFG,Mining & construction equipment; metro / rail coaches; defence vehicles,Coal India; metros; armed forces,H
+SANGHVIMOV,Sanghvi Movers,CG_MHE,RE_WIND,,Pure-play,N,SVC,Crane rental and EPC services for wind / industry,Wind developers; industry,M
+JYOTICNC,Jyoti CNC Automation,CG_MACHTOOL,DF_AERO,,Pure-play,N,MFG,CNC machines incl. aerospace / defence applications,Auto; aerospace; general engineering,M
+KENNAMET,Kennametal India,CG_MACHTOOL,,,Pure-play,N,MFG,Cutting tools and machining solutions,Auto; aerospace; industry,M
+GRINDWELL,Grindwell Norton,CG_MACHTOOL,CH_SPEC,,Majority,E,MFG,Abrasives; performance ceramics and plastics,Industry,M
+CARBORUNIV,Carborundum Universal,CG_MACHTOOL,MT_FERRO,,Significant,E,MFG,Abrasives; electrominerals; industrial ceramics,Industry,M
+ESABINDIA,ESAB India,CG_MACHTOOL,,,Pure-play,N,MFG,Welding equipment and consumables,Fabrication; infrastructure,M
+ADOR,Ador Welding,CG_MACHTOOL,,,Pure-play,N,MFG,Welding consumables and equipment,Fabrication,L
+AIAENG,AIA Engineering,CG_FORGE,MT_MINING,,Pure-play,L,MFG,High-chrome wear-resistant castings (mill internals) for mining / cement,Global mining and cement,H
+TEGA,Tega Industries,CG_FORGE,MT_MINING,,Pure-play,N,MFG,Mining consumables (mill liners) and equipment,Global mining companies,M
+AZAD,Azad Engineering,CG_FORGE,DF_AERO,PW_NUCLEAR,Majority,M,MFG,Precision turbine blades / airfoils for energy / aerospace / defence OEMs,Global turbine & aero OEMs,M
+MTARTECH,MTAR Technologies,CG_FORGE,PW_NUCLEAR|DF_AERO,RE_H2,Significant,N,MFG,Precision assemblies for clean energy (fuel cells) / nuclear / space / defence,Bloom Energy; NPCIL; ISRO; DRDO,M
+VOLTAS,Voltas,CD_AC,CG_HVAC|IN_CIVIL,,Majority,L,MIX,Room ACs and cooling products; electro-mechanical projects,Consumers; commercial projects,H
+BLUESTARCO,Blue Star,CG_HVAC,CD_AC,,Significant,L,MIX,Commercial ACs / data-centre cooling / MEP projects and room ACs,Commercial real estate; data centres; consumers,H
+RISHABH,Rishabh Instruments,CG_TIC,,,Pure-play,N,MFG,Electrical measurement and test instruments; aluminium die-casting,Industry; utilities,L

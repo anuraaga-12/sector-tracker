@@ -1,0 +1,92 @@
+sector:
+  id: DEFENCE
+  name: Defence & Aerospace
+  priority: 1
+  benchmark: ^CRSLDX
+  description: Defence platforms, electronics, shipbuilding, ammunition / explosives and aerospace components.
+  value_chain: "Materials & sub-systems (Tier-2/3) → Electronics, propulsion, munitions → Platform integrators (DPSUs, private) → Armed forces / exports"
+subsectors:
+  - id: DF_PLATFORM
+    name: Defence Platforms (Aircraft, Missiles, Vehicles)
+    what: Integrators of aircraft, helicopters, missiles and armoured vehicles — mostly DPSUs.
+    chain: Platform integration
+    customers: Armed forces, exports
+    inputs: Sub-systems, engines, electronics
+    economics: Nomination-based orders; strong cash advances.
+    barriers: Very high.
+    drivers: [Defence indigenisation (positive lists), Exports, Rising capital budget]
+    nature: Structural.
+    risks: [Order timing, Execution, Valuation]
+    rate: "growth:H competition:L barriers:H pricing:M margins:M roce:H custconc:H cyclicality:L regulation:H export:M structural:H"
+  - id: DF_ELEC
+    name: Defence Electronics & Systems
+    what: Radars, EW, communication, avionics, electro-optics.
+    chain: Sub-systems
+    customers: DPSUs, armed forces, exports
+    inputs: Electronics, engineers
+    economics: Technology-led, high margins.
+    barriers: High.
+    drivers: [Indigenisation, Modernisation]
+    nature: Structural.
+    risks: [Order lumpiness, Customer concentration]
+    rate: "growth:H competition:M barriers:H pricing:M margins:M roce:H custconc:H cyclicality:L regulation:H export:M structural:H"
+  - id: DF_SHIP
+    name: Shipbuilding
+    what: Naval and commercial shipbuilding and repair.
+    chain: Platform
+    customers: Navy, Coast Guard, commercial / exports
+    inputs: Steel, propulsion, systems
+    economics: Long-cycle contracts.
+    barriers: Very high.
+    drivers: [Naval expansion, Shipbuilding financial assistance policy]
+    nature: Structural.
+    risks: [Execution delays]
+    rate: "growth:H competition:L barriers:H pricing:M margins:M roce:M custconc:H cyclicality:L regulation:H export:M structural:H"
+  - id: DF_AMMO
+    name: Ammunition, Explosives & Propellants
+    what: Commercial / defence explosives, ammunition, rocket propellants.
+    chain: Consumables / munitions
+    customers: Mining, armed forces, exports
+    inputs: Ammonium nitrate, chemicals
+    economics: High-margin defence segment.
+    barriers: Licences, safety.
+    drivers: [Global ammunition shortage, Exports]
+    nature: Structural (geopolitics-sensitive).
+    risks: [Geopolitical normalisation, Accidents]
+    rate: "growth:H competition:L barriers:H pricing:H margins:H roce:H custconc:M cyclicality:M regulation:H export:H structural:H"
+  - id: DF_AERO
+    name: Aerospace Components & MRO
+    what: Precision aero-structures, engine parts and MRO for global OEMs.
+    chain: Tier-1 / Tier-2
+    customers: Boeing, Airbus, engine OEMs, defence
+    inputs: Titanium, special alloys
+    economics: Long qualification cycles, sticky contracts.
+    barriers: High (AS9100, OEM approvals).
+    drivers: [Aircraft backlog, Offsets, Supply-chain diversification]
+    nature: Structural.
+    risks: [OEM production issues]
+    rate: "growth:H competition:M barriers:H pricing:M margins:M roce:M custconc:H cyclicality:M regulation:M export:H structural:H"
+  - id: DF_DRONE
+    name: Drones, Space & Emerging Defence Tech
+    what: UAVs, counter-drone, space hardware.
+    chain: Emerging
+    customers: Armed forces, ISRO, private
+    inputs: Electronics, software
+    economics: Small, lumpy.
+    barriers: Moderate.
+    drivers: [Drone PLI, Space privatisation]
+    nature: Emerging.
+    risks: [Small orders, Valuation]
+    rate: "growth:H competition:H barriers:M pricing:M margins:M roce:L custconc:H cyclicality:M regulation:H export:M structural:M"
+  - id: DF_MATERIAL
+    name: Defence Materials & Special Alloys
+    what: Superalloys, titanium, armour steel and composites.
+    chain: Materials
+    customers: DPSUs, aerospace, space
+    inputs: Metals
+    economics: Niche, high barriers.
+    barriers: High.
+    drivers: [Indigenisation]
+    nature: Structural.
+    risks: [Concentration]
+    rate: "growth:M competition:L barriers:H pricing:M margins:M roce:M custconc:H cyclicality:L regulation:M export:M structural:H"

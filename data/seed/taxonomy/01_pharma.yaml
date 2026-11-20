@@ -1,0 +1,267 @@
+# Ratings key (H/M/L): growth, competition (intensity), barriers (entry), pricing (power),
+# margins (stability), roce, custconc (customer concentration), cyclicality, regulation
+# (dependence), export (dependence), structural (long-term relevance).
+# Ratings are an initial qualitative analyst view — review and edit freely.
+sector:
+  id: PHARMA
+  name: Pharmaceuticals & Healthcare
+  priority: 1
+  benchmark: ^CNXPHARMA
+  description: >-
+    Drug discovery, development and manufacturing (APIs, formulations, biologics), outsourced
+    research and manufacturing (CDMO/CRDMO), and healthcare delivery (hospitals, diagnostics,
+    devices, pharmacies).
+  value_chain: "KSMs / Intermediates → API → Formulations (generic / branded / complex / specialty) → Distribution & Pharmacy → Hospitals & Diagnostics → Patient"
+subsectors:
+  - id: PH_USGEN
+    name: US Generic Pharmaceuticals
+    what: Off-patent oral solids and other dosage forms sold into the US through wholesalers, PBMs and retail chains after USFDA approval (ANDAs).
+    chain: Formulations (export) — sells to the 3 large US wholesaler buying groups
+    customers: US wholesalers / GPOs (McKesson, Cencora, Cardinal), retail pharmacy chains
+    inputs: APIs (often in-house), excipients, USFDA-compliant plants
+    economics: Capital-moderate; profitability driven by product launches, limited-competition products (para IV / first-to-file) and price erosion in the base book. Export-oriented.
+    barriers: USFDA-approved facilities and filing pipeline; leaders differentiated by complex/limited-competition launches and compliance track record.
+    drivers: [US drug shortages and supply diversification away from China, Patent cliffs on large molecules, Cost-competitive Indian manufacturing]
+    nature: Mixed — structural volume growth, but cyclical pricing (price erosion cycles) and event-driven FDA outcomes.
+    risks: [US price erosion, USFDA warning letters / import alerts, Customer consolidation, US tariff or policy changes, Litigation]
+    rate: "growth:M competition:H barriers:M pricing:L margins:M roce:M custconc:H cyclicality:M regulation:H export:H structural:M"
+  - id: PH_DOMF
+    name: Domestic Branded Formulations
+    what: Branded generics sold in India through doctor prescriptions and chemist networks across chronic (cardiac, diabetes, CNS) and acute therapies.
+    chain: Formulations → stockists / distributors → chemists → patients
+    customers: Indian patients via doctors and ~10 lakh chemists
+    inputs: APIs, field force, brand portfolio
+    economics: Asset-light relative to exports; high ROCE; profitability driven by brand equity, chronic mix and field-force productivity. Domestic-focused.
+    barriers: Brand recall with doctors, distribution reach, field-force scale; leaders have large chronic portfolios.
+    drivers: [Rising healthcare spend, Chronic disease prevalence, Rural penetration, Trade generics shift]
+    nature: Structural — steady 8–10% market growth, low cyclicality.
+    risks: [NLEM / DPCO price control, Trade-generic and Jan Aushadhi competition, Marketing code changes, Patent expiries of in-licensed brands]
+    rate: "growth:M competition:M barriers:M pricing:M margins:H roce:H custconc:L cyclicality:L regulation:M export:L structural:H"
+  - id: PH_EMGEN
+    name: Emerging-Market & Branded Generic Exports
+    what: Branded and unbranded generics exported to Africa, Latin America, CIS, Asia and other semi-regulated markets.
+    chain: Formulations (export) → local distributors / tenders
+    customers: Distributors, government tenders, institutional buyers in emerging markets
+    inputs: APIs, local registrations / dossiers
+    economics: Moderate capital; margins depend on currency stability and receivable management. Export-oriented.
+    barriers: Product registrations and local distribution relationships.
+    drivers: [Healthcare access growth in emerging markets, Shift from imported branded drugs to generics]
+    nature: Mixed — structural demand, but currency and receivable cycles.
+    risks: [Currency devaluation, Receivable risk, Political instability, Tender pricing]
+    rate: "growth:M competition:M barriers:M pricing:M margins:M roce:M custconc:M cyclicality:M regulation:M export:H structural:M"
+  - id: PH_API
+    name: API Manufacturers
+    what: Active Pharmaceutical Ingredients — the chemically active component of drugs — sold to formulators globally and in India.
+    chain: Intermediates → API → formulators
+    customers: Generic formulators (domestic and global)
+    inputs: Key starting materials (KSMs, often from China), solvents, reagents
+    economics: Capital-intensive chemistry plants; profitability determined by scale, backward integration and cost leadership. Mixed export / domestic.
+    barriers: DMF filings, regulatory-approved plants, process chemistry; leaders are backward-integrated with cost leadership.
+    drivers: [China+1 sourcing, PLI scheme for KSMs/APIs, Patent expiries creating new generic APIs]
+    nature: Mixed — structural China+1 opportunity but pricing is cyclical and Chinese dumping matters.
+    risks: [Chinese price competition, KSM dependence on China, Regulatory inspections, Inventory destocking cycles]
+    rate: "growth:M competition:H barriers:M pricing:L margins:L roce:M custconc:M cyclicality:H regulation:H export:H structural:M"
+  - id: PH_INTER
+    name: Pharma Intermediates & KSMs
+    what: Advanced intermediates and key starting materials that feed into API synthesis.
+    chain: Basic chemicals → Intermediates / KSMs → API
+    customers: API makers, innovator CDMOs
+    inputs: Petrochemical and specialty chemical building blocks
+    economics: Chemistry-intensive and capital-intensive; margins depend on complexity of chemistry and import-substitution.
+    barriers: Process know-how and cost; China incumbency is the main hurdle.
+    drivers: [Import substitution, PLI for critical KSMs, China+1]
+    nature: Mixed — structural import substitution, cyclical pricing.
+    risks: [Chinese dumping, Customer concentration, Raw-material volatility]
+    rate: "growth:M competition:H barriers:M pricing:L margins:L roce:M custconc:H cyclicality:H regulation:M export:M structural:M"
+  - id: PH_CDMO
+    name: CDMO (Contract Development & Manufacturing)
+    what: Outsourced development and commercial manufacturing of APIs / intermediates / formulations for innovator pharma and biotech under long-term contracts.
+    chain: Innovator pipeline → process development → commercial API / drug product supply
+    customers: Global innovator pharma, emerging biotech
+    inputs: Skilled chemists, GMP capacity, specialised chemistry (flow, high-potency, peptides)
+    economics: Capital-intensive with long gestation; high ROCE once molecules commercialise. Export-oriented.
+    barriers: Track record, IP trust, regulatory compliance, multi-year customer qualification; leaders have sticky commercial molecules.
+    drivers: [China+1 (US BIOSECURE-type policies), Innovator outsourcing, GLP-1 / new modalities]
+    nature: Structural, but lumpy — order and biotech funding cycles drive near-term volatility.
+    risks: [Customer and molecule concentration, Biotech funding downturns, Clinical failure of key molecules, Execution delays]
+    rate: "growth:H competition:M barriers:H pricing:M margins:M roce:M custconc:H cyclicality:M regulation:H export:H structural:H"
+  - id: PH_CRDMO
+    name: CRDMO & Contract Research
+    what: Integrated discovery research, development and manufacturing (and CRO services) — from early chemistry/biology to commercial supply.
+    chain: Discovery → pre-clinical → clinical supply → commercial manufacturing
+    customers: Global pharma and biotech R&D organisations
+    inputs: Scientists, labs, GMP capacity
+    economics: People-intensive services plus capital for manufacturing; high switching costs. Export-oriented.
+    barriers: Scientific talent, data integrity, long customer relationships.
+    drivers: [China+1 for discovery services, R&D outsourcing growth, Biotech funding]
+    nature: Structural; near-term tied to biotech funding cycles.
+    risks: [Biotech funding cycles, Talent costs, Customer concentration]
+    rate: "growth:H competition:M barriers:H pricing:M margins:M roce:M custconc:M cyclicality:M regulation:M export:H structural:H"
+  - id: PH_SPEC
+    name: Specialty Pharmaceuticals
+    what: Differentiated, often patented or 505(b)(2) products (dermatology, ophthalmology, CNS, novel antibiotics, radiopharma) sold with own front-end.
+    chain: R&D / in-licensing → specialty formulation → own sales force
+    customers: Specialists, hospitals, payers (US / EU)
+    inputs: R&D, clinical trials, commercial infrastructure
+    economics: High R&D and launch costs; very high margins if successful.
+    barriers: Patents, clinical data, specialist sales force.
+    drivers: [Margin shift away from commoditised generics, Indian companies building innovation pipelines]
+    nature: Structural but binary (trial outcomes).
+    risks: [Clinical / regulatory failure, Launch costs, Patent challenges]
+    rate: "growth:H competition:M barriers:H pricing:H margins:M roce:M custconc:M cyclicality:L regulation:H export:H structural:H"
+  - id: PH_CPLX
+    name: Complex Generics (Injectables, Inhalation, Topicals, Long-acting)
+    what: Hard-to-make generics — sterile injectables, inhalers, complex topicals, long-acting depots — with fewer competitors.
+    chain: Specialised formulation plants → US / EU / India
+    customers: Hospitals, GPOs, wholesalers
+    inputs: Sterile/inhalation capacity, device know-how, clinical endpoint studies
+    economics: Capital- and R&D-intensive; better pricing than oral solids.
+    barriers: Technology, sterility compliance, bioequivalence challenges.
+    drivers: [Drug shortages in sterile products, Patent expiries of complex products]
+    nature: Structural with lumpy approvals.
+    risks: [FDA compliance on sterile plants, Approval delays, Price erosion as competitors enter]
+    rate: "growth:H competition:M barriers:H pricing:M margins:M roce:M custconc:M cyclicality:L regulation:H export:H structural:H"
+  - id: PH_PEPT
+    name: Peptides, GLP-1 & Peptide CDMO
+    what: Synthesis of peptide APIs (e.g. GLP-1 analogues such as semaglutide / liraglutide) and peptide building blocks, as generics or contract manufacturing.
+    chain: Amino-acid building blocks → peptide API → injectable / oral formulation
+    customers: Innovators (CDMO) and generic launches after patent expiry
+    inputs: Protected amino acids, solid-phase synthesis capacity, purification
+    economics: Very capital-intensive (large-scale SPPS + purification); high margins in early generic windows.
+    barriers: Scale-up know-how and capacity.
+    drivers: [GLP-1 obesity / diabetes demand, Semaglutide patent expiries in several markets from 2026]
+    nature: Structural theme; generic pricing will compress as many entrants launch.
+    risks: [Rapid price erosion post patent expiry, Capacity overbuild, Patent litigation]
+    rate: "growth:H competition:H barriers:H pricing:M margins:M roce:M custconc:M cyclicality:M regulation:H export:H structural:H"
+  - id: PH_ONCO
+    name: Oncology & Injectables
+    what: Oncology drugs (oral and injectable) and general sterile injectables, often high-potency.
+    chain: High-potency API → sterile fill-finish → hospitals
+    customers: Hospitals, oncology centres, US GPOs
+    inputs: Containment facilities, sterile lines
+    economics: Capital-intensive; better margins than oral generics.
+    barriers: Containment, sterility, regulatory track record.
+    drivers: [Rising cancer incidence, Injectable shortages in US]
+    nature: Structural.
+    risks: [Sterile plant compliance, Pricing pressure, Concentrated products]
+    rate: "growth:H competition:M barriers:H pricing:M margins:M roce:M custconc:M cyclicality:L regulation:H export:H structural:H"
+  - id: PH_BIO
+    name: Biosimilars & Biologics
+    what: Large-molecule drugs (insulins, monoclonal antibodies) and their biosimilars.
+    chain: Cell-line development → upstream fermentation → downstream purification → fill-finish
+    customers: Regulated-market payers / partners, emerging markets, India
+    inputs: Bioreactors, cell lines, biologics talent
+    economics: Very capital- and R&D-intensive; long payback.
+    barriers: Very high — technology, clinical comparability, regulatory approvals.
+    drivers: [Large biologic patent cliff (2025–2032), Payer push for biosimilars]
+    nature: Structural; adoption pace uncertain.
+    risks: [Slow uptake, Pricing pressure in US, High capital needs / leverage]
+    rate: "growth:H competition:M barriers:H pricing:M margins:M roce:L custconc:M cyclicality:L regulation:H export:H structural:H"
+  - id: PH_VACC
+    name: Vaccines
+    what: Human vaccines for government immunisation programmes, private market and exports.
+    chain: Antigen production → formulation / fill → government / private / UNICEF
+    customers: Government (UIP), UNICEF / GAVI, private paediatricians
+    inputs: Biological manufacturing capacity
+    economics: Capital-intensive; tender-driven pricing.
+    barriers: Regulatory (WHO-PQ), technology.
+    drivers: [Immunisation programme expansion, Adult vaccination]
+    nature: Mixed; tender-driven lumpiness.
+    risks: [Tender pricing, Demand volatility post-pandemic]
+    rate: "growth:M competition:M barriers:H pricing:L margins:M roce:M custconc:H cyclicality:M regulation:H export:M structural:M"
+  - id: PH_DCDMO
+    name: Domestic Formulation CDMO
+    what: Contract manufacturing of formulations (tablets, capsules, nutraceuticals) for Indian pharma brand owners.
+    chain: Formulation manufacturing for branded companies
+    customers: Indian pharma marketers and MNCs
+    inputs: Formulation plants, approvals
+    economics: Moderate capital; low-to-moderate margins; scale matters.
+    barriers: Low-moderate; customer trust and capacity.
+    drivers: [Outsourcing by Indian pharma, Revised Schedule M compliance favouring organised players]
+    nature: Structural, moderate growth.
+    risks: [Customer concentration, Pricing pressure]
+    rate: "growth:M competition:H barriers:L pricing:L margins:M roce:M custconc:M cyclicality:L regulation:M export:L structural:M"
+  - id: PH_DIAG
+    name: Diagnostics (Pathology & Radiology)
+    what: Pathology lab chains and imaging (radiology) centres.
+    chain: Collection centres → hub-and-spoke labs → reports
+    customers: Patients (walk-in), doctors, hospitals, B2B
+    inputs: Analysers, reagents, technicians, brand
+    economics: Asset-light-to-moderate; high ROCE for scaled chains; profitability driven by volume density and test mix.
+    barriers: Brand trust and network density; competition from hospital labs and online players.
+    drivers: [Formalisation of a fragmented market, Preventive health, Insurance penetration]
+    nature: Structural, but price competition caps margins.
+    risks: [Price wars, Online aggregators, Regulatory price caps]
+    rate: "growth:M competition:H barriers:M pricing:L margins:M roce:H custconc:L cyclicality:L regulation:L export:L structural:H"
+  - id: PH_HOSP
+    name: Hospitals
+    what: Multi-specialty and single-specialty hospital chains.
+    chain: Hospital beds → inpatient / outpatient / pharmacy
+    customers: Patients, insurers, government schemes, medical tourists
+    inputs: Land / buildings, doctors, nurses, equipment
+    economics: Capital-intensive; key metrics are ARPOB, occupancy and bed additions; mature hospitals earn high ROCE.
+    barriers: Doctor talent, brand, land / approvals.
+    drivers: [Bed shortage (India ~1.5 beds/1,000), Insurance penetration, Rising incomes, Medical tourism]
+    nature: Structural.
+    risks: [Execution of new beds, Price regulation, Doctor attrition, Government scheme rates]
+    rate: "growth:H competition:M barriers:M pricing:M margins:M roce:M custconc:L cyclicality:L regulation:M export:L structural:H"
+  - id: PH_HSVC
+    name: Healthcare Services, Pharmacy & Health-tech
+    what: Pharmacy retail, pharma distribution, healthcare BPM / revenue-cycle management and life-sciences services.
+    chain: Distribution / retail and services layers around care delivery
+    customers: Patients, hospitals, US payers / providers, pharma companies
+    inputs: Store networks, talent, technology
+    economics: Asset-light; margins vary from thin (distribution) to high (tech-enabled services).
+    barriers: Scale and process expertise.
+    drivers: [Organised pharmacy shift, US healthcare outsourcing]
+    nature: Structural.
+    risks: [Thin margins, E-pharmacy competition, Client concentration]
+    rate: "growth:M competition:H barriers:L pricing:L margins:M roce:M custconc:M cyclicality:L regulation:M export:M structural:M"
+  - id: PH_MEDTECH
+    name: Medical Devices, Surgical & Lab Consumables
+    what: Devices, disposables (infusion, dialysis, catheters), dental products, lab plasticware. (Merges spec items Medical Devices and Surgical Equipment.)
+    chain: Polymers / metals → device manufacture → hospitals / distributors
+    customers: Hospitals, clinics, labs, distributors, exports
+    inputs: Medical-grade polymers, precision moulding, regulatory approvals
+    economics: Moderate capital; high-margin niches.
+    barriers: Regulatory approvals (CE / USFDA / CDSCO), distribution.
+    drivers: [Import substitution (India imports ~70% of devices), PLI for devices, Hospital expansion]
+    nature: Structural.
+    risks: [Import competition, Price caps on devices, Approval timelines]
+    rate: "growth:H competition:M barriers:M pricing:M margins:M roce:M custconc:L cyclicality:L regulation:H export:M structural:H"
+  - id: PH_CONS
+    name: Consumer Healthcare, OTC & Nutraceuticals
+    what: Over-the-counter medicines, vitamins / supplements and health-food brands.
+    chain: Brands → FMCG + chemist distribution
+    customers: Consumers via chemists, modern trade and e-commerce
+    inputs: Brand spend, contract manufacturing
+    economics: Asset-light, high ROCE.
+    barriers: Brands and distribution.
+    drivers: [Self-care trend, Premiumisation]
+    nature: Structural, steady.
+    risks: [Competition from D2C brands, Regulatory claims scrutiny]
+    rate: "growth:M competition:H barriers:M pricing:M margins:H roce:H custconc:L cyclicality:L regulation:M export:L structural:M"
+  - id: PH_ANIMAL
+    name: Animal Healthcare
+    what: Veterinary vaccines, drugs and feed additives for poultry, livestock and companion animals.
+    chain: Animal-health APIs / vaccines → vets / farmers
+    customers: Poultry integrators, dairy farmers, vets, exports
+    inputs: Biological / chemical manufacturing
+    economics: Moderate capital; niche margins.
+    barriers: Registrations, vet relationships.
+    drivers: [Protein consumption growth, Organised poultry / dairy]
+    nature: Mixed; poultry cycles matter.
+    risks: [Poultry cycles, Disease outbreaks, Regulatory]
+    rate: "growth:M competition:M barriers:M pricing:M margins:M roce:M custconc:M cyclicality:M regulation:M export:M structural:M"
+  - id: PH_PACK
+    name: Pharmaceutical Packaging & Lab Glass
+    what: Primary packaging (glass vials, bottles, blister foils, cartons) and laboratory glassware.
+    chain: Glass / polymer / paperboard → packaging → pharma formulators
+    customers: Pharma companies, labs
+    inputs: Sand / soda ash, polymers, energy
+    economics: Capital- and energy-intensive.
+    barriers: Customer approvals (change-control for pharma packaging).
+    drivers: [Pharma volume growth, Injectable growth]
+    nature: Mixed.
+    risks: [Energy costs, Capacity additions]
+    rate: "growth:M competition:M barriers:M pricing:L margins:M roce:M custconc:M cyclicality:M regulation:M export:M structural:M"

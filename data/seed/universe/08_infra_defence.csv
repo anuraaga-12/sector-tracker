@@ -1,0 +1,52 @@
+symbol,name,primary,secondary,indirect,exposure,position,model,business,customers,confidence
+IRB,IRB Infrastructure Developers,IN_TOLL,IN_ROADS,,Majority,L,EPC,Toll road owner / operator and highway EPC,NHAI; road users,H
+NCC,NCC,IN_CIVIL,IN_WATER|IN_ROADS|IN_TDEPC,,Majority,E,EPC,Diversified construction (buildings / water / roads / electrical),State and central governments,H
+PNCINFRA,PNC Infratech,IN_ROADS,IN_WATER,,Majority,E,EPC,Highway EPC / HAM and water projects,NHAI; states,H
+KNRCON,KNR Constructions,IN_ROADS,IN_WATER,,Majority,N,EPC,Highway and irrigation EPC,NHAI; states,H
+GRINFRA,G R Infraprojects,IN_ROADS,IN_RAIL|IN_TDEPC,,Majority,E,EPC,Highway EPC / HAM; railways; transmission,NHAI; railways,H
+HGINFRA,H.G. Infra Engineering,IN_ROADS,IN_RAIL|RE_EPC,,Majority,N,EPC,Highway EPC; railways; solar / BESS,NHAI; railways,M
+ASHOKA,Ashoka Buildcon,IN_ROADS,IN_TDEPC,,Majority,N,EPC,Highway EPC / BOT; power distribution EPC,NHAI; discoms,M
+JKIL,J. Kumar Infraprojects,IN_METRO,IN_ROADS,,Majority,N,EPC,Metro / flyover / tunnel construction (Mumbai),Metro corporations,M
+AFCONS,Afcons Infrastructure,IN_CIVIL,IN_METRO|IN_PORTS,,Pure-play,E,EPC,Marine / tunnels / metro / bridges EPC (Shapoorji group),Government; international,M
+RVNL,Rail Vikas Nigam,IN_RAIL,IN_METRO|IN_TDEPC,,Majority,L,EPC,Railway project execution PSU,Ministry of Railways,H
+IRCON,IRCON International,IN_RAIL,IN_ROADS,,Majority,E,EPC,Railway and highway construction PSU,Railways; international,H
+RAILTEL,RailTel Corporation,IN_RAIL,TC_TOWER,,Majority,N,SVC,Railway telecom and IT projects,Railways; government,H
+IRCTC,Indian Railway Catering and Tourism,IN_RAIL,DS_TRAVEL,,Pure-play,L,SVC,Railway ticketing / catering / tourism,Rail passengers,H
+CONCOR,Container Corporation of India,LG_RAIL,,,Pure-play,L,SVC,Container rail logistics and terminals,Exporters; importers,H
+TITAGARH,Titagarh Rail Systems,IN_ROLLING,IN_METRO|DF_SHIP,,Pure-play,E,MFG,Wagons; metro coaches; Vande Bharat; shipbuilding,Railways; metros,H
+JWL,Jupiter Wagons,IN_ROLLING,AU_CV,,Pure-play,E,MFG,Wagons; brakes; wheels; commercial-vehicle bodies,Railways; private wagon owners,H
+TEXRAIL,Texmaco Rail & Engineering,IN_ROLLING,IN_RAIL,,Majority,N,MFG,Wagons and rail EPC,Railways,H
+HIRECT,Hind Rectifiers,IN_ROLLING,CG_XFMR,,Majority,N,MFG,Railway traction transformers and power electronics,Railways,M
+KERNEX,Kernex Microsystems,IN_SIGNAL,,,Pure-play,N,MFG,Kavach train collision avoidance systems,Indian Railways,M
+HBLENGINE,HBL Engineering,IN_SIGNAL,DF_AMMO|AU_BATT,,Significant,N,MFG,Kavach; defence batteries / fuzes; industrial batteries,Railways; armed forces,M
+KPIL,Kalpataru Projects International,IN_TDEPC,IN_CIVIL|IN_WATER|OG_SERV,,Majority,L,EPC,T&D EPC (global); buildings; water; oil & gas pipelines,Utilities; governments,H
+KEC,KEC International,IN_TDEPC,IN_RAIL|IN_CIVIL|CG_CABLE,,Majority,L,EPC,Global T&D EPC; civil; railways; cables,Utilities; railways,H
+TRANSRAILL,Transrail Lighting,IN_TDEPC,CG_CONDUCT,,Majority,N,EPC,Transmission EPC; conductors; towers,Utilities (India / Africa),L
+BAJEL,Bajel Projects,IN_TDEPC,,,Pure-play,N,EPC,Transmission and distribution EPC (demerged from Bajaj Electricals),Utilities,M
+SKIPPER,Skipper,IN_TDEPC,BM_PIPES,,Majority,N,MFG,Transmission towers manufacturing / EPC; PVC pipes,Utilities; EPC,M
+SALASAR,Salasar Techno Engineering,IN_TDEPC,TC_TOWER,,Majority,N,MFG,Galvanised towers and structures,Utilities; telecom,L
+WABAG,VA Tech Wabag,IN_WATER,,,Pure-play,L,EPC,Water and wastewater treatment EPC / O&M (incl. desalination),Municipal bodies; industry,H
+IONEXCHANG,Ion Exchange (India),IN_WATER,CH_WATER,,Majority,N,MIX,Water treatment plants; chemicals and resins,Industry; municipal,M
+ENGINERSIN,Engineers India,IN_CONSULT,OG_SERV,,Majority,E,SVC,Engineering consultancy for hydrocarbons and infra,Refiners; PSUs,H
+RITES,RITES,IN_CONSULT,IN_ROLLING,,Majority,E,SVC,Transport infrastructure consultancy; locomotive exports,Railways; governments,H
+ADANIPORTS,Adani Ports and Special Economic Zone,IN_PORTS,LG_3PL,,Majority,L,UTIL,Largest private port operator; logistics,Shipping lines; cargo owners,H
+JSWINFRA,JSW Infrastructure,IN_PORTS,,,Pure-play,E,UTIL,Port operator,Cargo owners,H
+GPPL,Gujarat Pipavav Port,IN_PORTS,,,Pure-play,N,UTIL,Container and bulk port,Shipping lines,H
+GMRAIRPORT,GMR Airports,IN_AIRPORT,,,Pure-play,L,UTIL,Airport operator (Delhi / Hyderabad / Goa),Airlines; passengers,H
+ADANIENT,Adani Enterprises,DV_CONGLO,IN_AIRPORT|RE_MODULE|OG_COAL|IN_ROADS|RE_H2,,Significant,L,HOLD,Incubator: airports; solar manufacturing; mining; roads; data centres,Varied,H
+HAL,Hindustan Aeronautics,DF_PLATFORM,DF_AERO,,Pure-play,L,MFG,Fighter aircraft / helicopters / engines and MRO,Indian armed forces,H
+BEL,Bharat Electronics,DF_ELEC,DF_PLATFORM,,Majority,L,MFG,Radars; EW; missile systems; communications,Indian armed forces,H
+BDL,Bharat Dynamics,DF_PLATFORM,,,Pure-play,E,MFG,Missiles and underwater weapons,Indian armed forces; exports,H
+MAZDOCK,Mazagon Dock Shipbuilders,DF_SHIP,,,Pure-play,L,MFG,Submarines and destroyers,Indian Navy,H
+COCHINSHIP,Cochin Shipyard,DF_SHIP,IN_PORTS,,Pure-play,E,MFG,Naval and commercial shipbuilding and ship repair,Navy; commercial owners,H
+GRSE,Garden Reach Shipbuilders & Engineers,DF_SHIP,,,Pure-play,E,MFG,Warships and patrol vessels,Indian Navy; Coast Guard,H
+DATAPATTNS,Data Patterns (India),DF_ELEC,,,Pure-play,N,MFG,Defence electronics (radars / EW / avionics),DPSUs; armed forces,H
+ASTRAMICRO,Astra Microwave Products,DF_ELEC,,,Pure-play,N,MFG,RF and microwave sub-systems for radars / space,DRDO; DPSUs,H
+PARAS,Paras Defence and Space Technologies,DF_ELEC,DF_DRONE,,Pure-play,N,MFG,Optics; defence electronics; drones,DRDO; armed forces,M
+ZENTEC,Zen Technologies,DF_ELEC,DF_DRONE,,Pure-play,N,MFG,Combat training simulators and anti-drone systems,Armed forces,M
+MIDHANI,Mishra Dhatu Nigam,DF_MATERIAL,,,Pure-play,N,MFG,Superalloys / titanium / special steels,Defence; space,H
+PTCIL,PTC Industries,DF_MATERIAL,CG_FORGE|DF_AERO,,Pure-play,N,MFG,Titanium / superalloy castings and aerospace materials,Aerospace and defence OEMs,M
+DYNAMATECH,Dynamatic Technologies,DF_AERO,AU_PRECISION|CG_PUMP,,Significant,N,MFG,Aero-structures; hydraulics; auto components,Airbus / Boeing; OEMs,M
+UNIMECH,Unimech Aerospace and Manufacturing,DF_AERO,,,Pure-play,M,MFG,Aero tooling and precision components,Aero OEMs,L
+IDEAFORGE,ideaForge Technology,DF_DRONE,,,Pure-play,N,MFG,Military and civil drones,Armed forces; police,M
+APOLLO,Apollo Micro Systems,DF_ELEC,,,Pure-play,N,MFG,Defence electronics and missile sub-systems,DRDO; DPSUs,M

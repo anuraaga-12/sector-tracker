@@ -1,0 +1,45 @@
+# Central configuration. Everything here can be changed without touching code.
+
+data:
+  yahoo_suffix: ".NS"          # NSE tickers on Yahoo Finance
+  history_years: 6             # price history to keep (5Y CAGR needs >5y)
+  download_chunk: 40           # symbols per yfinance batch
+  download_pause_sec: 2.0      # pause between batches (be polite / avoid rate limits)
+  stale_price_days: 7          # price older than this vs latest market date = stale
+  stale_fundamentals_days: 120
+  max_daily_move: 0.40         # daily returns beyond ±40% are treated as data errors in index maths
+
+benchmarks:
+  nifty50: "^NSEI"
+  nifty500: "^CRSLDX"
+  # Sector benchmarks (Yahoo symbols). Missing / unavailable ones fall back to Nifty 500.
+  sector_overrides: {}         # e.g. {DEFENCE: "NIFTY_IND_DEFENCE.NS"}
+
+membership:
+  # Which classification types count toward sub-sector / sector performance & breadth.
+  include_types: [primary, secondary]
+  min_members_for_ranking: 3   # sub-sectors with fewer priced members are shown but not ranked
+
+market_cap:
+  # Indicative thresholds in ₹ crore, used ONLY when no AMFI file is loaded.
+  # Defaults approximate the AMFI list effective Aug-2026 (large ≈ ₹1,06,300 cr; mid ≈ ₹33,500 cr).
+  large_min_cr: 106300
+  mid_min_cr: 33500
+  micro_max_cr: 5000           # below this an otherwise "Small" company is tagged "Micro" (not an AMFI category)
+
+momentum:
+  # Weights for the transparent momentum score (normalised to sum to 1). Components are
+  # percentile ranks (0-100) across eligible sub-sectors.
+  weights:
+    relative: 0.30       # excess return vs Nifty 500 (1M 20% / 3M 40% / 6M 40%)
+    absolute: 0.20       # equal-weighted return (3M / 6M average)
+    consistency: 0.15    # share of horizons (1W..1Y) with positive excess return
+    breadth: 0.20        # % of constituents outperforming Nifty 500 over 3M
+    ma_breadth: 0.15     # average of % above 50-DMA and % above 200-DMA
+
+rotation:
+  history_months: 36           # month-end snapshots reconstructed from price history
+  improving_score_delta: 10    # score change vs 1M ago counted as improving / weakening
+  breadth_improve_pp: 15       # change in % above 50-DMA vs 1M ago counted as improving breadth
+  narrow_gap_pp: 10            # cap-weighted minus median 3M return to flag "narrow leadership"
+  small_vs_large_pp: 5         # small/micro median minus large/mid median (3M) to flag "small caps leading"

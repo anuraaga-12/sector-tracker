@@ -1,0 +1,77 @@
+symbol,name,primary,secondary,indirect,exposure,position,model,business,customers,confidence
+360ONE,360 ONE WAM,FS_WEALTH,FS_AMC,,Pure-play,L,FIN,Wealth and alternates asset management for HNI / UHNI,HNIs; family offices,H
+NUVAMA,Nuvama Wealth Management,FS_WEALTH,FS_BROKER|FS_IB,,Majority,E,FIN,Wealth management; asset services; capital markets,HNIs; institutions,H
+ANANDRATHI,Anand Rathi Wealth,FS_WEALTH,,,Pure-play,E,FIN,Mutual-fund distribution-led wealth management for HNIs,HNIs,H
+PRUDENT,Prudent Corporate Advisory Services,FS_WEALTH,,,Pure-play,N,FIN,Mutual-fund distribution platform through IFAs,Retail investors via IFAs,M
+HDFCAMC,HDFC Asset Management,FS_AMC,,,Pure-play,L,FIN,Leading mutual fund manager,Retail and institutional investors,H
+NAM-INDIA,Nippon Life India Asset Management,FS_AMC,,,Pure-play,L,FIN,Mutual fund manager with strong ETF franchise,Retail; institutions,H
+UTIAMC,UTI Asset Management,FS_AMC,,,Pure-play,E,FIN,Mutual fund and pension fund manager,Retail; institutions,H
+ABSLAMC,Aditya Birla Sun Life AMC,FS_AMC,,,Pure-play,E,FIN,Mutual fund manager,Retail; institutions,H
+ICICIAMC,ICICI Prudential Asset Management,FS_AMC,,,Pure-play,L,FIN,Mutual fund manager (listed 2025),Retail; institutions,L
+CANHLIFE,Canara HSBC Life Insurance,FS_LIFE,,,Pure-play,M,FIN,Life insurer with Canara Bank bancassurance (listed 2025),Bank customers,L
+BSE,BSE,FS_EXCH,,,Pure-play,L,FIN,Stock exchange; equity derivatives (Sensex options); StAR MF platform,Brokers; issuers,H
+MCX,Multi Commodity Exchange,FS_EXCH,,,Pure-play,L,FIN,Commodity derivatives exchange,Brokers; hedgers,H
+IEX,Indian Energy Exchange,PW_TRADE,FS_EXCH,,Pure-play,L,FIN,Power exchange (day-ahead / real-time / green markets),Discoms; generators; open-access users,H
+CDSL,Central Depository Services,FS_DEPO,,,Pure-play,L,FIN,Securities depository,Brokers; issuers; investors,H
+CAMS,Computer Age Management Services,FS_DEPO,,,Pure-play,L,SVC,Mutual-fund RTA,AMCs,H
+KFINTECH,KFin Technologies,FS_DEPO,,,Pure-play,L,SVC,RTA for MFs and issuers; global fund administration,AMCs; issuers,H
+ANGELONE,Angel One,FS_BROKER,FS_AMC,,Majority,L,FIN,Retail discount broking and MTF,Retail traders,H
+GROWW,Billionbrains Garage Ventures (Groww),FS_BROKER,FS_AMC|FS_FININFRA,,Majority,L,PLAT,Largest retail investment platform (broking / MFs),Retail investors,L
+MOTILALOFS,Motilal Oswal Financial Services,FS_BROKER,FS_AMC|FS_WEALTH|FS_HFC,,Significant,E,FIN,Broking; asset and wealth management; housing finance,Retail; HNIs,H
+IIFL,IIFL Finance,FS_GOLD,FS_HFC|FS_SME,,Significant,E,FIN,Gold loans; home loans (IIFL Home); MSME loans,Retail borrowers,H
+IIFLCAPS,IIFL Capital Services,FS_BROKER,FS_IB,,Majority,N,FIN,Broking and institutional equities,Retail; institutions,M
+GEOJITFSL,Geojit Financial Services,FS_BROKER,,,Pure-play,N,FIN,Retail broking and distribution,Retail investors,M
+JMFINANCIL,JM Financial,FS_IB,FS_WEALTH|FS_INFRAFIN,,Significant,E,FIN,Investment banking; wealth; wholesale lending,Corporates; HNIs,M
+EQUITASBNK,Equitas Small Finance Bank,BK_SFB,,,Pure-play,E,FIN,Small finance bank (vehicle / MSME / micro),Underserved borrowers,H
+BAJFINANCE,Bajaj Finance,FS_RETAILNBFC,FS_SME|FS_VEHFIN,,Pure-play,L,FIN,Largest diversified retail NBFC (consumer / SME / mortgages / auto),Retail and SME borrowers,H
+BAJAJFINSV,Bajaj Finserv,FS_HOLDCO,FS_LIFE|FS_GENINS|FS_RETAILNBFC,,Pure-play,L,HOLD,Holding company for Bajaj Finance and Bajaj insurance companies,n/a,H
+BAJAJHFL,Bajaj Housing Finance,FS_HFC,,,Pure-play,L,FIN,Housing finance (prime home loans / LRD),Home buyers; developers,H
+SHRIRAMFIN,Shriram Finance,FS_VEHFIN,FS_SME|FS_GOLD,,Majority,L,FIN,Used commercial-vehicle finance; MSME; gold; two-wheeler loans,Transporters; small businesses,H
+CHOLAFIN,Cholamandalam Investment and Finance,FS_VEHFIN,FS_SME|FS_HFC,,Majority,L,FIN,Vehicle finance; LAP; home loans; SME loans,Retail and SME borrowers,H
+M&MFIN,Mahindra & Mahindra Financial Services,FS_VEHFIN,,,Pure-play,E,FIN,Rural vehicle and tractor finance,Rural borrowers,H
+SUNDARMFIN,Sundaram Finance,FS_VEHFIN,FS_HFC|FS_AMC|FS_GENINS,,Majority,E,FIN,Vehicle finance; housing; asset management,Retail; transporters,H
+HDBFS,HDB Financial Services,FS_RETAILNBFC,FS_VEHFIN|FS_SME,,Pure-play,L,FIN,HDFC Bank's NBFC (consumer / vehicle / enterprise loans),Retail; SME,M
+TATACAP,Tata Capital,FS_RETAILNBFC,FS_SME|FS_INFRAFIN|FS_VEHFIN,,Pure-play,L,FIN,Diversified NBFC of Tata group (listed Oct 2025),Retail; SME; corporate,L
+MUTHOOTFIN,Muthoot Finance,FS_GOLD,FS_MFI|FS_HFC,,Majority,L,FIN,Largest gold-loan NBFC,Retail borrowers,H
+MANAPPURAM,Manappuram Finance,FS_GOLD,FS_MFI|FS_VEHFIN,,Majority,E,FIN,Gold loans; microfinance (Asirvad); vehicle loans,Retail borrowers,H
+CREDITACC,CreditAccess Grameen,FS_MFI,,,Pure-play,L,FIN,Largest NBFC-MFI,Low-income women borrowers,H
+SPANDANA,Spandana Sphoorty Financial,FS_MFI,,,Pure-play,N,FIN,NBFC-MFI,Low-income borrowers,M
+FUSION,Fusion Finance,FS_MFI,,,Pure-play,N,FIN,NBFC-MFI,Low-income borrowers,M
+PIRAMALFIN,Piramal Finance,FS_RETAILNBFC,FS_HFC|FS_INFRAFIN,,Pure-play,E,FIN,Retail-focused lender (housing / LAP / used cars) with legacy wholesale book,Retail borrowers,L
+POONAWALLA,Poonawalla Fincorp,FS_RETAILNBFC,FS_SME,,Pure-play,E,FIN,Consumer and MSME lending,Retail; MSME,H
+LTF,L&T Finance,FS_RETAILNBFC,FS_VEHFIN|FS_MFI|FS_HFC,,Pure-play,L,FIN,Rural / farm / two-wheeler / personal / home loans,Retail and rural borrowers,H
+ABCAPITAL,Aditya Birla Capital,FS_HOLDCO,FS_RETAILNBFC|FS_HFC|FS_LIFE|FS_AMC,,Majority,L,HOLD,Diversified financial services (lending / insurance / AMC),Retail; SME,H
+JIOFIN,Jio Financial Services,FS_FININFRA,FS_RETAILNBFC|FS_AMC|FS_BROKER,,Majority,E,FIN,Lending; payments; insurance broking; AMC JV with BlackRock,Retail; merchants,M
+PAYTM,One 97 Communications (Paytm),FS_FININFRA,,,Pure-play,L,PLAT,Payments and financial-services distribution platform,Consumers; merchants,H
+POLICYBZR,PB Fintech (Policybazaar),FS_FININFRA,FS_GENINS,,Pure-play,L,PLAT,Online insurance and credit marketplace,Consumers; insurers,H
+CRISIL,CRISIL,FS_FININFRA,,,Pure-play,L,SVC,Ratings; research; analytics,Corporates; banks; institutions,H
+ICRA,ICRA,FS_FININFRA,,,Pure-play,E,SVC,Credit ratings and analytics,Corporates,H
+CARERATING,CARE Ratings,FS_FININFRA,,,Pure-play,N,SVC,Credit ratings,Corporates,H
+LICHSGFIN,LIC Housing Finance,FS_HFC,,,Pure-play,L,FIN,Large housing finance company,Home buyers,H
+PNBHOUSING,PNB Housing Finance,FS_HFC,,,Pure-play,E,FIN,Prime and affordable home loans,Home buyers,H
+AAVAS,Aavas Financiers,FS_HFC,,,Pure-play,N,FIN,Affordable housing finance,Self-employed home buyers,H
+APTUS,Aptus Value Housing Finance,FS_HFC,FS_SME,,Pure-play,N,FIN,Affordable housing finance (South India),Low-income home buyers,H
+HOMEFIRST,Home First Finance,FS_HFC,,,Pure-play,N,FIN,Affordable housing finance,Salaried low-income buyers,H
+AADHARHFC,Aadhar Housing Finance,FS_HFC,,,Pure-play,N,FIN,Affordable housing finance,Low-income home buyers,M
+CANFINHOME,Can Fin Homes,FS_HFC,,,Pure-play,E,FIN,Housing finance (Canara Bank sponsored),Salaried home buyers,H
+REPCOHOME,Repco Home Finance,FS_HFC,,,Pure-play,N,FIN,Housing finance (South India),Home buyers,M
+FIVESTAR,Five-Star Business Finance,FS_SME,,,Pure-play,N,FIN,Small-ticket secured business loans,Micro-entrepreneurs,H
+SBFC,SBFC Finance,FS_SME,FS_GOLD,,Pure-play,N,FIN,Secured MSME loans and gold loans,MSMEs,M
+UGROCAP,UGRO Capital,FS_SME,,,Pure-play,N,FIN,Data-led MSME lending,MSMEs,M
+MASFIN,MAS Financial Services,FS_SME,FS_VEHFIN,,Pure-play,N,FIN,MSME and vehicle loans,MSMEs,M
+PFC,Power Finance Corporation,FS_INFRAFIN,RE_RENFIN,,Pure-play,L,FIN,Power-sector lender (holds REC),Utilities; gencos,H
+RECLTD,REC,FS_INFRAFIN,RE_RENFIN,,Pure-play,L,FIN,Power and infrastructure lender,Utilities; infra,H
+IRFC,Indian Railway Finance Corporation,FS_INFRAFIN,IN_RAIL,,Pure-play,L,FIN,Financing arm of Indian Railways,Indian Railways,H
+IREDA,Indian Renewable Energy Development Agency,RE_RENFIN,FS_INFRAFIN,,Pure-play,L,FIN,Renewable-energy lender,RE developers,H
+HUDCO,Housing & Urban Development Corporation,FS_INFRAFIN,,,Pure-play,E,FIN,Housing and urban infrastructure lender,State agencies,H
+LICI,Life Insurance Corporation of India,FS_LIFE,,,Pure-play,L,FIN,Largest life insurer,Individuals,H
+HDFCLIFE,HDFC Life Insurance,FS_LIFE,,,Pure-play,L,FIN,Private life insurer,Individuals; bank customers,H
+SBILIFE,SBI Life Insurance,FS_LIFE,,,Pure-play,L,FIN,Private life insurer (SBI bancassurance),Individuals,H
+ICICIPRULI,ICICI Prudential Life Insurance,FS_LIFE,,,Pure-play,L,FIN,Private life insurer,Individuals,H
+MFSL,Max Financial Services,FS_LIFE,,,Pure-play,E,HOLD,Holding company for Axis Max Life Insurance,Individuals,H
+ICICIGI,ICICI Lombard General Insurance,FS_GENINS,,,Pure-play,L,FIN,Largest private general insurer,Individuals; corporates,H
+STARHEALTH,Star Health and Allied Insurance,FS_GENINS,,,Pure-play,L,FIN,Standalone health insurer,Individuals,H
+NIACL,New India Assurance,FS_GENINS,,,Pure-play,L,FIN,PSU general insurer,Individuals; corporates,H
+GODIGIT,Go Digit General Insurance,FS_GENINS,,,Pure-play,E,FIN,Digital-first general insurer,Individuals,M
+NIVABUPA,Niva Bupa Health Insurance,FS_GENINS,,,Pure-play,E,FIN,Standalone health insurer,Individuals,M
+GICRE,General Insurance Corporation of India,FS_REINS,,,Pure-play,L,FIN,National reinsurer,Insurers,H

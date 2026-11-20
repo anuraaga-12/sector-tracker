@@ -1,0 +1,12 @@
+{
+  "prices": {
+    "last_refresh": "2026-11-20T20:30:22+00:00",
+    "status": "ok",
+    "detail": "681/681 symbols returned data; last date 2026-11-19"
+  },
+  "market_cap": {
+    "last_refresh": "2026-11-20T20:33:38+00:00",
+    "status": "ok",
+    "detail": "681/681 market caps"
+  }
+}

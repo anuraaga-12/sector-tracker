@@ -1,0 +1,50 @@
+symbol,name,primary,secondary,indirect,exposure,position,model,business,customers,confidence
+PIDILITIND,Pidilite Industries,CH_PERF,BM_PAINTS,,Pure-play,L,MFG,Consumer and industrial adhesives (Fevicol); construction chemicals,Consumers; carpenters; industry,H
+SRF,SRF,CH_FLUORO,CH_CRAMS|CH_PETRO,TX_YARN,Significant,L,MFG,Refrigerants and fluorospecialties; agro CSM; packaging films; technical textiles,HVAC; agro innovators; packaging,H
+NAVINFLUOR,Navin Fluorine International,CH_FLUORO,CH_CRAMS|PH_CDMO,,Majority,L,MFG,Refrigerants; HPP fluorospecialties; CDMO,HVAC; agro / pharma innovators,H
+FLUOROCHEM,Gujarat Fluorochemicals,CH_FLUORO,CH_ELECTRONIC|AU_EVCOMP,,Majority,L,MFG,Fluoropolymers (PTFE / PVDF / FKM); battery chemicals,Industry; semiconductors; batteries,H
+CHEMPLASTS,Chemplast Sanmar,CH_PETRO,CH_IND|CH_CRAMS,,Majority,N,MFG,Specialty PVC paste resin; caustic soda; custom manufacturing,Industry,M
+DEEPAKNTR,Deepak Nitrite,CH_INTER,CH_SPEC|CH_SOLV,,Majority,L,MFG,Phenol / acetone (DPL) and basic intermediates,Chemical industry,H
+AARTIIND,Aarti Industries,CH_SPEC,CH_INTER|CH_CRAMS,,Pure-play,L,MFG,Benzene-based specialty chemicals and contract manufacturing,Agro; pharma; polymers,H
+VINATIORGA,Vinati Organics,CH_SPEC,,,Pure-play,E,MFG,IBB / ATBS / antioxidants specialty chemicals,Pharma (ibuprofen); polymers,H
+ATUL,Atul,CH_SPEC,CH_DYES|CH_AGRO,,Pure-play,E,MFG,Diversified life-science and performance chemicals,Multiple industries,H
+CLEAN,Clean Science and Technology,CH_SPEC,,,Pure-play,N,MFG,Catalytic-process specialty chemicals (MEHQ / BHA / guaiacol),Polymers; pharma; flavours,H
+FINEORG,Fine Organic Industries,CH_SPEC,,,Pure-play,N,MFG,Oleochemical-based additives,Food; plastics; cosmetics,H
+GALAXYSURF,Galaxy Surfactants,CH_PERF,,,Pure-play,E,MFG,Surfactants and specialty care ingredients,FMCG,H
+ROSSARI,Rossari Biotech,CH_WATER,CH_PERF,,Pure-play,N,MFG,Textile chemicals; home & personal care; animal health,Textile; FMCG,M
+NOCIL,NOCIL,CH_SPEC,,,Pure-play,N,MFG,Rubber chemicals,Tyre makers,H
+ACI,Archean Chemical Industries,CH_IND,,,Pure-play,N,MFG,Marine chemicals (bromine / industrial salt / SOP),Pharma; agro; flame retardants,M
+TATACHEM,Tata Chemicals,CH_IND,CH_SPEC|AG_FERT,,Majority,L,MFG,Soda ash (India / US / UK / Kenya); specialty products,Glass; detergents,H
+GHCL,GHCL,CH_IND,,,Pure-play,E,MFG,Soda ash,Glass; detergents,H
+DCMSHRIRAM,DCM Shriram,CH_IND,AG_SUGAR|AG_FERT,,Significant,E,MFG,Chlor-vinyl; sugar; fertiliser; agri inputs,Industry; farmers,M
+CHEMFAB,Chemfab Alkalis,CH_IND,,,Pure-play,N,MFG,Chlor-alkali,Industry,L
+GUJALKALI,Gujarat Alkalies and Chemicals,CH_IND,,,Pure-play,E,MFG,Chlor-alkali (PSU),Industry,H
+PCBL,PCBL Chemical,CH_IND,CH_SPEC|AU_EVCOMP,,Majority,L,MFG,Carbon black; specialty blacks; Aquapharm water chemicals; battery materials,Tyre makers,H
+HSCL,Himadri Speciality Chemical,CH_IND,AU_EVCOMP|CH_ELECTRONIC,,Majority,N,MFG,Carbon materials (pitch / carbon black); battery anode materials,Aluminium; graphite electrodes; batteries,M
+PIIND,PI Industries,CH_CRAMS,CH_AGRO|PH_CDMO,,Majority,L,MFG,Agrochemical CSM exports; domestic agro brands; pharma CDMO,Global agro innovators; farmers,H
+UPL,UPL,CH_AGRO,AG_SEEDS,,Pure-play,L,MFG,Global crop-protection and seeds,Farmers globally,H
+SUMICHEM,Sumitomo Chemical India,CH_AGRO,,,Pure-play,E,MFG,Crop protection and environmental health,Farmers,H
+BAYERCROP,Bayer CropScience,CH_AGRO,AG_SEEDS,,Pure-play,E,MFG,Crop protection and corn seeds,Farmers,H
+DHANUKA,Dhanuka Agritech,CH_AGRO,,,Pure-play,N,MFG,Branded agrochemical formulations,Farmers,H
+RALLIS,Rallis India,CH_AGRO,AG_SEEDS,,Pure-play,N,MFG,Crop protection and seeds (Tata),Farmers,H
+BHARATRAS,Bharat Rasayan,CH_AGRO,,,Pure-play,N,MFG,Agrochemical technicals,Agro formulators,M
+SHARDACROP,Sharda Cropchem,CH_AGRO,,,Pure-play,N,DIST,Off-patent agrochemical registrations and distribution globally,Distributors (LatAm / Europe),H
+ASTEC,Astec LifeSciences,CH_AGRO,,,Pure-play,N,MFG,Agrochemical technicals and CDMO,Agro companies,M
+INSECTICID,Insecticides (India),CH_AGRO,,,Pure-play,N,MFG,Branded crop protection,Farmers,M
+BESTAGRO,Best Agrolife,CH_AGRO,,,Pure-play,N,MFG,Agrochemical technicals and formulations,Farmers,L
+JUBLINGREA,Jubilant Ingrevia,CH_SPEC,CH_CRAMS|CH_SOLV|PH_CONS,,Pure-play,E,MFG,Pyridines / vitamins / acetyls and CDMO,Pharma; agro; nutrition,H
+LXCHEM,Laxmi Organic Industries,CH_SOLV,CH_SPEC|CH_FLUORO,,Majority,N,MFG,Acetyl intermediates; specialty intermediates; fluorospecialties,Pharma; coatings,M
+ALKYLAMINE,Alkyl Amines Chemicals,CH_SPEC,,,Pure-play,N,MFG,Aliphatic amines and derivatives,Pharma; agro,H
+BALAMINES,Balaji Amines,CH_SPEC,,,Pure-play,N,MFG,Methylamines / ethylamines and derivatives,Pharma; agro,M
+GNFC,Gujarat Narmada Valley Fertilizers & Chemicals,CH_INTER,AG_FERT,,Majority,E,MFG,TDI / nitric acid / acetic acid chemicals and fertilisers,Industry; farmers,H
+SUDARSCHEM,Sudarshan Chemical Industries,CH_DYES,,,Pure-play,L,MFG,Pigments (incl. acquired Heubach global business),Paints; plastics; inks,H
+BODALCHEM,Bodal Chemicals,CH_DYES,,,Pure-play,N,MFG,Dyes and dye intermediates,Textiles,L
+TATVA,Tatva Chintan Pharma Chem,CH_SPEC,CH_ELECTRONIC,,Pure-play,N,MFG,Structure-directing agents; phase-transfer catalysts; electrolyte salts,Refining; pharma; batteries,M
+ANURAS,Anupam Rasayan India,CH_CRAMS,,,Pure-play,N,MFG,Custom synthesis for agro / personal care / polymer innovators,Global innovators,M
+NEOGEN,Neogen Chemicals,CH_SPEC,CH_ELECTRONIC,,Majority,N,MFG,Bromine / lithium chemicals; battery electrolyte salts,Pharma; agro; batteries,M
+IGPL,I G Petrochemicals,CH_INTER,,,Pure-play,N,MFG,Phthalic anhydride,Plasticisers; paints,M
+PREMEXPLN,Premier Explosives,DF_AMMO,,,Pure-play,N,MFG,Commercial explosives; defence propellants and pyrotechnics,Mining; defence,M
+SOLARINDS,Solar Industries India,DF_AMMO,,,Pure-play,L,MFG,Industrial explosives; defence ammunition / propellants / drones,Coal India; armed forces; exports,H
+LINDEINDIA,Linde India,CH_GASES,,,Pure-play,L,MFG,Industrial and medical gases,Steel; healthcare; electronics,H
+ELLEN,Ellenbarrie Industrial Gases,CH_GASES,,,Pure-play,N,MFG,Industrial and medical gases (listed 2025),Steel; healthcare,L
+SUDARCOLOR,Sudarshan Colorants India (formerly Heubach Colorants India),CH_DYES,,,Pure-play,N,MFG,Pigments (now part of Sudarshan group),Paints; plastics,L

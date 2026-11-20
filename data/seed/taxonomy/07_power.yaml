@@ -1,0 +1,92 @@
+sector:
+  id: POWER
+  name: Power & Utilities
+  priority: 1
+  benchmark: ^CNXENERGY
+  description: Electricity generation (thermal, hydro, nuclear), transmission and distribution utilities, power trading and smart metering. Equipment makers sit under Capital Goods; renewables under Renewable Energy.
+  value_chain: "Fuel (coal / gas / water / sun / wind) → Generation → Transmission → Distribution (discoms) → Consumers; Trading exchanges match surplus and deficit"
+subsectors:
+  - id: PW_THERMAL
+    name: Thermal & Integrated Power Generation
+    what: Coal / gas-based generators, often with regulated PPAs; many are diversifying into renewables.
+    chain: Generation
+    customers: State discoms, merchant market
+    inputs: Coal, gas, water
+    economics: Capital-intensive; regulated ROE (~15.5%) on PPA capacity; merchant upside in deficits.
+    barriers: Very high — land, fuel linkage, capital.
+    drivers: [Peak demand growth, New thermal capacity orders, Data-centre load]
+    nature: Mixed — structural demand, but energy transition caps long-term relevance.
+    risks: [Coal supply, Discom dues, ESG / transition]
+    rate: "growth:M competition:L barriers:H pricing:M margins:M roce:M custconc:H cyclicality:M regulation:H export:L structural:M"
+  - id: PW_HYDRO
+    name: Hydropower & Pumped Storage
+    what: Hydro generators and pumped-storage projects.
+    chain: Generation / storage
+    customers: Discoms, grid
+    inputs: Water resources, civil construction
+    economics: Very long gestation, regulated returns.
+    barriers: Very high.
+    drivers: [Need for firm renewable power, Pumped storage for balancing]
+    nature: Structural.
+    risks: [Execution delays, Geological risk]
+    rate: "growth:M competition:L barriers:H pricing:M margins:M roce:L custconc:H cyclicality:L regulation:H export:L structural:H"
+  - id: PW_TRANS
+    name: Power Transmission Utilities
+    what: Owners / operators of transmission lines and substations (regulated and TBCB).
+    chain: Transmission
+    customers: Grid users (via pooled tariffs)
+    inputs: Capital, equipment
+    economics: Annuity-like regulated / tariff-based returns.
+    barriers: High.
+    drivers: [Green energy corridors, ISTS expansion]
+    nature: Structural.
+    risks: [Competitive bidding returns, Right-of-way delays]
+    rate: "growth:H competition:M barriers:H pricing:M margins:H roce:M custconc:L cyclicality:L regulation:H export:L structural:H"
+  - id: PW_DIST
+    name: Power Distribution (Private Discoms)
+    what: Private distribution licensees and integrated utilities.
+    chain: Distribution
+    customers: Retail and industrial consumers
+    inputs: Power purchase
+    economics: Regulated returns; AT&C losses key.
+    barriers: Licence.
+    drivers: [Privatisation of discoms, Electricity demand]
+    nature: Defensive.
+    risks: [Regulatory tariff decisions]
+    rate: "growth:M competition:L barriers:H pricing:L margins:M roce:M custconc:L cyclicality:L regulation:H export:L structural:M"
+  - id: PW_TRADE
+    name: Power Trading & Exchanges
+    what: Power exchanges and traders.
+    chain: Market infrastructure
+    customers: Discoms, generators, open-access users
+    inputs: Technology, licence
+    economics: Very high margins (exchange).
+    barriers: High (exchange network effects).
+    drivers: [Short-term market share growth]
+    nature: Structural.
+    risks: [Market coupling regulation]
+    rate: "growth:M competition:M barriers:H pricing:M margins:H roce:H custconc:L cyclicality:M regulation:H export:L structural:M"
+  - id: PW_METER
+    name: Smart Metering
+    what: Smart meter manufacturing and AMISP (meter-as-a-service) operators under RDSS.
+    chain: Equipment + services to discoms
+    customers: State discoms
+    inputs: Meters, communication modules, capital
+    economics: Long-tenure service contracts; capital-intensive AMISP model.
+    barriers: Moderate.
+    drivers: [RDSS target of 250 mn smart meters]
+    nature: Policy-driven multi-year cycle.
+    risks: [Discom payment delays, Execution]
+    rate: "growth:H competition:H barriers:M pricing:L margins:M roce:M custconc:H cyclicality:M regulation:H export:L structural:M"
+  - id: PW_NUCLEAR
+    name: Nuclear Power Ecosystem
+    what: Suppliers to the nuclear programme (components, engineering) — the generators themselves are unlisted.
+    chain: Equipment / engineering
+    customers: NPCIL, future private SMR operators
+    inputs: Specialised fabrication
+    economics: Lumpy orders.
+    barriers: Very high.
+    drivers: [Nuclear capacity target (100 GW by 2047), Private participation reforms, SMRs]
+    nature: Long-dated structural.
+    risks: [Policy timelines]
+    rate: "growth:M competition:L barriers:H pricing:M margins:M roce:M custconc:H cyclicality:M regulation:H export:L structural:H"

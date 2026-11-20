@@ -1,0 +1,37 @@
+symbol,name,primary,secondary,indirect,exposure,position,model,business,customers,confidence
+HDFCBANK,HDFC Bank,BK_PVTLARGE,,FS_RETAILNBFC|FS_LIFE|FS_AMC,Pure-play,L,FIN,Largest private bank,Retail; SME; corporate,H
+ICICIBANK,ICICI Bank,BK_PVTLARGE,,FS_LIFE|FS_GENINS|FS_AMC|FS_BROKER,Pure-play,L,FIN,Large private bank,Retail; SME; corporate,H
+KOTAKBANK,Kotak Mahindra Bank,BK_PVTLARGE,FS_BROKER|FS_AMC,FS_LIFE,Majority,L,FIN,Private bank with broking / AMC / insurance subsidiaries,Retail; corporate; HNI,H
+AXISBANK,Axis Bank,BK_PVTLARGE,,FS_LIFE,Pure-play,L,FIN,Large private bank,Retail; corporate,H
+INDUSINDBK,IndusInd Bank,BK_PVTLARGE,,,Pure-play,E,FIN,Private bank (vehicle finance / MFI heavy),Retail; corporate,H
+FEDERALBNK,Federal Bank,BK_PVTMID,,,Pure-play,E,FIN,Kerala-based private bank,Retail; NRI; corporate,H
+IDFCFIRSTB,IDFC First Bank,BK_PVTMID,,,Pure-play,E,FIN,Retail-focused private bank,Retail,H
+YESBANK,Yes Bank,BK_PVTMID,,,Pure-play,E,FIN,Private bank (SMBC-backed),Retail; corporate,H
+BANDHANBNK,Bandhan Bank,BK_PVTMID,FS_MFI,,Pure-play,E,FIN,Private bank with large micro-banking book,Rural / micro borrowers,H
+RBLBANK,RBL Bank,BK_PVTMID,,,Pure-play,N,FIN,Mid-sized private bank,Retail; cards,H
+CUB,City Union Bank,BK_PVTMID,,,Pure-play,N,FIN,Tamil Nadu private bank (MSME / gold),MSMEs,H
+KARURVYSYA,Karur Vysya Bank,BK_PVTMID,,,Pure-play,N,FIN,Tamil Nadu private bank,MSMEs; retail,H
+SOUTHBANK,South Indian Bank,BK_PVTMID,,,Pure-play,N,FIN,Kerala private bank,Retail,H
+KTKBANK,Karnataka Bank,BK_PVTMID,,,Pure-play,N,FIN,Karnataka private bank,Retail; MSME,H
+DCBBANK,DCB Bank,BK_PVTMID,,,Pure-play,N,FIN,Small private bank (mortgage / MSME),Self-employed,H
+TMB,Tamilnad Mercantile Bank,BK_PVTMID,,,Pure-play,N,FIN,Tamil Nadu private bank,MSMEs,M
+CSBBANK,CSB Bank,BK_PVTMID,FS_GOLD,,Pure-play,N,FIN,Kerala private bank (gold loans),Retail,M
+SBIN,State Bank of India,BK_PSU,,FS_LIFE|FS_GENINS|FS_AMC,Pure-play,L,FIN,Largest bank in India,All segments,H
+BANKBARODA,Bank of Baroda,BK_PSU,,,Pure-play,L,FIN,Large PSU bank,All segments,H
+PNB,Punjab National Bank,BK_PSU,,,Pure-play,L,FIN,Large PSU bank,All segments,H
+CANBK,Canara Bank,BK_PSU,,,Pure-play,L,FIN,Large PSU bank,All segments,H
+UNIONBANK,Union Bank of India,BK_PSU,,,Pure-play,E,FIN,PSU bank,All segments,H
+INDIANB,Indian Bank,BK_PSU,,,Pure-play,E,FIN,PSU bank,All segments,H
+BANKINDIA,Bank of India,BK_PSU,,,Pure-play,E,FIN,PSU bank,All segments,H
+MAHABANK,Bank of Maharashtra,BK_PSU,,,Pure-play,E,FIN,PSU bank,All segments,H
+IOB,Indian Overseas Bank,BK_PSU,,,Pure-play,N,FIN,PSU bank,All segments,H
+CENTRALBK,Central Bank of India,BK_PSU,,,Pure-play,N,FIN,PSU bank,All segments,H
+UCOBANK,UCO Bank,BK_PSU,,,Pure-play,N,FIN,PSU bank,All segments,H
+IDBI,IDBI Bank,BK_PSU,,,Pure-play,E,FIN,Bank under strategic sale,All segments,H
+AUBANK,AU Small Finance Bank,BK_SFB,FS_VEHFIN,,Pure-play,L,FIN,Largest small finance bank (vehicle / MSME / retail),Underserved retail and MSME,H
+UJJIVANSFB,Ujjivan Small Finance Bank,BK_SFB,FS_MFI,,Pure-play,E,FIN,SFB with microfinance and affordable housing,Low-income borrowers,H
+SURYODAY,Suryoday Small Finance Bank,BK_SFB,FS_MFI,,Pure-play,N,FIN,SFB with microfinance focus,Low-income borrowers,M
+ESAFSFB,ESAF Small Finance Bank,BK_SFB,FS_MFI,,Pure-play,N,FIN,SFB with microfinance focus (Kerala),Low-income borrowers,M
+UTKARSHBNK,Utkarsh Small Finance Bank,BK_SFB,FS_MFI,,Pure-play,N,FIN,SFB with microfinance focus (Bihar / UP),Low-income borrowers,M
+JSFB,Jana Small Finance Bank,BK_SFB,FS_SME,,Pure-play,N,FIN,SFB with secured MSME / housing growth,Low-income borrowers,M
+CAPITALSFB,Capital Small Finance Bank,BK_SFB,,,Pure-play,N,FIN,Punjab-based SFB (non-MFI),Retail; MSME,M
