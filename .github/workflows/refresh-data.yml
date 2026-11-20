@@ -7,7 +7,10 @@ name: refresh-data
 
 on:
   schedule:
-    - cron: "45 11 * * 1-5"   # 17:15 IST, Mon–Fri: prices (+ market cap) → rebuild → snapshot
+    # Times are UTC (IST = UTC+5:30). NSE publishes its official closing files in the evening;
+    # the refresh fills from them when Yahoo hasn't posted the day's close yet.
+    - cron: "30 13 * * 1-5"   # 19:00 IST, Mon–Fri: prices (+ market cap) → rebuild → snapshot
+    - cron: "0 17 * * 1-5"    # 22:30 IST, Mon–Fri: catch-up run in case NSE / Yahoo published late
     - cron: "15 3 * * 6"      # 08:45 IST, Saturday: weekly job incl. shares + fundamentals
   workflow_dispatch:
     inputs:
@@ -54,7 +57,7 @@ jobs:
           else python -m tracker.refresh daily; fi
 
       - name: Tests (engine + data integrity)
-        run: python -m pytest tests/test_analytics.py tests/test_seed_and_mcap.py
+        run: python -m pytest tests/test_analytics.py tests/test_seed_and_mcap.py tests/test_nse_fill.py
 
       - name: Publish to deploy branch (single squashed commit)
         run: |

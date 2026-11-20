@@ -67,7 +67,7 @@ HUDCO,Housing & Urban Development Corporation,FS_INFRAFIN,,,Pure-play,E,FIN,Hous
 LICI,Life Insurance Corporation of India,FS_LIFE,,,Pure-play,L,FIN,Largest life insurer,Individuals,H
 HDFCLIFE,HDFC Life Insurance,FS_LIFE,,,Pure-play,L,FIN,Private life insurer,Individuals; bank customers,H
 SBILIFE,SBI Life Insurance,FS_LIFE,,,Pure-play,L,FIN,Private life insurer (SBI bancassurance),Individuals,H
-ICICIPRULI,ICICI Prudential Life Insurance,FS_LIFE,,,Pure-play,L,FIN,Private life insurer,Individuals,H
+ICICILIFE,ICICI Life Insurance (formerly ICICI Prudential Life),FS_LIFE,,,Pure-play,L,FIN,Private life insurer,Individuals,H
 MFSL,Max Financial Services,FS_LIFE,,,Pure-play,E,HOLD,Holding company for Axis Max Life Insurance,Individuals,H
 ICICIGI,ICICI Lombard General Insurance,FS_GENINS,,,Pure-play,L,FIN,Largest private general insurer,Individuals; corporates,H
 STARHEALTH,Star Health and Allied Insurance,FS_GENINS,,,Pure-play,L,FIN,Standalone health insurer,Individuals,H

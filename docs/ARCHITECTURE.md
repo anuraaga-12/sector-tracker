@@ -10,7 +10,7 @@ data/market/*  ────────────┘    │                  �
    │                            ├─ marketcap.py     (AMFI or indicative categories)
    │                            └─ analytics.py     (returns, indices, breadth, momentum, flags, snapshots)
    │
-tracker.refresh  ◄── providers/yahoo.py (yfinance)  ← GitHub Action (weekday 17:15 IST, Saturday weekly)
+tracker.refresh  ◄── providers/yahoo.py (yfinance)  ← GitHub Action (weekdays 19:00 + 22:30 IST, Saturday weekly)
 ```
 
 | Component (spec §8) | Module |

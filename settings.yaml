@@ -9,6 +9,26 @@ data:
   stale_fundamentals_days: 120
   max_daily_move: 0.40         # daily returns beyond ±40% are treated as data errors in index maths
 
+nse:
+  # Yahoo often posts the day's close late (sometimes next day). The refresh fills the most recent
+  # days it is missing from NSE's official end-of-day files; Yahoo's values replace them later.
+  enabled: true
+  fill_days: 7                 # calendar days back to check
+  index_names:                 # Yahoo benchmark ticker -> index name in NSE's ind_close_all file
+    "^NSEI": "Nifty 50"
+    "^CRSLDX": "Nifty 500"
+    "^NSEBANK": "Nifty Bank"
+    "NIFTY_FIN_SERVICE.NS": "Nifty Financial Services"
+    "^CNXAUTO": "Nifty Auto"
+    "^CNXENERGY": "Nifty Energy"
+    "^CNXFMCG": "Nifty FMCG"
+    "^CNXINFRA": "Nifty Infrastructure"
+    "^CNXIT": "Nifty IT"
+    "^CNXMEDIA": "Nifty Media"
+    "^CNXMETAL": "Nifty Metal"
+    "^CNXPHARMA": "Nifty Pharma"
+    "^CNXREALTY": "Nifty Realty"
+
 benchmarks:
   nifty50: "^NSEI"
   nifty500: "^CRSLDX"

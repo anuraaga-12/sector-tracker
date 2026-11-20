@@ -20,7 +20,7 @@ NMDC,NMDC,MT_MINING,,,Pure-play,L,MFG,Iron ore mining,Steelmakers,H
 MOIL,MOIL,MT_MINING,,,Pure-play,N,MFG,Manganese ore,Ferro-alloy makers,H
 GMDCLTD,Gujarat Mineral Development Corporation,MT_MINING,PW_THERMAL,,Majority,N,MFG,Lignite and minerals (rare earths exploration),Industry,M
 GRAPHITE,Graphite India,MT_FERRO,,,Pure-play,E,MFG,Graphite electrodes,EAF steelmakers,H
-HEG,HEG,MT_FERRO,AU_EVCOMP,,Pure-play,E,MFG,Graphite electrodes; anode materials plans,EAF steelmakers,H
+HEGAM,HEG Advanced Material (formerly HEG),MT_FERRO,AU_EVCOMP,,Pure-play,E,MFG,Graphite electrodes; anode materials plans,EAF steelmakers,H
 MAITHANALL,Maithan Alloys,MT_FERRO,,,Pure-play,N,MFG,Manganese ferro alloys,Steelmakers,M
 VESUVIUS,Vesuvius India,MT_FERRO,,,Pure-play,N,MFG,Refractories and flow-control,Steelmakers,M
 RHIM,RHI Magnesita India,MT_FERRO,,,Pure-play,E,MFG,Refractories,Steel; cement,M

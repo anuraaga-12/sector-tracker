@@ -62,13 +62,78 @@ def refresh_prices(full: bool = False, symbols: list[str] | None = None, log=pri
         merged = merged.drop(columns=[c for c in refetch if c in merged.columns]).join(fullp, how="outer")
     cutoff = pd.Timestamp(start_full)
     merged = merged[merged.index >= cutoff]
-    store.write_wide(merged, config.PRICES_FILE)
+    if symbols is None:  # drop columns for symbols no longer in the universe (renamed / removed)
+        merged = merged[[c for c in merged.columns if c in set(syms)]]
     nb = yahoo.download_close(_bench_tickers(), start=start if not oldb.empty else start_full, log=log)
     mb, _ = store.merge_prices(oldb, nb)
+    merged, mb = fill_recent_from_nse(merged, mb, log=log)
+    store.write_wide(merged, config.PRICES_FILE)
     store.write_wide(mb[mb.index >= cutoff], config.BENCH_FILE)
     got = int(new.notna().any().sum())
     store.write_log("prices", "ok" if got else "error", f"{got}/{len(syms)} symbols returned data; last date {merged.index.max().date() if not merged.empty else 'n/a'}")
     log(f"Prices: {got}/{len(syms)} symbols updated.")
+
+
+def fill_recent_from_nse(close: pd.DataFrame, bench: pd.DataFrame, today: date | None = None,
+                         log=print) -> tuple[pd.DataFrame, pd.DataFrame]:
+    """Fill the last few days Yahoo has not posted yet with NSE's official closes.
+
+    Only empty cells are filled, so Yahoo's own (adjusted) values always win. Also logs tracked
+    symbols that are missing from NSE's latest bhavcopy — usually a renamed or delisted ticker."""
+    from .providers import nse
+    cfg = config.settings().get("nse") or {}
+    if not cfg.get("enabled", True) or close.empty:
+        return close, bench
+    names = {t: str(n).lower() for t, n in (cfg.get("index_names") or {}).items()}
+    today = today or date.today()
+    filled, latest_bhav = [], None
+    for back in range(int(cfg.get("fill_days", 7)), -1, -1):  # oldest first
+        d = today - timedelta(days=back)
+        ts = pd.Timestamp(d)
+        if d.weekday() >= 5:
+            continue
+        stock_gap = ts not in close.index or close.loc[ts].notna().mean() < 0.98
+        bench_gap = bool(names) and (ts not in bench.index or bench.loc[ts, [t for t in names if t in bench]].isna().any())
+        sc = nse.stock_closes(d) if (stock_gap or back <= 1) else pd.Series(dtype=float)
+        if not sc.empty:
+            latest_bhav = sc
+        if not stock_gap and not bench_gap:
+            continue
+        n_s = n_b = 0
+        if stock_gap and not sc.empty:
+            row = sc.reindex(close.columns)
+            if ts not in close.index:
+                close = close.reindex(close.index.union([ts]))
+            before = close.loc[ts].notna().sum()
+            close.loc[ts] = close.loc[ts].fillna(row)
+            n_s = int(close.loc[ts].notna().sum() - before)
+        if bench_gap:
+            ic = nse.index_closes(d)
+            if not ic.empty:
+                row = pd.Series({t: ic.get(n) for t, n in names.items()}, dtype=float)
+                cols = bench.columns.union(row.dropna().index)
+                bench = bench.reindex(index=bench.index.union([ts]), columns=cols)
+                before = bench.loc[ts].notna().sum()
+                bench.loc[ts] = bench.loc[ts].fillna(row.reindex(cols))
+                n_b = int(bench.loc[ts].notna().sum() - before)
+        if n_s or n_b:
+            filled.append(f"{d}: {n_s} stocks, {n_b} indices")
+    # a date that got no stock prices at all (e.g. only an index row) must not enter the calendar
+    close = close.dropna(how="all").sort_index()
+    bench = bench.dropna(how="all").sort_index()
+    if filled:
+        log("Filled from NSE official closes (Yahoo not posted yet): " + "; ".join(filled))
+    if latest_bhav is not None:
+        missing = sorted(set(close.columns) - set(latest_bhav.index))
+        store.write_log("nse_symbol_check", "ok" if not missing else "warning",
+                        f"{len(missing)} tracked symbols not in NSE's latest bhavcopy"
+                        + (f": {', '.join(missing)}" if missing else ""))
+        if missing:
+            log(f"WARNING: {len(missing)} symbols not traded on NSE in the latest session "
+                f"(renamed, suspended or delisted?): {', '.join(missing)}")
+    if filled:
+        store.write_log("nse_fill", "ok", "; ".join(filled))
+    return close, bench
 
 
 def refresh_quotes(symbols: list[str] | None = None, log=print) -> None:

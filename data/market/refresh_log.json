@@ -1,12 +1,22 @@
 {
   "prices": {
-    "last_refresh": "2026-11-20T20:30:22+00:00",
+    "last_refresh": "2026-11-20T20:53:15+00:00",
     "status": "ok",
-    "detail": "681/681 symbols returned data; last date 2026-11-19"
+    "detail": "681/681 symbols returned data; last date 2026-11-20"
   },
   "market_cap": {
-    "last_refresh": "2026-11-20T20:33:38+00:00",
+    "last_refresh": "2026-11-20T20:56:01+00:00",
     "status": "ok",
     "detail": "681/681 market caps"
+  },
+  "nse_symbol_check": {
+    "last_refresh": "2026-11-20T20:53:13+00:00",
+    "status": "ok",
+    "detail": "0 tracked symbols not in NSE's latest bhavcopy"
+  },
+  "nse_fill": {
+    "last_refresh": "2026-11-20T20:53:13+00:00",
+    "status": "ok",
+    "detail": "2026-11-16: 0 stocks, 1 indices; 2026-11-17: 0 stocks, 1 indices; 2026-11-18: 0 stocks, 1 indices; 2026-11-19: 0 stocks, 1 indices; 2026-11-20: 681 stocks, 12 indices"
   }
 }

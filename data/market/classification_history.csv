@@ -44,3 +44,9 @@ STRIDES,PH_USGEN,primary,removed,2026-11-21
 SUDARCOLOR,CH_DYES,primary,added,2026-11-21
 VIYASH,PH_ANIMAL,primary,added,2026-11-21
 VIYASH,PH_API,secondary,added,2026-11-21
+HEG,AU_EVCOMP,secondary,removed,2026-11-21
+HEG,MT_FERRO,primary,removed,2026-11-21
+HEGAM,AU_EVCOMP,secondary,added,2026-11-21
+HEGAM,MT_FERRO,primary,added,2026-11-21
+ICICILIFE,FS_LIFE,primary,added,2026-11-21
+ICICIPRULI,FS_LIFE,primary,removed,2026-11-21

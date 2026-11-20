@@ -48,7 +48,7 @@ TRACKER_DATA_MODE=demo streamlit run app.py
 1. Push this folder to a GitHub repo (public or private).
 2. In the repo: *Actions → refresh-data → Run workflow* with `task = weekly`. It downloads prices, shares and
    fundamentals, runs the tests, and force-pushes code + data to a `deploy` branch as one squashed commit (so daily
-   data never bloats history). It then runs automatically every weekday at 17:15 IST and Saturday morning.
+   data never bloats history). It then runs automatically every weekday at 19:00 and 22:30 IST and Saturday morning, filling the latest day from NSE's official closing files when Yahoo is late.
 3. On [share.streamlit.io](https://share.streamlit.io) → *Create app* → choose the repo, **branch `deploy`**, main file
    `app.py`, Python 3.12. Every data push triggers a redeploy; the app rebuilds its SQLite DB on start (~10 s).
 4. Optional: *App settings → Secrets* → `ADMIN_PASSWORD = "…"` to protect the in-app refresh button.
