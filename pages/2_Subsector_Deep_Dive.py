@@ -10,7 +10,7 @@ from dashboard import common as C
 from tracker import config
 
 C.setup("Sub-sector Deep Dive", "🔬")
-st.title("🔬 Sub-sector Deep Dive")
+C.hero("Sub-sector Deep Dive", "Industry profile, every listed company in the theme, breadth and peer comparison.", icon="🔬")
 
 subs = C.subsectors()
 ids = subs["subsector_id"].tolist()
@@ -151,7 +151,7 @@ with tab_p:
             if cfgb["nifty500"] in bench:
                 ser["Nifty 500"] = bench[cfgb["nifty500"]]
             st.plotly_chart(charts.rebased_lines({k_: v for k_, v in ser.items() if v is not None},
-                                                 f"{info['subsector_name']} vs Nifty 500", start))
+                                                 f"{info['subsector_name']} vs Nifty 500", start), theme=None)
         b1, b2 = st.columns(2)
         with b1:
             st.markdown("**Breadth**")
@@ -171,12 +171,12 @@ with tab_p:
         with b2:
             capm = pd.DataFrame({"Category": C.CAP_ORDER, "Median 3M": [p.get(f"med_3m_{c.lower()}") for c in C.CAP_ORDER]})
             capm["Median 3M"] = capm["Median 3M"] * 100
-            st.plotly_chart(charts.bar(capm, "Median 3M", "Category", "Median 3M return by market-cap category", height=260))
+            st.plotly_chart(charts.bar(capm, "Median 3M", "Category", "Median 3M return by market-cap category", height=260), theme=None)
             labels = {"c_relative": "Relative performance", "c_absolute": "Absolute performance",
                       "c_consistency": "Consistency across periods", "c_breadth": "Breadth (% beating N500)",
                       "c_ma_breadth": "% above moving averages"}
             if pd.notna(p.get("momentum_score")):
-                st.plotly_chart(charts.components_bar(p, labels))
+                st.plotly_chart(charts.components_bar(p, labels), theme=None)
         per = st.radio("Constituent returns", ["1M", "3M", "6M", "1Y"], index=1, horizontal=True)
         col = f"return_{per.lower()}"
         perf_m = members[members["classification_type"] != "indirect"][["company_name", col, "market_cap_category"]].dropna(subset=[col])
@@ -184,7 +184,7 @@ with tab_p:
         perf_m["market_cap_category"] = perf_m["market_cap_category"].fillna("Unknown")
         st.plotly_chart(charts.bar(perf_m.sort_values(col, ascending=False), col, "company_name",
                                    f"{per} return by constituent (colour = market-cap category)", color="market_cap_category",
-                                   color_map=C.CAP_COLORS))
+                                   color_map=C.CAP_COLORS), theme=None)
 
 # --------------------------------------------------------------------------- peers
 with tab_f:
@@ -213,7 +213,7 @@ with tab_f:
     if not f.empty and peers["roce"].notna().sum() >= 3:
         sc = peers.assign(roce_pct=peers["roce"] * 100)
         st.plotly_chart(charts.scatter(sc, "roce_pct", "pe", "market_cap_cr", "nse_symbol", "market_cap_category",
-                                       "ROCE (%) vs P/E · bubble = market cap", C.CAP_COLORS))
+                                       "ROCE (%) vs P/E · bubble = market cap", C.CAP_COLORS), theme=None)
 
 # --------------------------------------------------------------------------- value chain
 with tab_v:

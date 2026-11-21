@@ -10,14 +10,20 @@ from tracker import config
 from tracker.analytics import series_return
 
 C.setup("Market Overview", "🧭")
-st.title("🧭 Indian Equity Sector & Sub-sector Tracker")
-st.caption("Which sectors and granular themes are leading the Indian market — and is the move broad-based? "
-           + C.DISCLAIMER)
 
 sec = C.perf("sector")
 sub = C.perf("subsector")
 cls = C.classifications()
 comp = C.companies()
+
+_n_lead = int((sec["xs500_1m"] > 0).sum()) if "xs500_1m" in sec else 0
+C.hero("Indian Equity Sector Tracker",
+       "Which sectors and granular themes are leading the Indian market — and is the move broad-based?",
+       icon="🧭", disclaimer=True,
+       chips=[(f"📅 Data as of {C._fmt_date(C.as_of())}", "v"),
+              (f"🏭 {C.sectors().shape[0]} sectors · {C.subsectors().shape[0]} themes", ""),
+              (f"🏢 {comp['nse_symbol'].nunique()} NSE companies", ""),
+              (f"▲ {_n_lead} sectors beating Nifty 500 (1M)", "g")])
 
 if sec.empty or sec["ew_1m"].isna().all():
     st.warning("No price data yet. Run `python -m tracker.refresh daily` (or the scheduled GitHub Action) to "
@@ -27,8 +33,8 @@ if sec.empty or sec["ew_1m"].isna().all():
 k = st.columns(6)
 k[0].metric("Sectors", C.sectors().shape[0])
 k[1].metric("Sub-sectors", C.subsectors().shape[0])
-k[2].metric("Unique companies", comp["nse_symbol"].nunique())
-k[3].metric("With price data", int(comp["last_price_date"].notna().sum()))
+k[2].metric("Companies", comp["nse_symbol"].nunique())
+k[3].metric("With prices", int(comp["last_price_date"].notna().sum()))
 bench = C.benchmarks()
 cfgb = config.settings()["benchmarks"]
 for i, (lab, t) in enumerate((("Nifty 50 · 3M", cfgb["nifty50"]), ("Nifty 500 · 3M", cfgb["nifty500"]))):
@@ -48,31 +54,30 @@ def _flagged(df, flag):
 
 
 # --------------------------------------------------------------------------- headline lists
-c1, c2, c3, c4 = st.columns(4)
-with c1:
-    st.markdown("**Leading sectors**")
-    for r in ranked_sec.head(5).itertuples():
-        st.markdown(f"{int(r.rank)}. {r.name} · <span class='small'>score {r.momentum_score:.0f} · 3M {C.pct(r.ew_3m)}</span>",
-                    unsafe_allow_html=True)
-with c2:
-    st.markdown("**Leading sub-sectors**")
-    for r in ranked_sub.head(5).itertuples():
-        st.markdown(f"{int(r.rank)}. {r.name} · <span class='small'>{r.sector_name} · 3M {C.pct(r.ew_3m)}</span>",
-                    unsafe_allow_html=True)
-with c3:
-    st.markdown("**Weakening**")
-    w = _flagged(ranked_sub, "Weakening momentum").sort_values("momentum_score").head(5)
-    if w.empty:
-        st.caption("No sub-sector lost ≥ the configured score drop over 1M.")
-    for r in w.itertuples():
-        st.markdown(f"▼ {r.name} · <span class='small'>score {r.momentum_score:.0f}</span>", unsafe_allow_html=True)
-with c4:
-    st.markdown("**Emerging momentum**")
-    e = pd.concat([_flagged(ranked_sub, "Early strength"), _flagged(ranked_sub, "Small caps leading")]).drop_duplicates("entity_id")
-    if e.empty:
-        st.caption("No early-strength or small-cap-led themes flagged right now.")
-    for r in e.head(5).itertuples():
-        st.markdown(f"▲ {r.name} · <span class='small'>{r.flags.replace('|', ', ')}</span>", unsafe_allow_html=True)
+w = _flagged(ranked_sub, "Weakening momentum").sort_values("momentum_score").head(5)
+e = pd.concat([_flagged(ranked_sub, "Early strength"), _flagged(ranked_sub, "Small caps leading")]).drop_duplicates("entity_id")
+cards = [
+    C.list_card("Leading sectors · 3M", [
+        {"rank": int(r.rank), "name": r.name, "sub": f"Momentum score {r.momentum_score:.0f}",
+         "value": C.pct(r.ew_3m), "tone": C.tone(r.ew_3m)} for r in ranked_sec.head(5).itertuples()],
+        icon="🏆", accent="v"),
+    C.list_card("Leading sub-sectors · 3M", [
+        {"rank": int(r.rank), "name": r.name, "sub": r.sector_name,
+         "value": C.pct(r.ew_3m), "tone": C.tone(r.ew_3m)} for r in ranked_sub.head(5).itertuples()],
+        icon="🚀", accent="g"),
+    C.list_card("Weakening · 1M", [
+        {"rank": "▼", "name": r.name, "sub": f"{r.sector_name} · score {r.momentum_score:.0f}",
+         "value": C.pct(r.ew_1m), "tone": C.tone(r.ew_1m)} for r in w.itertuples()],
+        icon="📉", accent="r", empty="No sub-sector lost ≥ the configured score drop over 1M."),
+    C.list_card("Emerging momentum · 1M", [
+        {"rank": "▲", "name": r.name, "sub": r.flags.replace("|", " · "),
+         "value": C.pct(r.ew_1m), "tone": C.tone(r.ew_1m)} for r in e.head(5).itertuples()],
+        icon="🌱", accent="a", empty="No early-strength or small-cap-led themes flagged right now."),
+]
+for pair in (cards[:2], cards[2:]):
+    for col, html in zip(st.columns(2, gap="medium"), pair):
+        col.markdown(html, unsafe_allow_html=True)
+    st.markdown("<div style='height:6px'></div>", unsafe_allow_html=True)
 
 st.divider()
 
@@ -95,7 +100,7 @@ if rel == "Excess vs Nifty 500":
 hm.columns = [C.PERIOD_LABEL[p] for p in periods]
 order = sec.set_index("name")["momentum_score"].sort_values(ascending=False).index
 hm = (hm.reindex(order) * 100)
-st.plotly_chart(charts.heatmap(hm, title=f"{basis} · {rel.lower()} (sorted by momentum score)"))
+st.plotly_chart(charts.heatmap(hm, title=f"{basis} · {rel.lower()} (sorted by momentum score)"), theme=None)
 
 # --------------------------------------------------------------------------- tables
 pc = ["ew_1w", "ew_1m", "ew_3m", "ew_6m", "ew_1y", "xs500_1m", "xs500_3m", "xs500_6m", "med_3m",

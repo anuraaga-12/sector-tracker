@@ -15,7 +15,15 @@ class Figure:
         return self
 
     update_layout = update_xaxes = update_yaxes = update_traces = add_shape = add_annotation = _noop
+    add_vline = add_hline = _noop
 
 
 def __getattr__(name):  # go.Scatter, go.Bar, go.Heatmap, go.Candlestick, …
     return _Trace
+
+
+class _Layout:
+    Template = _Trace
+
+
+layout = _Layout()

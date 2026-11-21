@@ -10,7 +10,7 @@ from dashboard import common as C
 from tracker import config, quality, store
 
 C.setup("Data Quality", "🧪")
-st.title("🧪 Data Quality & Coverage")
+C.hero("Data Quality & Coverage", "Missing or stale data and low-confidence classifications — the gaps to know about.", icon="🧪")
 
 rep = quality.report()
 fresh = C.freshness()

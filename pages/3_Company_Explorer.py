@@ -9,7 +9,7 @@ from dashboard import common as C
 from tracker import config
 
 C.setup("Company Explorer", "🏢")
-st.title("🏢 Company Explorer")
+C.hero("Company Explorer", "Screener-style view: price chart, key ratios, results and where the company sits in its sector.", icon="🏢")
 
 comp = C.companies()
 cls = C.classifications()
@@ -137,7 +137,7 @@ else:
     dmas = tuple(int(o.split()[0]) for o in overlay if "DMA" in o)
     fig = charts.price_chart(ohlc, sym, kind=kind, dmas=dmas, volume="Volume" in overlay and "Volume" in ohlc,
                              compare=cmp, start=start, log_scale=log_scale)
-    st.plotly_chart(fig)
+    st.plotly_chart(fig, theme=None)
     st.caption(f"{source_note}. Moving averages are computed on the full history before windowing.")
 
 # --------------------------------------------------------------------------- returns
@@ -161,9 +161,9 @@ stm = live_statements(config.yahoo_ticker(sym))
 if stm:
     fc1, fc2 = st.columns(2)
     if "quarterly" in stm:
-        fc1.plotly_chart(charts.financial_bars(stm["quarterly"].tail(8), "Quarterly (₹ crore)"))
+        fc1.plotly_chart(charts.financial_bars(stm["quarterly"].tail(8), "Quarterly (₹ crore)"), theme=None)
     if "annual" in stm:
-        fc2.plotly_chart(charts.financial_bars(stm["annual"].tail(5), "Annual (₹ crore)"))
+        fc2.plotly_chart(charts.financial_bars(stm["annual"].tail(5), "Annual (₹ crore)"), theme=None)
     st.caption("Source: Yahoo Finance statements via yfinance (unofficial; consolidated where available). "
                "Cross-check with exchange filings / Screener before relying on figures.")
 else:

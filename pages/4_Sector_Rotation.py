@@ -10,9 +10,8 @@ from dashboard import common as C
 from tracker import analytics, config
 
 C.setup("Sector Rotation", "🔄")
-st.title("🔄 Sector Rotation")
-st.caption("Momentum scores rank past price behaviour relative to peers. They are descriptive, not predictive, and are "
-           "not investment recommendations.")
+C.hero("Sector Rotation", "Momentum scores rank past price behaviour relative to peers. They are descriptive, not predictive, "
+       "and are not investment recommendations.", icon="🔄")
 
 cfg = config.settings()
 top = st.columns([2, 2, 3])
@@ -74,26 +73,43 @@ if seg != "All":
     now["lens"] = now[f"med_3m_{seg.lower()}"] * 100
 
 # --------------------------------------------------------------------------- narrative boxes
-b = st.columns(4)
 lead_now = now.sort_values("score", ascending=False).head(5)
 lead_3m = now.sort_values("rank_3m_ago").head(5)
 losing = now[now["d_score_1m"] <= -cfg["rotation"]["improving_score_delta"]].sort_values("d_score_1m").head(5)
 early = now[(now["rank_3m_ago"] > len(now) / 2) & (now["d_score_1m"] > 0) & (now["xs500_1m"] > 0)].sort_values(
     "d_score_1m", ascending=False).head(5)
-for col, title, df, fmt in ((b[0], "Leading 3 months ago", lead_3m, lambda r: f"#{int(r.rank_3m_ago)} then → #{int(r.rank_now)} now"),
-                            (b[1], "Leading now", lead_now, lambda r: f"score {r.score:.0f}"),
-                            (b[2], "Losing momentum", losing, lambda r: f"Δ score {r.d_score_1m:+.0f}"),
-                            (b[3], "Early signs of strength", early, lambda r: f"was #{int(r.rank_3m_ago)}")):
-    with col:
-        st.markdown(f"**{title}**")
-        if df.empty:
-            st.caption("None flagged.")
-        for r in df.itertuples():
-            try:
-                extra = fmt(r)
-            except (ValueError, TypeError):  # NaN rank (e.g. group not eligible 3M ago)
-                extra = ""
-            st.markdown(f"- {r.name} <span class='small'>· {extra}</span>", unsafe_allow_html=True)
+
+
+def _safe(f, r):
+    try:
+        return f(r)
+    except (ValueError, TypeError):  # NaN rank (e.g. group not eligible 3M ago)
+        return ""
+
+
+def _rows(df, rank, sub, value, tone):
+    return [{"rank": _safe(rank, r), "name": r.name, "sub": _safe(sub, r), "value": _safe(value, r), "tone": _safe(tone, r)}
+            for r in df.itertuples()]
+
+
+cards = [
+    C.list_card("Leading 3 months ago", _rows(lead_3m, lambda r: int(r.rank_3m_ago), lambda r: f"#{int(r.rank_3m_ago)} then → #{int(r.rank_now)} now",
+                                              lambda r: f"now #{int(r.rank_now)}", lambda r: "up" if r.rank_now <= r.rank_3m_ago else "dn"),
+                icon="⏪", accent="v", empty="None flagged."),
+    C.list_card("Leading now", _rows(lead_now, lambda r: int(r.rank_now), lambda r: f"Momentum score {r.score:.0f}",
+                                     lambda r: f"{r.score:.0f}", lambda r: "up"),
+                icon="🏆", accent="g", empty="None flagged."),
+    C.list_card("Losing momentum", _rows(losing, lambda r: "▼", lambda r: f"Score {r.score:.0f} (1M ago {r.score_1m_ago:.0f})",
+                                         lambda r: f"Δ {r.d_score_1m:+.0f}", lambda r: "dn"),
+                icon="📉", accent="r", empty="None flagged."),
+    C.list_card("Early signs of strength", _rows(early, lambda r: "▲", lambda r: f"Was #{int(r.rank_3m_ago)} three months ago",
+                                                 lambda r: f"Δ {r.d_score_1m:+.0f}", lambda r: "up"),
+                icon="🌱", accent="a", empty="None flagged."),
+]
+for pair in (cards[:2], cards[2:]):
+    for col, html in zip(st.columns(2, gap="medium"), pair):
+        col.markdown(html, unsafe_allow_html=True)
+    st.markdown("<div style='height:6px'></div>", unsafe_allow_html=True)
 
 # --------------------------------------------------------------------------- leaderboard
 st.subheader("Leaderboard")
@@ -142,7 +158,7 @@ else:
         tails.append(tl.assign(name=nm))
     if pts:
         st.plotly_chart(charts.rrg(pd.DataFrame(pts), pd.concat(tails) if tails else None,
-                                   "Equal-weighted index vs Nifty 500 (simplified RRG; tails = last ~6 weeks)"))
+                                   "Equal-weighted index vs Nifty 500 (simplified RRG; tails = last ~6 weeks)"), theme=None)
         st.caption("x > 100: outperforming Nifty 500 over the trailing ~3 months; y > 100: that relative strength is rising. "
                    "Groups typically rotate clockwise Improving → Leading → Weakening → Lagging, but not always.")
 
@@ -161,12 +177,12 @@ else:
     pv = sn[sn["entity_id"].isin(pick)].pivot_table(index="calculation_date", columns="entity_id", values="performance_rank")
     pv.index = pd.to_datetime(pv.index)
     pv = pv.rename(columns=names)
-    st.plotly_chart(charts.rank_lines(pv, "Momentum rank (default weights) — lower is stronger"))
+    st.plotly_chart(charts.rank_lines(pv, "Momentum rank (default weights) — lower is stronger"), theme=None)
     hm = sn.pivot_table(index="entity_id", columns="calculation_date", values="momentum_score")
     hm = hm.reindex([e for e in lb["entity_id"] if e in hm.index]).rename(index=names)
     hm.columns = [pd.to_datetime(c).strftime("%b-%y") for c in hm.columns]
     hm = hm.T.groupby(level=0, sort=False).last().T  # one column per month label
-    st.plotly_chart(charts.heatmap(hm.iloc[:40, -18:], "Momentum score by month (0-100)", zmid=50, fmt="{:.0f}"))
+    st.plotly_chart(charts.heatmap(hm.iloc[:40, -18:], "Momentum score by month (0-100)", zmid=50, fmt="{:.0f}"), theme=None)
 
 # --------------------------------------------------------------------------- breadth & participation
 st.subheader("Breadth & participation")
@@ -177,8 +193,8 @@ hh = hh.set_index("date").sort_index()
 c1, c2 = st.columns(2)
 c1.plotly_chart(charts.lines(hh[["pct_above_50dma", "pct_above_200dma", "pct_outperf_3m"]].rename(columns={
     "pct_above_50dma": "% above 50-DMA", "pct_above_200dma": "% above 200-DMA", "pct_outperf_3m": "% beating N500 (3M)"}),
-    f"Breadth trend — {names[focus]}", "%"))
+    "Breadth trend", "%"), theme=None)
 cap = hh[[f"med_3m_{c.lower()}" for c in C.CAP_ORDER]] * 100
 cap.columns = [f"{c} median 3M" for c in C.CAP_ORDER]
-c2.plotly_chart(charts.lines(cap, f"Large vs small participation — {names[focus]}", "%"))
+c2.plotly_chart(charts.lines(cap, "Large vs small caps · median 3M return", "%"), theme=None)
 st.caption("Month-end points reconstructed from price history. Large/Mid/Small/Micro use the current market-cap category.")

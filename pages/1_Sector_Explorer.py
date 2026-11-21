@@ -9,7 +9,7 @@ from dashboard import common as C
 from tracker import config
 
 C.setup("Sector Explorer", "🏭")
-st.title("🏭 Sector Explorer")
+C.hero("Sector Explorer", "What each industry does, how its themes are performing, and how broad the move is.", icon="🏭")
 
 secs = C.sectors()
 ids = secs["sector_id"].tolist()
@@ -71,13 +71,13 @@ st.caption("Returns are equal-weighted sub-sector indices of primary + secondary
 c1, c2 = st.columns(2)
 with c1:
     b = tbl[["subsector_name", "ew_3m"]].assign(ew_3m=tbl["ew_3m"] * 100)
-    st.plotly_chart(charts.bar(b, "ew_3m", "subsector_name", title="3M equal-weighted return"))
+    st.plotly_chart(charts.bar(b, "ew_3m", "subsector_name", title="3M equal-weighted return"), theme=None)
 with c2:
     pv = caps.pivot_table(index="subsector_id", columns="market_cap_category", values="company_id", aggfunc="nunique", fill_value=0)
     pv = pv.reindex(columns=[c for c in C.CAP_ORDER + ["Unknown"] if c in pv.columns])
     pv.index = pv.index.map(subs.set_index("subsector_id")["subsector_name"])
     pv = pv.reindex([n for n in tbl["subsector_name"] if n in pv.index])
-    st.plotly_chart(charts.stacked_caps(pv, "subsector", "Market-cap distribution (company count)", C.CAP_COLORS))
+    st.plotly_chart(charts.stacked_caps(pv, "subsector", "Market-cap distribution (company count)", C.CAP_COLORS), theme=None)
 
 st.subheader("Structural growth drivers & key risks")
 drv, rsk = {}, {}
@@ -109,7 +109,7 @@ if not idx.empty:
         series["Nifty 500"] = bench[n500]
     if pd.notna(s["benchmark"]) and s["benchmark"] in bench and s["benchmark"] != n500:
         series[f"Sector index ({s['benchmark']})"] = bench[s["benchmark"]]
-    st.plotly_chart(charts.rebased_lines({k: v for k, v in series.items() if v is not None}, f"{s['sector_name']} vs benchmarks", start))
+    st.plotly_chart(charts.rebased_lines({k: v for k, v in series.items() if v is not None}, f"{s['sector_name']} vs benchmarks", start), theme=None)
 
 st.markdown("#### Drill down")
 opts = tbl["subsector_id"].tolist()

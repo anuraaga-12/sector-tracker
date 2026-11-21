@@ -44,7 +44,7 @@ def _record(name):
 
 for _n in ("set_page_config", "markdown", "title", "header", "subheader", "caption", "write", "info", "warning",
            "error", "success", "divider", "code", "metric", "dataframe", "plotly_chart", "download_button",
-           "json", "table", "latex", "toast", "balloons", "image"):
+           "json", "table", "latex", "toast", "balloons", "image", "page_link", "html"):
     globals()[_n] = _record(_n)
 
 

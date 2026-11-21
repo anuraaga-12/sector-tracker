@@ -8,7 +8,7 @@ from dashboard import common as C
 from tracker import config
 
 C.setup("Methodology", "📐")
-st.title("📐 Methodology")
+C.hero("Methodology", "How companies are classified and how returns, breadth and momentum are calculated.", icon="📐")
 
 st.markdown("""
 ### Classification
