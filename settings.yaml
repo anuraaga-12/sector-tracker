@@ -87,6 +87,9 @@ funds:
         146130: Canara Robeco Small Cap
         120591: ICICI Pru Smallcap
         118525: Franklin India Small Cap
+        145137: Invesco India Small Cap
+        153912: Helios Small Cap
+        154063: Groww Small Cap
     Mid cap:
       benchmark: {code: 147622, name: "Nifty Midcap 150 (index fund)"}
       funds:
@@ -102,6 +105,8 @@ funds:
         120381: ICICI Pru Midcap
         118533: Franklin India Mid Cap
         120726: UTI Mid Cap
+        150584: WhiteOak Capital Mid Cap
+        153326: Helios Mid Cap
     Flexi cap:
       benchmark: {code: 147625, name: "Nifty 500 (index fund)"}
       funds:
@@ -117,3 +122,6 @@ funds:
         119076: DSP Flexi Cap
         120843: Quant Flexi Cap
         120492: JM Flexicap
+        149763: Invesco India Flexi Cap
+        150346: WhiteOak Capital Flexi Cap
+        152135: Helios Flexi Cap

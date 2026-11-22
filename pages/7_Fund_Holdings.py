@@ -79,7 +79,7 @@ with tab_perf:
     tbl = C.as_pct_cols(tbl.reset_index(drop=True), list(F.NAV_PERIODS))
     st.dataframe(
         tbl[["name", "aum_cr", "nav", *F.NAV_PERIODS, "n_stocks", "top10", "cash"]], hide_index=True,
-        height=min(560, 36 * len(tbl) + 40),
+        height=36 * len(tbl) + 40,
         column_config={"name": st.column_config.TextColumn("Fund", width="medium"),
                        "aum_cr": st.column_config.NumberColumn("AUM ₹ cr", format="%,.0f",
                                                                help="Month-end portfolio value from the latest disclosure."),
