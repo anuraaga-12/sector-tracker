@@ -31,10 +31,12 @@ NAV = [  # (key, label, icon) — drawn in the sidebar by setup()
     ("subsector", "Sub-sector Deep Dive", ":material/troubleshoot:"),
     ("company", "Company Explorer", ":material/domain:"),
     ("rotation", "Sector Rotation", ":material/autorenew:"),
+    ("funds", "Fund Holdings", ":material/account_balance:"),
     ("quality", "Data Quality", ":material/fact_check:"),
     ("methodology", "Methodology", ":material/menu_book:"),
 ]
 PAGES["methodology"] = "pages/6_Methodology.py"
+PAGES["funds"] = "pages/7_Fund_Holdings.py"
 
 # Soft pastel light theme. Colours mirror .streamlit/config.toml and dashboard/charts.py.
 CSS = """
@@ -182,7 +184,7 @@ def _fmt_date(d) -> str:
 def sidebar_status() -> None:
     log = freshness()
     labels = [("prices", "Prices"), ("market_cap", "Market caps"), ("fundamentals", "Fundamentals"),
-              ("database_build", "Last build")]
+              ("funds", "Fund data"), ("database_build", "Last build")]
     rows = []
     for key, lab in labels:
         row = log.get(key)
@@ -321,6 +323,24 @@ def prices() -> pd.DataFrame:
 
 def benchmarks() -> pd.DataFrame:
     return _wide(str(config.BENCH_FILE), db_version())
+
+
+@st.cache_data(ttl=3600, show_spinner=False)
+def _mf(version: tuple) -> dict:
+    from tracker import funds as F
+    hold = store.read_table(config.MF_HOLDINGS_FILE)
+    if not hold.empty:
+        hold["amfi"] = hold["amfi"].astype(str)
+    meta = (pd.read_csv(config.MF_FUNDS_FILE, dtype=str, keep_default_na=False)
+            if config.MF_FUNDS_FILE.exists() else F.fund_list())
+    return {"funds": meta, "nav": store.read_wide(config.MF_NAV_FILE), "holdings": hold,
+            "ref": store.read_table(config.ISIN_FILE)}
+
+
+def mf_data() -> dict:
+    """Mutual-fund files (cached; reloaded whenever the refresh rewrites them)."""
+    files = (config.MF_FUNDS_FILE, config.MF_NAV_FILE, config.MF_HOLDINGS_FILE, config.ISIN_FILE)
+    return _mf(tuple(p.stat().st_mtime if p.exists() else 0.0 for p in files))
 
 
 # ----------------------------------------------------------------------------- formatting

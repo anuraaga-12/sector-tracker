@@ -90,17 +90,24 @@ def bar(df: pd.DataFrame, x: str, y: str, title: str = "", color: str | None = N
     return fig
 
 
-def rebased_lines(series: dict[str, pd.Series], title: str = "", start: pd.Timestamp | None = None) -> go.Figure:
+def rebased_lines(series: dict[str, pd.Series], title: str = "", start: pd.Timestamp | None = None,
+                  reference: str | None = None) -> go.Figure:
+    """Rebased lines. ``reference`` names a benchmark series drawn as a dashed ink line (outside the colour order)."""
     fig = go.Figure()
-    for i, (name, s) in enumerate(series.items()):
+    i = 0
+    for name, s in series.items():
         s = s.dropna()
         if start is not None:
             s = s[s.index >= start]
         if s.empty:
             continue
         s = s / s.iloc[0] * 100
-        fig.add_trace(go.Scatter(x=s.index, y=s.values, name=name, mode="lines",
-                                 line=dict(width=2.4 if i == 0 else 1.8, color=SERIES[i % len(SERIES)])))
+        if name == reference:
+            line = dict(width=2, color=INK2, dash="dash")
+        else:
+            line = dict(width=2.4 if i == 0 and reference is None else 2, color=SERIES[i % len(SERIES)])
+            i += 1
+        fig.add_trace(go.Scatter(x=s.index, y=s.values, name=name, mode="lines", line=line))
     fig.update_layout(**LAYOUT, height=400, yaxis_title="Rebased = 100")
     return _title_legend(fig, title)
 
@@ -249,4 +256,47 @@ def stacked_caps(df: pd.DataFrame, x: str, title: str, colors: dict) -> go.Figur
                       title=dict(text=f"{title}<br><span style='font-size:12px;color:{INK2};font-weight:400'>{key}</span>",
                                  y=0.965, yanchor="top"))
     fig.update_yaxes(autorange="reversed", showgrid=False, tickfont=dict(color=INK2))
+    return fig
+
+
+def hbar(df: pd.DataFrame, x: str, y: str, title: str = "", color: str = VIOLET, suffix: str = "%",
+         digits: int = 1) -> go.Figure:
+    """Single-series horizontal bars (one hue), value labels at the bar ends."""
+    d = df.dropna(subset=[x])
+    fig = go.Figure(go.Bar(x=d[x], y=d[y], orientation="h", marker_color=color, marker_line_width=0,
+                           text=[f"{v:.{digits}f}{suffix}" for v in d[x]], textposition="outside",
+                           textfont=dict(color=INK2, size=11), cliponaxis=False,
+                           hovertemplate="<b>%{y}</b><br>%{x:." + str(digits) + "f}" + suffix + "<extra></extra>"))
+    fig.update_layout(**_closest(margin=dict(l=12, r=40, t=48 if title else 12, b=12)), title=title,
+                      height=max(260, 26 * len(d) + 80), showlegend=False)
+    fig.update_yaxes(autorange="reversed", showgrid=False, tickfont=dict(color=INK2))
+    fig.update_xaxes(ticksuffix=suffix, title=None)
+    return fig
+
+
+def returns_vs_bench(df: pd.DataFrame, x: str, y: str, bench: float | None, bench_name: str, title: str = "") -> go.Figure:
+    """Fund returns as bars coloured by whether they beat the benchmark (dashed line), each bar labelled."""
+    d = df.dropna(subset=[x]).sort_values(x, ascending=False)
+    has_b = bench is not None and np.isfinite(bench)
+    beat = d[x] >= (bench if has_b else -np.inf)
+    fig = go.Figure()
+    for flag, lab, colr in ((True, "Beat the index", UP), (False, "Trailed the index", DOWN)):
+        part = d[beat == flag]
+        if part.empty:
+            continue
+        fig.add_trace(go.Bar(x=part[x], y=part[y], orientation="h", name=lab, marker_color=colr, marker_line_width=0,
+                             text=[f"{v:+.1f}%" for v in part[x]], textposition="outside", cliponaxis=False,
+                             textfont=dict(color=INK2, size=11),
+                             hovertemplate="<b>%{y}</b><br>%{x:+.1f}%<extra></extra>"))
+    lo, hi = min(0.0, d[x].min(), bench if has_b else 0), max(0.0, d[x].max(), bench if has_b else 0)
+    pad = (hi - lo) * 0.3 or 1
+    if has_b:
+        fig.add_shape(type="line", x0=bench, x1=bench, y0=0, y1=1, yref="paper", line=dict(color=INK2, width=1.5, dash="dash"))
+        fig.add_trace(go.Scatter(x=[None], y=[None], mode="lines", name=f"{bench_name} {bench:+.1f}%",
+                                 line=dict(color=INK2, width=1.5, dash="dash")))
+    fig.update_layout(**_closest(), height=max(300, 28 * len(d) + 120), barmode="overlay")
+    _title_legend(fig, title)
+    fig.update_yaxes(autorange="reversed", showgrid=False, tickfont=dict(color=INK2), categoryorder="array",
+                     categoryarray=list(d[y]))
+    fig.update_xaxes(ticksuffix="%", zeroline=True, zerolinecolor=AXIS, range=[lo - (pad if lo < 0 else 0), hi + pad])
     return fig

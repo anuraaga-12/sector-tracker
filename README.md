@@ -14,7 +14,7 @@ micro) participate in each theme. Built with Python · Streamlit · Plotly · pa
 | Sub-sectors | **192**, each with what-it-does, value-chain position, customers, inputs, economics, barriers, structural drivers, structural-vs-cyclical note, risks and 11 attractiveness ratings |
 | Companies | **683** unique NSE mainboard symbols |
 | Mappings | **1,289** (683 primary · 563 secondary · 43 indirect), each with exposure band, confidence and source |
-| Pages | Market Overview · Sector Explorer · Sub-sector Deep Dive · Company Explorer (Screener-style chart) · Sector Rotation · Data Quality · Methodology |
+| Pages | Market Overview · Sector Explorer · Sub-sector Deep Dive · Company Explorer (Screener-style chart) · Sector Rotation · Fund Holdings · Data Quality · Methodology |
 
 ### Pages
 * **Market Overview** – KPIs, leading / weakening / emerging themes, sector heatmap (EW / median / cap-weighted, absolute or vs Nifty 500), top-10 tables, improving breadth, narrow leadership.
@@ -22,6 +22,7 @@ micro) participate in each theme. Built with Python · Streamlit · Plotly · pa
 * **Sub-sector Deep Dive** – industry profile & attractiveness, full company universe (filter by exposure / cap / confidence, pure-play vs diversified), returns (EW, cap-weighted, median, vs N500/N50), breadth, performance by cap bucket, score components, peer fundamentals table + ROCE-vs-P/E chart, value-chain map.
 * **Company Explorer** – Screener-like page: key ratios grid, **candlestick / line chart with 20/50/200-DMA, volume, log scale, period buttons, compare vs Nifty 500 / sub-sector index / peers**, returns vs benchmarks, quarterly & annual financial charts, classification evidence, peers, links to Screener / NSE / TradingView.
 * **Sector Rotation** – live-reweightable momentum leaderboard with rank 1M / 3M ago, RRG-style rotation map, rank history, monthly score heatmap, breadth trend, large-vs-small participation.
+* **Fund Holdings** – the 12 largest small, mid and flexi cap funds each (list in `settings.yaml`): returns vs a category index fund, growth-of-₹100 chart, each fund's full latest portfolio with month-on-month activity (new / added / trimmed / exited, split-adjusted), portfolio mix and industries, and category-wide most-bought / most-sold / most-widely-held stocks.
 * **Data Quality** – freshness timestamps, missing / stale prices, missing market cap / fundamentals, low-confidence and unverified mappings, thin sub-sectors, duplicates, classification change log, CSV export / import, guarded refresh button.
 
 ## Quick start (local)
@@ -61,6 +62,7 @@ docker run -p 8501:8501 tracker`). Point the host at the `deploy` branch, or run
 | Command | What it does |
 |---|---|
 | `python -m tracker.refresh daily` | Incremental prices (auto full re-download for new names / split-adjustment changes) → rebuild → record snapshot |
+| `python -m tracker.refresh funds` | Mutual-fund NAVs + any new monthly holdings disclosures (also part of `daily`) |
 | `python -m tracker.refresh weekly` | daily + shares outstanding + fundamentals for names older than 30 days |
 | `python -m tracker.refresh prices --full` | Re-download full price history |
 | `python -m tracker.refresh amfi AMFI.xlsx` | Import AMFI's half-yearly categorisation (replaces indicative thresholds) |
@@ -99,5 +101,7 @@ Run `python -m pytest tests/test_seed_and_mcap.py` after edits — it validates 
   and the classification change log start accumulating from your first deployment.
 * Sector benchmark tickers on Yahoo may be missing for some indices; such sectors fall back to Nifty 500 only.
 * Nothing is live: everything is end-of-day.
+* **Fund holdings are monthly** (SEBI disclosure, published ~10 days after month-end) and come via a third-party open
+  archive that parses the fund houses' files; activity is inferred from share-count changes.
 
 See `docs/` for architecture, schema and data-source details.

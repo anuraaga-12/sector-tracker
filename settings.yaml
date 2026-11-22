@@ -63,3 +63,57 @@ rotation:
   breadth_improve_pp: 15       # change in % above 50-DMA vs 1M ago counted as improving breadth
   narrow_gap_pp: 10            # cap-weighted minus median 3M return to flag "narrow leadership"
   small_vs_large_pp: 5         # small/micro median minus large/mid median (3M) to flag "small caps leading"
+
+funds:
+  # Mutual-fund page: daily NAVs (mfapi.in / AMFI) and monthly portfolio holdings (fund houses'
+  # SEBI monthly disclosures, via the open fund-holdings-data archive). Codes are AMFI scheme codes
+  # of the Direct-Growth plan — find others at https://api.mfapi.in/mf/search?q=<name>.
+  enabled: true
+  months: 6                    # monthly holdings disclosures to keep (for month-on-month changes)
+  nav_years: 6                 # NAV history to keep
+  categories:
+    Small cap:
+      benchmark: {code: 147623, name: "Nifty Smallcap 250 (index fund)"}
+      funds:
+        118778: Nippon India Small Cap
+        125497: SBI Small Cap
+        130503: HDFC Small Cap
+        120828: Quant Small Cap
+        125354: Axis Small Cap
+        120164: Kotak Small Cap
+        119212: DSP Small Cap
+        145206: Tata Small Cap
+        147946: Bandhan Small Cap
+        146130: Canara Robeco Small Cap
+        120591: ICICI Pru Smallcap
+        118525: Franklin India Small Cap
+    Mid cap:
+      benchmark: {code: 147622, name: "Nifty Midcap 150 (index fund)"}
+      funds:
+        118989: HDFC Mid Cap
+        119775: Kotak Midcap
+        118668: Nippon India Growth Mid Cap
+        127042: Motilal Oswal Midcap
+        120505: Axis Midcap
+        119716: SBI Midcap
+        119071: DSP Midcap
+        140228: Edelweiss Mid Cap
+        120403: Invesco India Midcap
+        120381: ICICI Pru Midcap
+        118533: Franklin India Mid Cap
+        120726: UTI Mid Cap
+    Flexi cap:
+      benchmark: {code: 147625, name: "Nifty 500 (index fund)"}
+      funds:
+        122639: Parag Parikh Flexi Cap
+        118955: HDFC Flexi Cap
+        120166: Kotak Flexicap
+        120662: UTI Flexi Cap
+        119718: SBI Flexicap
+        120564: Aditya Birla SL Flexi Cap
+        118535: Franklin India Flexi Cap
+        129046: Motilal Oswal Flexi Cap
+        148990: ICICI Pru Flexicap
+        119076: DSP Flexi Cap
+        120843: Quant Flexi Cap
+        120492: JM Flexicap

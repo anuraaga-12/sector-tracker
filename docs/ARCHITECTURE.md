@@ -24,6 +24,7 @@ tracker.refresh  ◄── providers/yahoo.py (yfinance)  ← GitHub Action (wee
 | 7 Performance & breadth | `tracker/analytics.py` |
 | 8 Ranking & rotation engine | `analytics.momentum_components / score / add_flags`, month-end reconstruction + recorded snapshots |
 | 9 Dashboard | `app.py`, `pages/`, `dashboard/common.py`, `dashboard/charts.py` |
+| 9b Mutual funds | `tracker/funds.py` (refresh + analytics), `providers/mf.py`, `pages/7_Fund_Holdings.py`; files `data/market/mf_*.csv*`, `isin_reference.csv.gz` (read directly, not via SQLite) |
 | 10 Validation & refresh management | `tracker/quality.py`, `tests/`, refresh log, GitHub workflow |
 
 **Why a derived DB?** Free hosts have ephemeral disks. Seeds and compressed market files live in git; the DB is

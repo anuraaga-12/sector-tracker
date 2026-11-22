@@ -5,7 +5,8 @@
     python -m tracker.refresh quotes            # market cap / shares
     python -m tracker.refresh fundamentals [--limit 100] [--stale-days 30]
     python -m tracker.refresh snapshot          # record today's rankings (rotation history)
-    python -m tracker.refresh daily             # prices + quotes + build + snapshot
+    python -m tracker.refresh funds             # mutual-fund NAVs + monthly portfolio holdings
+    python -m tracker.refresh daily             # prices + quotes + funds + build + snapshot
     python -m tracker.refresh weekly            # daily + fundamentals for stale names
     python -m tracker.refresh amfi FILE.xlsx    # import AMFI categorisation file
     python -m tracker.refresh import-prices FILE.csv   # manual long-format prices (symbol,date,close)
@@ -236,9 +237,19 @@ def import_prices(path: str, log=print) -> None:
     log(f"Imported {wide.shape[1]} symbols × {wide.shape[0]} dates.")
 
 
+def _refresh_funds_safely(log=print) -> None:
+    """The fund page is an add-on: a failure here must never stop the sector data from publishing."""
+    from .funds import refresh_funds
+    try:
+        refresh_funds(log=log)
+    except Exception as e:  # noqa: BLE001
+        store.write_log("funds", "error", f"{type(e).__name__}: {e}")
+        log(f"Mutual funds refresh failed: {e}")
+
+
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("task", choices=["prices", "quotes", "fundamentals", "snapshot", "daily", "weekly",
+    ap.add_argument("task", choices=["prices", "quotes", "fundamentals", "snapshot", "daily", "weekly", "funds",
                                      "build", "amfi", "import-prices"])
     ap.add_argument("file", nargs="?")
     ap.add_argument("--full", action="store_true")
@@ -253,6 +264,8 @@ def main(argv=None) -> int:
         refresh_fundamentals(a.limit, a.stale_days)
     elif a.task == "amfi":
         import_amfi(a.file)
+    elif a.task == "funds":
+        _refresh_funds_safely()
     elif a.task == "import-prices":
         import_prices(a.file)
     elif a.task in ("daily", "weekly"):
@@ -261,9 +274,10 @@ def main(argv=None) -> int:
             refresh_quotes()          # shares outstanding; market cap = shares × daily close
         if a.task == "weekly":
             refresh_fundamentals(a.limit, a.stale_days)
+        _refresh_funds_safely()
         builder.build()
         record_snapshot()
-    if a.task in ("prices", "quotes", "fundamentals", "amfi", "import-prices", "build"):
+    if a.task in ("prices", "quotes", "fundamentals", "amfi", "import-prices", "build", "funds"):
         builder.build()
     if a.task == "snapshot":
         builder.ensure_database()

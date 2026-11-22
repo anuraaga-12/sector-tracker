@@ -11,6 +11,9 @@
 | Fundamentals | Yahoo summary + annual statements (ROCE) | Weekly, names older than 30 days | Mixed TTM / latest-quarter growth; period & source shown everywhere; never estimated |
 | Market-cap category | AMFI half-yearly list (import) → else indicative thresholds | Twice a year | AMFI list effective Aug-2026 used ~₹1,06,300 cr (large) / ~₹33,500 cr (mid) cut-offs |
 | Financial statement charts | Yahoo statements, fetched live and cached 6 h | On view | |
+| Mutual-fund NAVs | AMFI daily NAV file via mfapi.in (free, no key) | Every daily run | Direct-Growth plans; one low-cost index fund per category is the benchmark |
+| Mutual-fund holdings | Each fund house's SEBI-mandated monthly portfolio disclosure, parsed by the open [fund-holdings-data](https://github.com/kushagra-agarwal-a/fund-holdings-data) archive | Checked every daily run; new month appears ~10 days after month-end | Last 6 months kept. If the archive stops updating, the page keeps the last disclosure and shows its date. Funds tracked are listed in `settings.yaml` → `funds` |
+| ISIN → NSE symbol, size bucket | NSE `EQUITY_L.csv`, Nifty 100 and Nifty Midcap 150 constituent files | Weekly, or when new holdings arrive | Large = Nifty 100, Mid = Midcap 150, Small = other listed (approximates AMFI's list) |
 
 Rules enforced in code: missing fields stay blank; provider failures keep the last good value and are flagged on the
 Data Quality page; every number shown carries an as-of date; demo mode is visually flagged and cannot write to live
