@@ -57,7 +57,7 @@ jobs:
           else python -m tracker.refresh daily; fi
 
       - name: Tests (engine + data integrity)
-        run: python -m pytest tests/test_analytics.py tests/test_seed_and_mcap.py tests/test_nse_fill.py tests/test_funds.py
+        run: python -m pytest tests/test_analytics.py tests/test_seed_and_mcap.py tests/test_nse_fill.py tests/test_funds.py tests/test_cache_refresh.py
 
       - name: Publish to deploy branch (single squashed commit)
         run: |

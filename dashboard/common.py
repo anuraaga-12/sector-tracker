@@ -145,7 +145,7 @@ hr {border-color: var(--line) !important;}
 
 # ----------------------------------------------------------------------------- setup
 @st.cache_resource(show_spinner="Building the database from seed and market files …")
-def _ensure_db(_stamp: float) -> float:
+def _ensure_db(stamp: float) -> float:
     build.ensure_database(log=print)
     return config.DB_PATH.stat().st_mtime
 
@@ -235,7 +235,7 @@ def list_card(title: str, rows: list[dict], icon: str = "★", accent: str = "v"
 
 # ----------------------------------------------------------------------------- data access
 @st.cache_data(ttl=3600, show_spinner=False)
-def _q(sql: str, params: tuple, _v: float) -> pd.DataFrame:
+def _q(sql: str, params: tuple, version: float) -> pd.DataFrame:
     return db.read_sql(sql, params)
 
 
@@ -313,7 +313,7 @@ def index_series(level: str, entity: str) -> pd.DataFrame:
 
 
 @st.cache_data(ttl=3600, show_spinner=False)
-def _wide(path: str, _v: float) -> pd.DataFrame:
+def _wide(path: str, version: float) -> pd.DataFrame:
     return store.read_wide(path)
 
 
