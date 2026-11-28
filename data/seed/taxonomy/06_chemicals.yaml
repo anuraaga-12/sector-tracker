@@ -1,0 +1,164 @@
+sector:
+  id: CHEM
+  name: Chemicals & Petrochemicals
+  priority: 1
+  benchmark: ^CRSLDX
+  description: Specialty and commodity chemicals, agrochemicals, fluorochemicals and custom manufacturing.
+  value_chain: "Crude / gas / minerals → Basic & commodity chemicals → Intermediates → Specialty & performance chemicals → End industries (pharma, agro, textiles, electronics, auto)"
+subsectors:
+  - id: CH_SPEC
+    name: Diversified Specialty Chemicals
+    what: Multi-product specialty chemical makers serving several end markets.
+    chain: Intermediates / specialties
+    customers: Pharma, agro, polymers, FMCG, exports
+    inputs: Benzene, toluene, nitric acid, etc.
+    economics: Capital-intensive; margins tied to chemistry complexity and Chinese pricing.
+    barriers: Process chemistry, customer qualification.
+    drivers: [China+1, Import substitution]
+    nature: Structural opportunity but deep cyclical downturns (2022–24 destocking).
+    risks: [Chinese dumping, Capex overbuild, Customer destocking]
+    rate: "growth:M competition:H barriers:M pricing:L margins:L roce:M custconc:M cyclicality:H regulation:M export:H structural:M"
+  - id: CH_AGRO
+    name: Agrochemicals
+    what: Crop-protection chemicals — technicals and formulations; also contract manufacturing for innovators.
+    chain: Intermediates → technical → formulations → farmers
+    customers: Farmers (branded), global agrochem majors
+    inputs: Intermediates (often Chinese)
+    economics: Working-capital heavy; monsoon and global inventory cycles.
+    barriers: Registrations.
+    drivers: [Off-patent molecules, CSM for innovators]
+    nature: Cyclical.
+    risks: [Global destocking, Chinese pricing, Monsoon]
+    rate: "growth:M competition:H barriers:M pricing:L margins:M roce:M custconc:M cyclicality:H regulation:H export:H structural:M"
+  - id: CH_FLUORO
+    name: Fluorochemicals & Fluoropolymers
+    what: Refrigerant gases, fluorospecialties and fluoropolymers (PTFE, PVDF) incl. battery-grade materials.
+    chain: Fluorspar → HF → refrigerants / fluorospecialties / polymers
+    customers: HVAC, pharma / agro innovators, semiconductors, batteries
+    inputs: Fluorspar, chloroform
+    economics: Capital-intensive, high barriers; refrigerant prices cyclical.
+    barriers: High — HF handling, technology.
+    drivers: [Refrigerant phase-down transition, Battery / semiconductor fluoropolymers, CSM for innovators]
+    nature: Structural.
+    risks: [Refrigerant pricing cycles, PFAS regulation]
+    rate: "growth:H competition:M barriers:H pricing:M margins:M roce:M custconc:M cyclicality:M regulation:H export:H structural:H"
+  - id: CH_DYES
+    name: Dyes & Pigments
+    what: Textile dyes, organic / inorganic pigments.
+    chain: Intermediates → dyes / pigments
+    customers: Textiles, paints, inks, plastics
+    inputs: Aromatic intermediates
+    economics: Fragmented; pollution compliance matters.
+    barriers: Low-moderate.
+    drivers: [China supply rationalisation]
+    nature: Cyclical.
+    risks: [Chinese competition, Effluent regulation]
+    rate: "growth:L competition:H barriers:L pricing:L margins:L roce:L custconc:M cyclicality:H regulation:H export:H structural:L"
+  - id: CH_SOLV
+    name: Solvents, Alcohol & Acetyls
+    what: Solvents, acetyl chain (acetic acid, ethyl acetate), alcohol-based chemicals.
+    chain: Basic / intermediate chemicals
+    customers: Pharma, coatings, packaging
+    inputs: Molasses, methanol
+    economics: Commodity spreads.
+    barriers: Low.
+    drivers: [Domestic demand]
+    nature: Cyclical.
+    risks: [Spread compression]
+    rate: "growth:M competition:H barriers:L pricing:L margins:L roce:L custconc:L cyclicality:H regulation:M export:M structural:L"
+  - id: CH_INTER
+    name: Chemical Intermediates (Benzene / Nitro / Phenol chain)
+    what: Large-volume intermediates such as nitro-chlorobenzenes, phenol, acetone, amines.
+    chain: Intermediates
+    customers: Specialty chemical, agro and pharma makers
+    inputs: Benzene, ammonia
+    economics: Scale and integration drive returns.
+    barriers: Scale.
+    drivers: [Import substitution]
+    nature: Cyclical.
+    risks: [Imports, Spreads]
+    rate: "growth:M competition:H barriers:M pricing:L margins:L roce:M custconc:M cyclicality:H regulation:M export:M structural:M"
+  - id: CH_PERF
+    name: Performance & Construction Chemicals, Adhesives
+    what: Adhesives, sealants, construction chemicals, polymer additives.
+    chain: Formulated products
+    customers: Construction, consumers, industry
+    inputs: Polymers (VAE, PVA), additives
+    economics: Brand-led, asset-light, high ROCE in consumer adhesives.
+    barriers: Brand, distribution.
+    drivers: [Construction, Home improvement]
+    nature: Structural.
+    risks: [Raw-material costs]
+    rate: "growth:M competition:M barriers:H pricing:H margins:H roce:H custconc:L cyclicality:L regulation:L export:L structural:H"
+  - id: CH_IND
+    name: Industrial & Commodity Chemicals (Chlor-alkali, Soda Ash, Carbon Black)
+    what: Caustic soda, soda ash, chlorine derivatives, carbon black.
+    chain: Basic chemicals
+    customers: Glass, detergents, alumina, tyres, paper
+    inputs: Salt, power, coal, crude derivatives
+    economics: Capital-intensive commodity; power cost key.
+    barriers: Scale.
+    drivers: [Industrial demand, Solar-glass (soda ash)]
+    nature: Cyclical.
+    risks: [Imports, Power cost]
+    rate: "growth:M competition:M barriers:M pricing:L margins:L roce:L custconc:L cyclicality:H regulation:M export:L structural:M"
+  - id: CH_ELECTRONIC
+    name: Electronic & Battery Chemicals
+    what: High-purity chemicals for semiconductors, electronics and lithium-ion batteries (electrolytes, cathode / anode materials).
+    chain: Specialty materials
+    customers: Semiconductor fabs, cell makers
+    inputs: High-purity feedstocks
+    economics: Early-stage in India; high barriers.
+    barriers: Purity specifications.
+    drivers: [India Semiconductor Mission, Cell PLI]
+    nature: Structural, early.
+    risks: [Execution, Customer adoption]
+    rate: "growth:H competition:M barriers:H pricing:M margins:M roce:L custconc:H cyclicality:M regulation:M export:M structural:H"
+  - id: CH_WATER
+    name: Water Treatment & Textile Chemicals
+    what: Water treatment chemicals, ion-exchange resins, textile auxiliaries.
+    chain: Specialty
+    customers: Utilities, industry, textiles
+    inputs: Polymers
+    economics: Niche specialties.
+    barriers: Moderate.
+    drivers: [Water reuse norms]
+    nature: Structural niche.
+    risks: [Competition]
+    rate: "growth:M competition:M barriers:M pricing:M margins:M roce:M custconc:L cyclicality:M regulation:M export:M structural:M"
+  - id: CH_CRAMS
+    name: Custom Synthesis & Manufacturing (CSM / CRAMS)
+    what: Contract manufacturing of advanced intermediates for global agro / specialty / pharma innovators.
+    chain: Contract manufacturing
+    customers: Global innovators
+    inputs: Chemistry talent, multi-purpose plants
+    economics: Long contracts, high ROCE when utilised.
+    barriers: High — trust, IP, quality.
+    drivers: [China+1 outsourcing]
+    nature: Structural.
+    risks: [Customer concentration, Molecule life-cycle]
+    rate: "growth:H competition:M barriers:H pricing:M margins:M roce:M custconc:H cyclicality:M regulation:M export:H structural:H"
+  - id: CH_PETRO
+    name: Petrochemicals, Polymers & Specialty Polymers
+    what: Polymers (PVC, PET, specialty polymers) and petrochemical derivatives.
+    chain: Crude / gas → monomers → polymers
+    customers: Packaging, pipes, textiles
+    inputs: Naphtha, ethylene, PTA / MEG
+    economics: Commodity spreads.
+    barriers: Scale.
+    drivers: [Domestic demand, Import duty / ADD]
+    nature: Cyclical.
+    risks: [Chinese overcapacity]
+    rate: "growth:M competition:H barriers:M pricing:L margins:L roce:L custconc:L cyclicality:H regulation:M export:L structural:M"
+  - id: CH_GASES
+    name: Industrial Gases & Specialty Gases
+    what: Oxygen, nitrogen, specialty gases, carbon dioxide.
+    chain: Gas production / distribution
+    customers: Steel, healthcare, electronics, food
+    inputs: Power
+    economics: Long-term contracts.
+    barriers: Moderate.
+    drivers: [Semiconductor / electronics manufacturing]
+    nature: Mixed.
+    risks: [Power costs]
+    rate: "growth:M competition:M barriers:M pricing:M margins:M roce:M custconc:M cyclicality:M regulation:L export:L structural:M"

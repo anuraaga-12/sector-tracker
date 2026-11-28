@@ -1,0 +1,226 @@
+sector:
+  id: FINSERV
+  name: Financial Services (Non-bank)
+  priority: 1
+  benchmark: NIFTY_FIN_SERVICE.NS
+  description: >-
+    NBFCs, housing finance, capital-market intermediaries, asset and wealth managers, insurers
+    and financial infrastructure. Banks are a separate sector.
+  value_chain: "Savings (deposits / insurance / MFs) → Intermediaries (brokers, AMCs, wealth) → Market infrastructure (exchanges, depositories, RTAs) → Lenders (NBFCs, HFCs) → Borrowers"
+subsectors:
+  - id: FS_WEALTH
+    name: Wealth Management
+    what: Advisory and distribution for HNI / UHNI clients across MFs, PMS, AIFs, structured products.
+    chain: Distribution / advice layer
+    customers: HNIs, UHNIs, family offices
+    inputs: Relationship managers, products, brand
+    economics: Asset-light; revenue linked to AUM and market levels; high ROE.
+    barriers: Trust, RM talent.
+    drivers: [Financialisation of savings, Wealth creation, Shift to fee-based models]
+    nature: Structural, but market-linked.
+    risks: [Market downturns, RM attrition, Regulatory fee caps]
+    rate: "growth:H competition:M barriers:M pricing:M margins:M roce:H custconc:L cyclicality:M regulation:M export:L structural:H"
+  - id: FS_AMC
+    name: Asset Management Companies
+    what: Mutual fund managers earning fees on AUM.
+    chain: Product manufacturer
+    customers: Retail investors via SIPs, institutions
+    inputs: Fund managers, distribution
+    economics: Asset-light, very high ROE; earnings track AUM and yields.
+    barriers: Brand, performance track record, distribution.
+    drivers: [SIP flows, Financialisation, Low MF penetration]
+    nature: Structural, market-linked.
+    risks: [SEBI TER cuts, Market falls, Passive shift]
+    rate: "growth:H competition:M barriers:M pricing:M margins:H roce:H custconc:L cyclicality:M regulation:H export:L structural:H"
+  - id: FS_EXCH
+    name: Stock & Commodity Exchanges
+    what: Exchanges earning transaction, listing and data fees.
+    chain: Market infrastructure
+    customers: Brokers, listed companies, data users
+    inputs: Technology, regulatory licence
+    economics: Near-monopoly economics; very high margins; volumes drive revenue (especially options).
+    barriers: Very high — licence and network effects.
+    drivers: [Retail participation, Derivatives volumes, New products]
+    nature: Structural with regulatory event risk.
+    risks: [SEBI F&O curbs, Regulatory fees]
+    rate: "growth:H competition:L barriers:H pricing:H margins:H roce:H custconc:L cyclicality:M regulation:H export:L structural:H"
+  - id: FS_BROKER
+    name: Brokerage & Investment Platforms
+    what: Retail / institutional broking, discount brokers, margin trading.
+    chain: Intermediary
+    customers: Retail and institutional traders
+    inputs: Technology, capital for MTF
+    economics: Asset-light; highly sensitive to F&O volumes.
+    barriers: Low-moderate; scale and tech.
+    drivers: [Demat account growth, Financialisation]
+    nature: Cyclical with market activity.
+    risks: [F&O regulation, Price wars, Market downturns]
+    rate: "growth:M competition:H barriers:L pricing:L margins:M roce:H custconc:L cyclicality:H regulation:H export:L structural:M"
+  - id: FS_DEPO
+    name: Depositories & RTAs
+    what: Securities depositories (CDSL) and registrar & transfer agents (CAMS, KFin).
+    chain: Market infrastructure
+    customers: AMCs, issuers, brokers, investors
+    inputs: Technology, licence
+    economics: Duopoly-like, asset-light, high margins.
+    barriers: High.
+    drivers: [Demat and folio growth, MF industry growth]
+    nature: Structural.
+    risks: [Pricing pressure from AMCs, Regulatory fee changes]
+    rate: "growth:H competition:L barriers:H pricing:M margins:H roce:H custconc:M cyclicality:M regulation:H export:L structural:H"
+  - id: FS_IB
+    name: Investment Banking & Institutional Equities
+    what: ECM / DCM advisory, M&A, institutional broking.
+    chain: Intermediary
+    customers: Corporates, institutions
+    inputs: Bankers, relationships
+    economics: Asset-light, cyclical with deal flow.
+    barriers: Reputation.
+    drivers: [IPO / QIP activity]
+    nature: Cyclical.
+    risks: [Deal drought]
+    rate: "growth:M competition:H barriers:M pricing:M margins:M roce:M custconc:M cyclicality:H regulation:M export:L structural:M"
+  - id: FS_HFC
+    name: Housing Finance Companies
+    what: Home loans and loans against property.
+    chain: Lender
+    customers: Salaried and self-employed home buyers
+    inputs: Borrowings (banks, NHB, bonds)
+    economics: Spread business; asset quality generally good; affordable HFCs earn higher spreads.
+    barriers: Low-moderate; cost of funds is the moat.
+    drivers: [Housing shortage, PMAY, Urbanisation]
+    nature: Structural.
+    risks: [Competition from banks, Rate cycles, Real-estate stress]
+    rate: "growth:M competition:H barriers:L pricing:L margins:M roce:M custconc:L cyclicality:M regulation:M export:L structural:H"
+  - id: FS_VEHFIN
+    name: Vehicle Finance
+    what: Loans for commercial vehicles, cars, two-wheelers, tractors and used vehicles.
+    chain: Lender
+    customers: Transporters, individuals, farmers
+    inputs: Borrowings, branch networks
+    economics: Higher yields, cyclical credit costs.
+    barriers: Collections expertise in rural / semi-urban.
+    drivers: [Vehicle demand, Used-vehicle formalisation]
+    nature: Cyclical.
+    risks: [CV cycle, Rural stress]
+    rate: "growth:M competition:H barriers:M pricing:M margins:M roce:M custconc:L cyclicality:H regulation:M export:L structural:M"
+  - id: FS_GOLD
+    name: Gold Loan NBFCs
+    what: Loans against gold jewellery.
+    chain: Lender
+    customers: Small businesses and households
+    inputs: Branches, vaults
+    economics: High yields, low credit loss; gold prices drive AUM.
+    barriers: Branch network, trust.
+    drivers: [Gold price, Unsecured lending curbs pushing borrowers to secured gold loans]
+    nature: Mixed; gold-price linked.
+    risks: [Gold price fall, RBI regulation on LTV / auctions, Bank competition]
+    rate: "growth:H competition:M barriers:M pricing:M margins:H roce:H custconc:L cyclicality:M regulation:H export:L structural:M"
+  - id: FS_MFI
+    name: Microfinance
+    what: Joint-liability group loans to low-income women borrowers.
+    chain: Lender
+    customers: Low-income rural households
+    inputs: Field staff, borrowings
+    economics: High yields, volatile credit costs (event-driven).
+    barriers: Low.
+    drivers: [Financial inclusion]
+    nature: Highly cyclical.
+    risks: [Over-leverage cycles, State loan-waiver politics, Natural disasters]
+    rate: "growth:M competition:H barriers:L pricing:M margins:L roce:M custconc:L cyclicality:H regulation:H export:L structural:M"
+  - id: FS_RETAILNBFC
+    name: Diversified / Retail NBFCs
+    what: Consumer durables, personal, business and diversified retail lending.
+    chain: Lender
+    customers: Retail and small-business borrowers
+    inputs: Borrowings, data / underwriting
+    economics: Spread business; scale players have strong ROE.
+    barriers: Underwriting data, cost of funds.
+    drivers: [Credit penetration, Digital lending]
+    nature: Mixed.
+    risks: [Unsecured credit cycle, RBI risk-weight changes]
+    rate: "growth:H competition:H barriers:M pricing:M margins:M roce:M custconc:L cyclicality:M regulation:H export:L structural:H"
+  - id: FS_SME
+    name: SME & MSME Lending
+    what: Secured business loans, LAP and MSME credit.
+    chain: Lender
+    customers: Small businesses
+    inputs: Borrowings, branch networks
+    economics: Higher yields, collateral-backed.
+    barriers: Underwriting informal income.
+    drivers: [Formalisation (GST), MSME credit gap]
+    nature: Structural.
+    risks: [Asset-quality cycles]
+    rate: "growth:H competition:M barriers:M pricing:M margins:M roce:M custconc:L cyclicality:M regulation:M export:L structural:H"
+  - id: FS_INFRAFIN
+    name: Infrastructure & Wholesale Finance (incl. PSU lenders)
+    what: Power / infra financiers and corporate lenders.
+    chain: Lender
+    customers: Utilities, infra developers, corporates
+    inputs: Bond borrowings
+    economics: Thin spreads, large tickets; PSU parentage lowers funding cost.
+    barriers: Sovereign-linked cost of funds.
+    drivers: [Power and renewable capex, Infra spend]
+    nature: Structural capex-linked.
+    risks: [Concentrated exposures, Discom stress]
+    rate: "growth:M competition:M barriers:M pricing:L margins:M roce:M custconc:H cyclicality:M regulation:M export:L structural:M"
+  - id: FS_LIFE
+    name: Life Insurance
+    what: Protection, savings and annuity life insurance.
+    chain: Risk / savings product manufacturer
+    customers: Individuals, groups
+    inputs: Distribution (bancassurance, agents), capital
+    economics: Long-duration business; VNB margin is the key metric.
+    barriers: Distribution and brand.
+    drivers: [Under-penetration of protection, Rising incomes]
+    nature: Structural.
+    risks: [Tax changes on savings products, Commission regulation]
+    rate: "growth:M competition:M barriers:M pricing:M margins:M roce:M custconc:L cyclicality:L regulation:H export:L structural:H"
+  - id: FS_GENINS
+    name: General & Health Insurance
+    what: Motor, health, property and other non-life insurance.
+    chain: Risk underwriter
+    customers: Individuals, corporates
+    inputs: Capital, distribution, claims management
+    economics: Combined ratio + float income; health is the growth engine.
+    barriers: Distribution, claims expertise.
+    drivers: [Health insurance penetration, Motor sales]
+    nature: Structural.
+    risks: [Price competition, Catastrophe losses, Regulation]
+    rate: "growth:H competition:H barriers:M pricing:L margins:L roce:M custconc:L cyclicality:L regulation:H export:L structural:H"
+  - id: FS_REINS
+    name: Reinsurance
+    what: Insurance for insurers.
+    chain: Risk underwriter
+    customers: Insurance companies
+    inputs: Capital
+    economics: Volatile; catastrophe-driven.
+    barriers: Capital, ratings.
+    drivers: [Insurance growth]
+    nature: Cyclical.
+    risks: [Catastrophe losses]
+    rate: "growth:M competition:M barriers:H pricing:M margins:L roce:L custconc:M cyclicality:H regulation:H export:M structural:M"
+  - id: FS_FININFRA
+    name: Fintech, Payments & Financial Infrastructure
+    what: Payments, credit bureaus, insurance / loan marketplaces and digital financial platforms.
+    chain: Platform / infrastructure
+    customers: Consumers, merchants, lenders, insurers
+    inputs: Technology, regulatory licences
+    economics: Asset-light; scale economics; many are still reaching profitability.
+    barriers: Network effects, licences.
+    drivers: [Digital payments, UPI, Credit and insurance penetration]
+    nature: Structural.
+    risks: [Regulation (payments, lending), Competition, Profitability]
+    rate: "growth:H competition:H barriers:M pricing:L margins:L roce:L custconc:L cyclicality:M regulation:H export:L structural:H"
+  - id: FS_HOLDCO
+    name: Financial Holding Companies & Conglomerates
+    what: Holding companies owning stakes in banks, insurers, AMCs and lenders.
+    chain: Holding company
+    customers: n/a
+    inputs: Capital
+    economics: Value tracks underlying businesses; holding-company discount.
+    barriers: n/a
+    drivers: [Value unlocking via listings]
+    nature: Mixed.
+    risks: [Holding discount]
+    rate: "growth:M competition:M barriers:M pricing:M margins:M roce:M custconc:L cyclicality:M regulation:M export:L structural:M"

@@ -1,0 +1,188 @@
+sector:
+  id: AUTO
+  name: Automobile & Auto Ancillaries
+  priority: 1
+  benchmark: ^CNXAUTO
+  description: Vehicle OEMs across segments and the component (ancillary) ecosystem supplying them, including EV-specific suppliers.
+  value_chain: "Steel / aluminium / electronics → Castings & forgings → Precision components & systems (Tier-2 → Tier-1) → OEM assembly → Dealers → Aftermarket"
+subsectors:
+  - id: AU_PV
+    name: Passenger Vehicles
+    what: Cars, SUVs and utility vehicles.
+    chain: OEM assembly
+    customers: Retail buyers, fleets, exports
+    inputs: Components, steel, electronics, batteries
+    economics: Capital-intensive; scale, SUV mix and pricing discipline drive margins.
+    barriers: High — brand, dealer network, platform investment.
+    drivers: [Low car penetration (~30 per 1,000), Premiumisation to SUVs, Exports, GST rationalisation]
+    nature: Cyclical around a structural penetration story.
+    risks: [Demand slowdown, EV transition costs, Regulation (safety / emissions)]
+    rate: "growth:M competition:H barriers:H pricing:M margins:M roce:M custconc:L cyclicality:H regulation:M export:M structural:H"
+  - id: AU_CV
+    name: Commercial Vehicles
+    what: Trucks, buses and light commercial vehicles.
+    chain: OEM assembly
+    customers: Fleet operators, state transport undertakings
+    inputs: Engines, steel, components
+    economics: Highly cyclical; tied to freight, infra and replacement cycles.
+    barriers: High.
+    drivers: [Infrastructure activity, Replacement demand, Bus electrification]
+    nature: Cyclical.
+    risks: [Freight slowdown, Emission-norm cost increases]
+    rate: "growth:M competition:M barriers:H pricing:M margins:M roce:M custconc:L cyclicality:H regulation:M export:L structural:M"
+  - id: AU_2W
+    name: Two-wheelers
+    what: Motorcycles and scooters (ICE and electric).
+    chain: OEM assembly
+    customers: Retail (rural and urban), exports
+    inputs: Components, steel
+    economics: High ROCE for leaders; rural demand cycles matter.
+    barriers: Brand and distribution.
+    drivers: [Rural recovery, Premiumisation, Exports, Electrification]
+    nature: Mixed.
+    risks: [EV disruption to incumbents, Rural stress]
+    rate: "growth:M competition:H barriers:M pricing:M margins:M roce:H custconc:L cyclicality:M regulation:M export:M structural:M"
+  - id: AU_3W
+    name: Three-wheelers & Small Commercial
+    what: Passenger and cargo three-wheelers (ICE / CNG / electric).
+    chain: OEM assembly
+    customers: Self-employed drivers, last-mile logistics
+    inputs: Components
+    economics: Moderate.
+    barriers: Moderate; fast EV disruption from new entrants.
+    drivers: [Last-mile logistics, Electrification]
+    nature: Mixed.
+    risks: [EV start-up competition]
+    rate: "growth:M competition:H barriers:M pricing:L margins:M roce:M custconc:L cyclicality:M regulation:M export:M structural:M"
+  - id: AU_EV
+    name: Electric Vehicles (OEMs)
+    what: Pure-play or EV-focused vehicle makers.
+    chain: OEM
+    customers: Retail, fleets
+    inputs: Battery cells, motors, power electronics
+    economics: Loss-making for many players; subsidy-sensitive.
+    barriers: Technology and scale.
+    drivers: [Total-cost-of-ownership advantage, PM E-DRIVE / PLI, Battery cost declines]
+    nature: Structural, but with severe competitive and profitability risk.
+    risks: [Subsidy withdrawal, Price wars, Battery supply]
+    rate: "growth:H competition:H barriers:M pricing:L margins:L roce:L custconc:L cyclicality:M regulation:H export:L structural:H"
+  - id: AU_EVCOMP
+    name: EV Components (Motors, Controllers, Battery Packs, Chargers)
+    what: Traction motors, controllers, battery packs / BMS, chargers and EV-specific parts.
+    chain: Tier-1 / Tier-2
+    customers: EV OEMs
+    inputs: Magnets, cells, semiconductors
+    economics: Early-stage; content-per-vehicle much higher than ICE parts.
+    barriers: Technology and OEM qualification.
+    drivers: [EV adoption, PLI auto components]
+    nature: Structural, timing uncertain.
+    risks: [EV adoption pace, Rare-earth magnet supply, Chinese competition]
+    rate: "growth:H competition:H barriers:M pricing:L margins:M roce:M custconc:H cyclicality:M regulation:M export:M structural:H"
+  - id: AU_ELEC
+    name: Auto Electronics & Electricals
+    what: Wiring harnesses, sensors, ECUs, instrument clusters, lighting electronics.
+    chain: Tier-1
+    customers: OEMs
+    inputs: Semiconductors, copper
+    economics: Rising electronic content per vehicle.
+    barriers: Technology partnerships.
+    drivers: [Premiumisation, Safety / ADAS features, EV]
+    nature: Structural.
+    risks: [Chip shortages, Customer concentration]
+    rate: "growth:H competition:M barriers:M pricing:M margins:M roce:M custconc:H cyclicality:M regulation:L export:M structural:H"
+  - id: AU_FORGE
+    name: Auto Forgings & Castings
+    what: Crankshafts, connecting rods, gears, aluminium / iron castings for vehicles.
+    chain: Tier-2 / Tier-1
+    customers: Auto OEMs, Tier-1s, exports (incl. off-highway)
+    inputs: Steel, aluminium, energy
+    economics: Capital-intensive; export-heavy players exposed to US / EU truck cycles.
+    barriers: Metallurgy, approvals.
+    drivers: [China+1, Non-auto diversification (aerospace, defence)]
+    nature: Cyclical.
+    risks: [Global truck cycle, Commodity costs]
+    rate: "growth:M competition:M barriers:M pricing:L margins:M roce:M custconc:H cyclicality:H regulation:L export:H structural:M"
+  - id: AU_TYRE
+    name: Tyres
+    what: Tyres for trucks, cars, two-wheelers, farm and off-highway.
+    chain: Rubber / carbon black → tyres → OEM + replacement
+    customers: Replacement market (~60%), OEMs, exports
+    inputs: Natural rubber, synthetic rubber, carbon black, crude derivatives
+    economics: Capital-intensive; margins swing with raw-material prices.
+    barriers: Brand, distribution.
+    drivers: [Replacement demand, Exports, Radialisation]
+    nature: Cyclical (raw-material).
+    risks: [Rubber / crude prices, Chinese imports]
+    rate: "growth:M competition:H barriers:M pricing:M margins:L roce:M custconc:L cyclicality:H regulation:L export:M structural:M"
+  - id: AU_BATT
+    name: Automotive & Industrial Batteries
+    what: Lead-acid and lithium-ion batteries for vehicles, inverters, telecom and data centres.
+    chain: Lead / cells → batteries → OEM + aftermarket
+    customers: Aftermarket, OEMs, industrial
+    inputs: Lead, cells
+    economics: Strong aftermarket brands; Li-ion is a big capex transition.
+    barriers: Brand / distribution.
+    drivers: [Vehicle parc, Li-ion cell manufacturing (PLI ACC)]
+    nature: Mixed.
+    risks: [Lithium transition capex, Chinese cell competition]
+    rate: "growth:M competition:M barriers:M pricing:M margins:M roce:M custconc:L cyclicality:M regulation:M export:L structural:H"
+  - id: AU_SYSTEMS
+    name: Braking, Transmission & Driveline Systems
+    what: Brakes, clutches, gears, axles, steering and suspension.
+    chain: Tier-1
+    customers: OEMs, aftermarket
+    inputs: Steel, castings
+    economics: Moderate; tech tie-ups common.
+    barriers: Technology and OEM approval.
+    drivers: [Safety regulations, Premiumisation]
+    nature: Cyclical.
+    risks: [OEM concentration]
+    rate: "growth:M competition:M barriers:M pricing:M margins:M roce:M custconc:H cyclicality:M regulation:M export:M structural:M"
+  - id: AU_PRECISION
+    name: Precision Components & Diversified Auto Ancillaries
+    what: Engine components, fasteners, pistons, filters, valves and diversified Tier-1s.
+    chain: Tier-1 / Tier-2
+    customers: OEMs, exports, aftermarket
+    inputs: Steel, aluminium
+    economics: Moderate; diversified Tier-1s smooth cycles.
+    barriers: Moderate.
+    drivers: [Global outsourcing to India, PLI]
+    nature: Cyclical.
+    risks: [EV transition for engine-linked parts]
+    rate: "growth:M competition:M barriers:M pricing:M margins:M roce:M custconc:M cyclicality:M regulation:L export:M structural:M"
+  - id: AU_INTERIOR
+    name: Automotive Interiors, Lighting & Seating
+    what: Seating, lighting, mirrors, glass, interior plastics.
+    chain: Tier-1
+    customers: OEMs
+    inputs: Plastics, glass, electronics
+    economics: Content growth with premiumisation.
+    barriers: Moderate.
+    drivers: [Premiumisation, LED lighting adoption]
+    nature: Cyclical with structural content growth.
+    risks: [OEM concentration]
+    rate: "growth:M competition:M barriers:M pricing:M margins:M roce:M custconc:H cyclicality:M regulation:L export:M structural:M"
+  - id: AU_AFTER
+    name: Aftermarket & Dealership
+    what: Replacement parts brands, dealership chains.
+    chain: Distribution
+    customers: Vehicle owners, garages
+    inputs: Distribution network
+    economics: Asset-light, steady.
+    barriers: Distribution.
+    drivers: [Ageing vehicle parc]
+    nature: Defensive.
+    risks: [Counterfeits]
+    rate: "growth:M competition:M barriers:M pricing:M margins:M roce:M custconc:L cyclicality:L regulation:L export:L structural:M"
+  - id: AU_TRACTOR
+    name: Tractors & Farm Equipment
+    what: Tractors, harvesters and farm machinery.
+    chain: OEM
+    customers: Farmers
+    inputs: Engines, steel
+    economics: Monsoon-dependent.
+    barriers: High.
+    drivers: [Farm mechanisation, Rural incomes]
+    nature: Cyclical (monsoon).
+    risks: [Weak monsoon]
+    rate: "growth:M competition:M barriers:H pricing:M margins:M roce:M custconc:L cyclicality:H regulation:L export:M structural:M"

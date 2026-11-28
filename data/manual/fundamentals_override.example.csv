@@ -1,0 +1,2 @@
+symbol,reporting_period,revenue_cr,revenue_growth,ebitda_margin,pat_cr,pat_growth,roce,roe,debt_to_equity,pe,pb,source,as_of
+EXAMPLE,FY26,1000,0.15,0.18,120,0.2,0.22,0.17,0.3,35,6,Annual report FY26,2026-05-30

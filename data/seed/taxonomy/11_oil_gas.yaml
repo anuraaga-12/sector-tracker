@@ -1,0 +1,57 @@
+sector:
+  id: OILGAS
+  name: Oil, Gas & Consumable Fuels
+  priority: 1
+  benchmark: ^CNXENERGY
+  description: Upstream exploration, refining & marketing, gas transmission and city gas distribution, coal mining and lubricants.
+  value_chain: "Upstream (exploration / production) → Midstream (pipelines, LNG terminals) → Downstream (refining, marketing, CGD) → Consumers"
+subsectors:
+  - id: OG_UPSTREAM
+    name: Upstream Oil & Gas
+    what: Exploration and production of crude oil and natural gas.
+    drivers: [Domestic production push, Gas price reforms]
+    risks: [Crude price volatility, Windfall taxes, Ageing fields]
+    nature: Cyclical (commodity).
+    rate: "growth:L competition:L barriers:H pricing:L margins:M roce:M custconc:L cyclicality:H regulation:H export:L structural:M"
+  - id: OG_REFINE
+    name: Refining & Fuel Marketing
+    what: Refineries and fuel retail (OMCs) plus integrated conglomerates.
+    drivers: [Fuel demand growth, Petrochemical integration]
+    risks: [Marketing margin controls, Crude volatility, EV transition long-term]
+    nature: Cyclical.
+    rate: "growth:L competition:L barriers:H pricing:L margins:L roce:M custconc:L cyclicality:H regulation:H export:M structural:M"
+  - id: OG_GASTRANS
+    name: Gas Transmission, LNG & Trading
+    what: Gas pipelines, LNG regasification and gas marketing.
+    drivers: [Gas share in energy mix target (15%), Pipeline grid build-out]
+    risks: [LNG price spikes, Tariff regulation]
+    nature: Structural.
+    rate: "growth:M competition:L barriers:H pricing:M margins:M roce:M custconc:M cyclicality:M regulation:H export:L structural:M"
+  - id: OG_CGD
+    name: City Gas Distribution
+    what: CNG for vehicles and piped natural gas for homes and industry.
+    drivers: [New geographical areas, CNG vehicle adoption]
+    risks: [APM gas allocation cuts, EV competition for CNG, Pricing]
+    nature: Structural with policy risk.
+    rate: "growth:M competition:L barriers:H pricing:M margins:M roce:H custconc:L cyclicality:L regulation:H export:L structural:M"
+  - id: OG_COAL
+    name: Coal Mining
+    what: Coal production for power and industry.
+    drivers: [Power demand]
+    risks: [Energy transition, E-auction premium normalisation]
+    nature: Cyclical; long-term transition risk.
+    rate: "growth:L competition:L barriers:H pricing:M margins:H roce:H custconc:M cyclicality:M regulation:H export:L structural:L"
+  - id: OG_LUBE
+    name: Lubricants & Specialty Oils
+    what: Automotive and industrial lubricants, transformer and specialty oils.
+    drivers: [Vehicle parc, Premiumisation]
+    risks: [Base-oil prices, EV transition]
+    nature: Defensive.
+    rate: "growth:M competition:M barriers:M pricing:M margins:M roce:H custconc:L cyclicality:L regulation:L export:L structural:M"
+  - id: OG_SERV
+    name: Oilfield Services & Equipment
+    what: Drilling, offshore services, and oil & gas equipment.
+    drivers: [Upstream capex]
+    risks: [Crude-linked capex cycles]
+    nature: Cyclical.
+    rate: "growth:M competition:M barriers:M pricing:L margins:M roce:M custconc:H cyclicality:H regulation:M export:M structural:L"

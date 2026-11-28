@@ -1,0 +1,127 @@
+# Central configuration. Everything here can be changed without touching code.
+
+data:
+  yahoo_suffix: ".NS"          # NSE tickers on Yahoo Finance
+  history_years: 6             # price history to keep (5Y CAGR needs >5y)
+  download_chunk: 40           # symbols per yfinance batch
+  download_pause_sec: 2.0      # pause between batches (be polite / avoid rate limits)
+  stale_price_days: 7          # price older than this vs latest market date = stale
+  stale_fundamentals_days: 120
+  max_daily_move: 0.40         # daily returns beyond ±40% are treated as data errors in index maths
+
+nse:
+  # Yahoo often posts the day's close late (sometimes next day). The refresh fills the most recent
+  # days it is missing from NSE's official end-of-day files; Yahoo's values replace them later.
+  enabled: true
+  fill_days: 7                 # calendar days back to check
+  index_names:                 # Yahoo benchmark ticker -> index name in NSE's ind_close_all file
+    "^NSEI": "Nifty 50"
+    "^CRSLDX": "Nifty 500"
+    "^NSEBANK": "Nifty Bank"
+    "NIFTY_FIN_SERVICE.NS": "Nifty Financial Services"
+    "^CNXAUTO": "Nifty Auto"
+    "^CNXENERGY": "Nifty Energy"
+    "^CNXFMCG": "Nifty FMCG"
+    "^CNXINFRA": "Nifty Infrastructure"
+    "^CNXIT": "Nifty IT"
+    "^CNXMEDIA": "Nifty Media"
+    "^CNXMETAL": "Nifty Metal"
+    "^CNXPHARMA": "Nifty Pharma"
+    "^CNXREALTY": "Nifty Realty"
+
+benchmarks:
+  nifty50: "^NSEI"
+  nifty500: "^CRSLDX"
+  # Sector benchmarks (Yahoo symbols). Missing / unavailable ones fall back to Nifty 500.
+  sector_overrides: {}         # e.g. {DEFENCE: "NIFTY_IND_DEFENCE.NS"}
+
+membership:
+  # Which classification types count toward sub-sector / sector performance & breadth.
+  include_types: [primary, secondary]
+  min_members_for_ranking: 3   # sub-sectors with fewer priced members are shown but not ranked
+
+market_cap:
+  # Indicative thresholds in ₹ crore, used ONLY when no AMFI file is loaded.
+  # Defaults approximate the AMFI list effective Aug-2026 (large ≈ ₹1,06,300 cr; mid ≈ ₹33,500 cr).
+  large_min_cr: 106300
+  mid_min_cr: 33500
+  micro_max_cr: 5000           # below this an otherwise "Small" company is tagged "Micro" (not an AMFI category)
+
+momentum:
+  # Weights for the transparent momentum score (normalised to sum to 1). Components are
+  # percentile ranks (0-100) across eligible sub-sectors.
+  weights:
+    relative: 0.30       # excess return vs Nifty 500 (1M 20% / 3M 40% / 6M 40%)
+    absolute: 0.20       # equal-weighted return (3M / 6M average)
+    consistency: 0.15    # share of horizons (1W..1Y) with positive excess return
+    breadth: 0.20        # % of constituents outperforming Nifty 500 over 3M
+    ma_breadth: 0.15     # average of % above 50-DMA and % above 200-DMA
+
+rotation:
+  history_months: 36           # month-end snapshots reconstructed from price history
+  improving_score_delta: 10    # score change vs 1M ago counted as improving / weakening
+  breadth_improve_pp: 15       # change in % above 50-DMA vs 1M ago counted as improving breadth
+  narrow_gap_pp: 10            # cap-weighted minus median 3M return to flag "narrow leadership"
+  small_vs_large_pp: 5         # small/micro median minus large/mid median (3M) to flag "small caps leading"
+
+funds:
+  # Mutual-fund page: daily NAVs (mfapi.in / AMFI) and monthly portfolio holdings (fund houses'
+  # SEBI monthly disclosures, via the open fund-holdings-data archive). Codes are AMFI scheme codes
+  # of the Direct-Growth plan — find others at https://api.mfapi.in/mf/search?q=<name>.
+  enabled: true
+  months: 6                    # monthly holdings disclosures to keep (for month-on-month changes)
+  nav_years: 6                 # NAV history to keep
+  categories:
+    Small cap:
+      benchmark: {code: 147623, name: "Nifty Smallcap 250 (index fund)"}
+      funds:
+        118778: Nippon India Small Cap
+        125497: SBI Small Cap
+        130503: HDFC Small Cap
+        120828: Quant Small Cap
+        125354: Axis Small Cap
+        120164: Kotak Small Cap
+        119212: DSP Small Cap
+        145206: Tata Small Cap
+        147946: Bandhan Small Cap
+        146130: Canara Robeco Small Cap
+        120591: ICICI Pru Smallcap
+        118525: Franklin India Small Cap
+        145137: Invesco India Small Cap
+        153912: Helios Small Cap
+        154063: Groww Small Cap
+    Mid cap:
+      benchmark: {code: 147622, name: "Nifty Midcap 150 (index fund)"}
+      funds:
+        118989: HDFC Mid Cap
+        119775: Kotak Midcap
+        118668: Nippon India Growth Mid Cap
+        127042: Motilal Oswal Midcap
+        120505: Axis Midcap
+        119716: SBI Midcap
+        119071: DSP Midcap
+        140228: Edelweiss Mid Cap
+        120403: Invesco India Midcap
+        120381: ICICI Pru Midcap
+        118533: Franklin India Mid Cap
+        120726: UTI Mid Cap
+        150584: WhiteOak Capital Mid Cap
+        153326: Helios Mid Cap
+    Flexi cap:
+      benchmark: {code: 147625, name: "Nifty 500 (index fund)"}
+      funds:
+        122639: Parag Parikh Flexi Cap
+        118955: HDFC Flexi Cap
+        120166: Kotak Flexicap
+        120662: UTI Flexi Cap
+        119718: SBI Flexicap
+        120564: Aditya Birla SL Flexi Cap
+        118535: Franklin India Flexi Cap
+        129046: Motilal Oswal Flexi Cap
+        148990: ICICI Pru Flexicap
+        119076: DSP Flexi Cap
+        120843: Quant Flexi Cap
+        120492: JM Flexicap
+        149763: Invesco India Flexi Cap
+        150346: WhiteOak Capital Flexi Cap
+        152135: Helios Flexi Cap

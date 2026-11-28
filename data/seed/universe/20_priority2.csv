@@ -1,0 +1,193 @@
+symbol,name,primary,secondary,indirect,exposure,position,model,business,customers,confidence
+TATASTEEL,Tata Steel,MT_STEEL,,,Pure-play,L,MFG,Integrated steel (India / Netherlands / UK),Auto; construction,H
+JSWSTEEL,JSW Steel,MT_STEEL,,,Pure-play,L,MFG,Largest Indian steelmaker,Construction; auto,H
+JINDALSTEL,Jindal Steel,MT_STEEL,MT_MINING,,Pure-play,L,MFG,Steel and mining,Construction; infra,H
+SAIL,Steel Authority of India,MT_STEEL,,,Pure-play,L,MFG,PSU integrated steel,Construction; railways,H
+JSL,Jindal Stainless,MT_STEELPROD,,,Pure-play,L,MFG,Stainless steel,Auto; railways; kitchenware,H
+APLAPOLLO,APL Apollo Tubes,MT_STEELPROD,IN_CONSTEQ,,Pure-play,L,MFG,Structural steel tubes,Construction; infra,H
+WELCORP,Welspun Corp,MT_STEELPROD,IN_CONSTEQ|BM_PIPES,,Majority,E,MFG,Large-diameter line pipes; DI pipes; TMT,Oil & gas; water projects,H
+JINDALSAW,Jindal SAW,MT_STEELPROD,IN_CONSTEQ,,Majority,E,MFG,SAW / DI / seamless pipes,Oil & gas; water,H
+RATNAMANI,Ratnamani Metals & Tubes,MT_STEELPROD,,,Pure-play,E,MFG,Stainless and carbon steel tubes,Oil & gas; power; nuclear,H
+ELECTCAST,Electrosteel Castings,IN_CONSTEQ,MT_STEELPROD,,Majority,N,MFG,Ductile iron pipes,Water projects,M
+SHYAMMETL,Shyam Metalics and Energy,MT_STEELPROD,MT_FERRO|MT_ALU,,Majority,E,MFG,Integrated secondary steel; ferro alloys; aluminium foil,Construction; industry,M
+LLOYDSME,Lloyds Metals and Energy,MT_MINING,MT_STEEL,,Majority,E,MFG,Iron ore mining (Gadchiroli) and pellets / DRI,Steelmakers,M
+HINDALCO,Hindalco Industries,MT_ALU,MT_NONFERROUS,,Majority,L,MFG,Aluminium (incl. Novelis) and copper,Packaging; auto; power,H
+NATIONALUM,National Aluminium Company,MT_ALU,MT_MINING,,Pure-play,L,MFG,Bauxite / alumina / aluminium (PSU),Industry; exports,H
+VEDL,Vedanta,MT_NONFERROUS,MT_ALU|OG_UPSTREAM|MT_MINING,,Significant,L,MFG,Zinc / aluminium / oil & gas / iron ore (demerger under way),Industry,H
+HINDZINC,Hindustan Zinc,MT_NONFERROUS,,,Pure-play,L,MFG,Zinc / lead / silver,Galvanisers; exports,H
+HINDCOPPER,Hindustan Copper,MT_NONFERROUS,MT_MINING,,Pure-play,E,MFG,Copper mining (PSU),Copper smelters,H
+NMDC,NMDC,MT_MINING,,,Pure-play,L,MFG,Iron ore mining,Steelmakers,H
+MOIL,MOIL,MT_MINING,,,Pure-play,N,MFG,Manganese ore,Ferro-alloy makers,H
+GMDCLTD,Gujarat Mineral Development Corporation,MT_MINING,PW_THERMAL,,Majority,N,MFG,Lignite and minerals (rare earths exploration),Industry,M
+GRAPHITE,Graphite India,MT_FERRO,,,Pure-play,E,MFG,Graphite electrodes,EAF steelmakers,H
+HEGAM,HEG Advanced Material (formerly HEG),MT_FERRO,AU_EVCOMP,,Pure-play,E,MFG,Graphite electrodes; anode materials plans,EAF steelmakers,H
+MAITHANALL,Maithan Alloys,MT_FERRO,,,Pure-play,N,MFG,Manganese ferro alloys,Steelmakers,M
+VESUVIUS,Vesuvius India,MT_FERRO,,,Pure-play,N,MFG,Refractories and flow-control,Steelmakers,M
+RHIM,RHI Magnesita India,MT_FERRO,,,Pure-play,E,MFG,Refractories,Steel; cement,M
+ULTRACEMCO,UltraTech Cement,BM_CEMENT,CG_CABLE,,Majority,L,MFG,Largest cement maker; entering wires & cables,Construction,H
+AMBUJACEM,Ambuja Cements,BM_CEMENT,,,Pure-play,L,MFG,Cement (Adani group),Construction,H
+SHREECEM,Shree Cement,BM_CEMENT,,,Pure-play,L,MFG,Cement,Construction,H
+DALBHARAT,Dalmia Bharat,BM_CEMENT,,,Pure-play,E,MFG,Cement,Construction,H
+JKCEMENT,JK Cement,BM_CEMENT,BM_PAINTS,,Majority,E,MFG,Grey and white cement; paints,Construction,H
+RAMCOCEM,The Ramco Cements,BM_CEMENT,,,Pure-play,E,MFG,Cement (South India),Construction,H
+ACC,ACC,BM_CEMENT,,,Pure-play,E,MFG,Cement (Adani group),Construction,H
+ASTRAL,Astral,BM_PIPES,CH_PERF|BM_TILES,,Majority,L,MFG,Plastic pipes; adhesives; bathware,Plumbers; builders,H
+SUPREMEIND,Supreme Industries,BM_PIPES,DV_PACK,,Majority,L,MFG,Plastic pipes and plastic products,Builders; farmers; industry,H
+FINPIPE,Finolex Industries,BM_PIPES,CH_PETRO,,Pure-play,E,MFG,PVC pipes with backward-integrated resin,Agriculture; plumbing,H
+PRINCEPIPE,Prince Pipes and Fittings,BM_PIPES,,,Pure-play,N,MFG,Plastic pipes,Plumbing; agriculture,H
+ASIANPAINT,Asian Paints,BM_PAINTS,,,Pure-play,L,MFG,Largest decorative paints company,Consumers,H
+BERGEPAINT,Berger Paints India,BM_PAINTS,,,Pure-play,L,MFG,Decorative and industrial paints,Consumers; industry,H
+KANSAINER,Kansai Nerolac Paints,BM_PAINTS,,,Pure-play,E,MFG,Industrial (auto) and decorative paints,Auto OEMs; consumers,H
+INDIGOPNTS,Indigo Paints,BM_PAINTS,,,Pure-play,N,MFG,Decorative paints,Consumers,H
+KAJARIACER,Kajaria Ceramics,BM_TILES,,,Pure-play,L,MFG,Ceramic and vitrified tiles,Builders; consumers,H
+CERA,Cera Sanitaryware,BM_TILES,,,Pure-play,E,MFG,Sanitaryware and faucets,Builders; consumers,H
+CENTURYPLY,Century Plyboards (India),BM_WOOD,,,Pure-play,L,MFG,Plywood / laminates / MDF,Carpenters; consumers,H
+GREENPANEL,Greenpanel Industries,BM_WOOD,,,Pure-play,E,MFG,MDF,Furniture makers,H
+GREENLAM,Greenlam Industries,BM_WOOD,,,Pure-play,E,MFG,Laminates,Consumers,H
+ASAHIINDIA,Asahi India Glass,BM_GLASS,AU_INTERIOR,,Majority,L,MFG,Automotive and architectural glass,Auto OEMs; builders,H
+DIXON,Dixon Technologies (India),EM_EMS,CD_BRAND,,Pure-play,L,MFG,Largest EMS (mobiles / TVs / appliances / IT hardware),Global and Indian brands,H
+KAYNES,Kaynes Technology India,EM_EMS,EM_SEMI|EM_PCB,DF_ELEC,Majority,E,MFG,EMS for industrial / auto / aerospace; OSAT; PCBs,Industrial and auto OEMs,H
+SYRMA,Syrma SGS Technology,EM_EMS,EM_PCB,,Pure-play,E,MFG,EMS and RFID; PCB plans,Industrial / auto / consumer OEMs,H
+AVALON,Avalon Technologies,EM_EMS,,,Pure-play,N,MFG,Box-build EMS (US exports),US industrial OEMs,M
+AMBER,Amber Enterprises India,EM_EMS,CD_AC|EM_PCB|IN_ROLLING,,Pure-play,E,MFG,AC ODM; electronics (PCBA); railway sub-systems,AC brands; railways,H
+EPACK,EPACK Durable,EM_EMS,CD_AC,,Pure-play,N,MFG,Room AC and small appliance ODM,Appliance brands,M
+PGEL,PG Electroplast,EM_EMS,CD_AC,,Pure-play,E,MFG,AC / washing machine / TV ODM,Appliance brands,H
+CENTUM,Centum Electronics,EM_EMS,DF_ELEC,,Pure-play,N,MFG,Electronics design and manufacturing for defence / space,Defence; space,M
+SFL,Sheela Foam,CD_KITCHEN,,,Pure-play,E,MFG,Mattresses (Sleepwell / Kurlon),Consumers,M
+MOSCHIP,MosChip Technologies,EM_SEMI,IT_ERD,,Pure-play,N,SVC,Semiconductor design services,Global chip companies,M
+SPELS,SPEL Semiconductor,EM_SEMI,,,Pure-play,N,MFG,Semiconductor packaging (OSAT),Chip companies,L
+HAVELLS,Havells India,CD_ELEC,CG_CABLE|CG_SWGR|CD_AC,,Majority,L,MFG,Consumer electricals; wires; switchgear; Lloyd ACs,Consumers; electricians,H
+CROMPTON,Crompton Greaves Consumer Electricals,CD_ELEC,CD_KITCHEN,,Pure-play,L,MFG,Fans; pumps; lighting; Butterfly kitchen appliances,Consumers,H
+BAJAJELEC,Bajaj Electricals,CD_ELEC,CD_KITCHEN,,Pure-play,E,MFG,Appliances; fans; lighting,Consumers,H
+VGUARD,V-Guard Industries,CD_ELEC,CG_CABLE,,Pure-play,E,MFG,Stabilisers; wires; fans; water heaters,Consumers,H
+ORIENTELEC,Orient Electric,CD_ELEC,,,Pure-play,N,MFG,Fans and lighting,Consumers,H
+WHIRLPOOL,Whirlpool of India,CD_BRAND,,,Pure-play,E,MFG,Refrigerators; washing machines,Consumers,H
+BOSCH-HCIL,Bosch Home Comfort India (formerly Johnson Controls-Hitachi AC India),CD_AC,,,Pure-play,N,MFG,Room and commercial ACs,Consumers,M
+LGEINDIA,LG Electronics India,CD_BRAND,CD_AC,,Pure-play,L,MFG,Home appliances and consumer electronics (listed Oct 2025),Consumers,L
+TTKPRESTIG,TTK Prestige,CD_KITCHEN,,,Pure-play,E,MFG,Pressure cookers and kitchen appliances,Consumers,H
+HINDUNILVR,Hindustan Unilever,FM_HPC,FM_FOOD|FM_BEV,,Majority,L,MFG,Largest FMCG company,Consumers,H
+ITC,ITC,FM_TOBACCO,FM_FOOD|DV_PAPER|AG_COMMOD,,Significant,L,MFG,Cigarettes; foods; paperboards; agri business,Consumers,H
+NESTLEIND,Nestle India,FM_FOOD,FM_BEV,,Pure-play,L,MFG,Packaged foods (Maggi / dairy / coffee),Consumers,H
+BRITANNIA,Britannia Industries,FM_FOOD,,,Pure-play,L,MFG,Biscuits and dairy,Consumers,H
+TATACONSUM,Tata Consumer Products,FM_BEV,FM_FOOD,,Pure-play,L,MFG,Tea / coffee / salt / foods,Consumers,H
+DABUR,Dabur India,FM_HPC,FM_BEV|PH_CONS,,Pure-play,L,MFG,Ayurvedic health / personal care and juices,Consumers,H
+MARICO,Marico,FM_HPC,FM_FOOD,,Pure-play,L,MFG,Hair oils (Parachute) and foods,Consumers,H
+GODREJCP,Godrej Consumer Products,FM_HPC,,,Pure-play,L,MFG,Home insecticides and personal care,Consumers,H
+COLPAL,Colgate-Palmolive (India),FM_HPC,,,Pure-play,L,MFG,Oral care,Consumers,H
+EMAMILTD,Emami,FM_HPC,PH_CONS,,Pure-play,E,MFG,Personal care and OTC (Navratna / Zandu),Consumers,H
+VBL,Varun Beverages,FM_BEV,,,Pure-play,L,MFG,PepsiCo bottler (India / Africa),Consumers,H
+UNITDSPR,United Spirits,FM_BEV,,,Pure-play,L,MFG,Spirits (Diageo India),Consumers,H
+RADICO,Radico Khaitan,FM_BEV,,,Pure-play,E,MFG,Spirits,Consumers,H
+UBL,United Breweries,FM_BEV,,,Pure-play,L,MFG,Beer (Heineken),Consumers,H
+ZYDUSWELL,Zydus Wellness,FM_FOOD,PH_CONS,,Pure-play,E,MFG,Health foods (Glucon-D / Complan / Sugar Free),Consumers,H
+PATANJALI,Patanjali Foods,FM_FOOD,AG_COMMOD,,Pure-play,E,MFG,Edible oils and packaged foods,Consumers,H
+AWL,AWL Agri Business,AG_COMMOD,FM_FOOD,,Pure-play,L,MFG,Edible oils and staples (Fortune),Consumers,M
+GODFRYPHLP,Godfrey Phillips India,FM_TOBACCO,,,Pure-play,E,MFG,Cigarettes,Consumers,H
+BIKAJI,Bikaji Foods International,FM_FOOD,,,Pure-play,N,MFG,Ethnic snacks,Consumers,H
+TRENT,Trent,DS_RETAIL,DS_APPAREL,,Pure-play,L,DIST,Westside / Zudio fashion retail; Star groceries,Consumers,H
+DMART,Avenue Supermarts,DS_RETAIL,,,Pure-play,L,DIST,Value grocery retail (DMart),Consumers,H
+VMART,V-Mart Retail,DS_RETAIL,,,Pure-play,N,DIST,Value fashion in tier-2/3,Consumers,H
+VMM,Vishal Mega Mart,DS_RETAIL,,,Pure-play,E,DIST,Value retail for middle / lower-middle income,Consumers,M
+TITAN,Titan Company,DS_JEWEL,DS_APPAREL,,Majority,L,MFG,Jewellery (Tanishq); watches; eyewear,Consumers,H
+KALYANKJIL,Kalyan Jewellers India,DS_JEWEL,,,Pure-play,E,DIST,Jewellery retail,Consumers,H
+SENCO,Senco Gold,DS_JEWEL,,,Pure-play,N,DIST,Jewellery retail (East India),Consumers,H
+PNGJL,P N Gadgil Jewellers,DS_JEWEL,,,Pure-play,N,DIST,Jewellery retail (Maharashtra),Consumers,M
+JUBLFOOD,Jubilant FoodWorks,DS_QSR,,,Pure-play,L,SVC,Domino's / Popeyes franchisee,Consumers,H
+DEVYANI,Devyani International,DS_QSR,,,Pure-play,E,SVC,KFC / Pizza Hut franchisee,Consumers,H
+WESTLIFE,Westlife Foodworld,DS_QSR,,,Pure-play,E,SVC,McDonald's (West & South India),Consumers,H
+INDHOTEL,The Indian Hotels Company,DS_HOTEL,,,Pure-play,L,SVC,Taj and other hotels,Travellers,H
+EIHOTEL,EIH,DS_HOTEL,,,Pure-play,E,SVC,Oberoi hotels,Travellers,H
+CHALET,Chalet Hotels,DS_HOTEL,RL_COMM,,Majority,E,SVC,Upscale hotels and office assets,Travellers,H
+LEMONTREE,Lemon Tree Hotels,DS_HOTEL,,,Pure-play,N,SVC,Mid-priced hotels,Travellers,H
+INDIGO,InterGlobe Aviation,DS_TRAVEL,,,Pure-play,L,SVC,IndiGo airline,Passengers,H
+ETERNAL,Eternal (Zomato),DS_INTERNET,,,Pure-play,L,PLAT,Food delivery (Zomato) and quick commerce (Blinkit),Consumers; restaurants,H
+SWIGGY,Swiggy,DS_INTERNET,,,Pure-play,L,PLAT,Food delivery and Instamart quick commerce,Consumers,H
+NYKAA,FSN E-Commerce Ventures,DS_INTERNET,DS_RETAIL,,Pure-play,E,PLAT,Beauty and fashion e-commerce,Consumers,H
+NAUKRI,Info Edge (India),DS_INTERNET,,,Pure-play,L,PLAT,Naukri / 99acres / Jeevansathi; start-up investments,Recruiters; consumers,H
+PAGEIND,Page Industries,DS_APPAREL,,,Pure-play,L,MFG,Jockey innerwear,Consumers,H
+BATAINDIA,Bata India,DS_APPAREL,,,Pure-play,E,MFG,Footwear,Consumers,H
+RELAXO,Relaxo Footwears,DS_APPAREL,,,Pure-play,E,MFG,Mass footwear,Consumers,H
+METROBRAND,Metro Brands,DS_APPAREL,,,Pure-play,E,DIST,Footwear retail,Consumers,H
+ABFRL,Aditya Birla Fashion and Retail,DS_APPAREL,DS_RETAIL,,Pure-play,E,DIST,Fashion brands and retail,Consumers,M
+DLF,DLF,RL_RESI,RL_COMM,,Majority,L,MFG,Residential development and rental (DCCDL),Home buyers; office occupiers,H
+GODREJPROP,Godrej Properties,RL_RESI,,,Pure-play,L,MFG,Residential development,Home buyers,H
+OBEROIRLTY,Oberoi Realty,RL_RESI,RL_COMM,,Majority,E,MFG,Mumbai residential and commercial,Home buyers,H
+PRESTIGE,Prestige Estates Projects,RL_RESI,RL_COMM|DS_HOTEL,,Majority,L,MFG,Bengaluru-led residential / office / hospitality,Home buyers,H
+LODHA,Lodha Developers,RL_RESI,,,Pure-play,L,MFG,Mumbai residential leader,Home buyers,M
+PHOENIXLTD,The Phoenix Mills,RL_COMM,DS_HOTEL,,Majority,L,MFG,Retail malls and offices,Retailers; occupiers,H
+BRIGADE,Brigade Enterprises,RL_RESI,RL_COMM|DS_HOTEL,,Majority,E,MFG,Bengaluru residential / office / hotels,Home buyers,H
+SOBHA,Sobha,RL_RESI,,,Pure-play,E,MFG,Residential development,Home buyers,H
+ANANTRAJ,Anant Raj,RL_RESI,IT_DC,,Majority,N,MFG,Residential and data-centre development (NCR),Home buyers; data-centre clients,M
+DELHIVERY,Delhivery,LG_3PL,,,Pure-play,L,SVC,Express parcels and part-truckload logistics,E-commerce; enterprises,H
+BLUEDART,Blue Dart Express,LG_3PL,,,Pure-play,E,SVC,Express air logistics,Enterprises,H
+TCI,Transport Corporation of India,LG_3PL,LG_SHIP,,Pure-play,E,SVC,Multimodal logistics,Enterprises,H
+VRLLOG,VRL Logistics,LG_3PL,,,Pure-play,N,SVC,LTL road transport,SMEs,H
+GESHIP,The Great Eastern Shipping Company,LG_SHIP,OG_SERV,,Majority,E,SVC,Tankers and dry bulk; offshore rigs,Charterers,H
+SCI,Shipping Corporation of India,LG_SHIP,,,Pure-play,E,SVC,PSU shipping,Charterers,H
+TCS,Tata Consultancy Services,IT_LARGE,,,Pure-play,L,SVC,Largest IT services company,Global enterprises,H
+INFY,Infosys,IT_LARGE,,,Pure-play,L,SVC,IT services,Global enterprises,H
+HCLTECH,HCL Technologies,IT_LARGE,IT_PRODUCT|IT_ERD,,Majority,L,SVC,IT services; products; engineering services,Global enterprises,H
+WIPRO,Wipro,IT_LARGE,,,Pure-play,L,SVC,IT services,Global enterprises,H
+TECHM,Tech Mahindra,IT_LARGE,,,Pure-play,L,SVC,IT services (telecom heavy),Global enterprises,H
+LTM,LTM (formerly LTIMindtree),IT_LARGE,,,Pure-play,L,SVC,IT services,Global enterprises,H
+PERSISTENT,Persistent Systems,IT_MID,IT_ERD,,Pure-play,L,SVC,Digital engineering and IT services,Global enterprises,H
+COFORGE,Coforge,IT_MID,,,Pure-play,L,SVC,IT services (BFSI / travel),Global enterprises,H
+MPHASIS,Mphasis,IT_MID,,,Pure-play,L,SVC,IT services (BFSI),Global enterprises,H
+HEXT,Hexaware Technologies,IT_MID,,,Pure-play,E,SVC,IT services,Global enterprises,M
+SONATSOFTW,Sonata Software,IT_MID,,,Pure-play,N,SVC,IT services (Microsoft ecosystem),Global enterprises,H
+BSOFT,Birlasoft,IT_MID,,,Pure-play,N,SVC,IT services,Global enterprises,H
+ZENSARTECH,Zensar Technologies,IT_MID,,,Pure-play,N,SVC,IT services,Global enterprises,H
+KPITTECH,KPIT Technologies,IT_ERD,,,Pure-play,L,SVC,Automotive software and engineering,Global auto OEMs,H
+TATAELXSI,Tata Elxsi,IT_ERD,,,Pure-play,E,SVC,Design and engineering services (auto / media / healthcare),Global OEMs,H
+LTTS,L&T Technology Services,IT_ERD,,,Pure-play,L,SVC,Engineering R&D services,Global OEMs,H
+CYIENT,Cyient,IT_ERD,EM_SEMI,,Pure-play,E,SVC,Engineering services; DLM; semiconductor design,Aerospace; rail; utilities,H
+TATATECH,Tata Technologies,IT_ERD,,,Pure-play,E,SVC,Automotive engineering services,Auto OEMs,H
+OFSS,Oracle Financial Services Software,IT_PRODUCT,,,Pure-play,L,SVC,Banking software,Banks,H
+NEWGEN,Newgen Software Technologies,IT_PRODUCT,,,Pure-play,N,SVC,Low-code process automation software,Banks; insurers,H
+INTELLECT,Intellect Design Arena,IT_PRODUCT,,,Pure-play,N,SVC,Banking software,Banks,H
+NETWEB,Netweb Technologies India,IT_DC,EM_EMS,,Pure-play,N,MFG,HPC / AI servers and private cloud systems,Government; enterprises,M
+E2E,E2E Networks,IT_DC,,,Pure-play,N,SVC,GPU cloud and cloud infrastructure,Start-ups; enterprises,M
+BHARTIARTL,Bharti Airtel,TC_OPER,TC_TOWER,,Majority,L,UTIL,Telecom operator (India / Africa); Indus Towers stake,Subscribers,H
+IDEA,Vodafone Idea,TC_OPER,,,Pure-play,E,UTIL,Telecom operator,Subscribers,H
+INDUSTOWER,Indus Towers,TC_TOWER,,,Pure-play,L,UTIL,Telecom tower infrastructure,Telecom operators,H
+TATACOMM,Tata Communications,TC_OPER,IT_DC,,Pure-play,E,SVC,Enterprise connectivity and digital platforms,Enterprises,H
+STLTECH,Sterlite Technologies,TC_EQUIP,,,Pure-play,E,MFG,Optical fibre and cables,Telecom operators; data centres,H
+HFCL,HFCL,TC_EQUIP,DF_ELEC,,Pure-play,E,MFG,Optical fibre cable; telecom equipment; defence electronics,Telecom operators,H
+TEJASNET,Tejas Networks,TC_EQUIP,,,Pure-play,E,MFG,Optical and wireless telecom equipment (Tata group),BSNL; operators,H
+ITI,ITI,TC_EQUIP,,,Pure-play,N,MFG,Telecom equipment (PSU),Government,M
+KPRMILL,K.P.R. Mill,TX_GARMENT,TX_YARN|AG_SUGAR,,Majority,E,MFG,Integrated yarn-fabric-garments; sugar / ethanol,Global brands,H
+WELSPUNLIV,Welspun Living,TX_HOME,,,Pure-play,L,MFG,Home textiles exporter,US retailers,H
+TRIDENT,Trident,TX_HOME,TX_YARN|DV_PAPER,,Majority,E,MFG,Home textiles; yarn; paper,US retailers,H
+GOKEX,Gokaldas Exports,TX_GARMENT,,,Pure-play,N,MFG,Garment exporter,Global brands,H
+ARVIND,Arvind,TX_YARN,TX_GARMENT,,Pure-play,E,MFG,Denim and woven fabrics; garments; advanced materials,Global brands,H
+VTL,Vardhman Textiles,TX_YARN,,,Pure-play,E,MFG,Yarn and fabric,Garment makers,H
+RAYMOND,Raymond,DV_CONGLO,CG_FORGE|DF_AERO|RL_RESI,,Significant,E,MFG,Engineering (aerospace / precision); real estate; textiles,Varied,M
+CHAMBLFERT,Chambal Fertilisers and Chemicals,AG_FERT,,,Pure-play,L,MFG,Urea and trading of DAP,Farmers,H
+COROMANDEL,Coromandel International,AG_FERT,CH_AGRO,,Majority,L,MFG,Phosphatic fertilisers; crop protection; retail,Farmers,H
+RCF,Rashtriya Chemicals and Fertilizers,AG_FERT,CH_IND,,Majority,E,MFG,Urea / complex fertilisers (PSU),Farmers,H
+FACT,Fertilisers and Chemicals Travancore,AG_FERT,,,Pure-play,E,MFG,Complex fertilisers (PSU),Farmers,H
+PARADEEP,Paradeep Phosphates,AG_FERT,,,Pure-play,N,MFG,Phosphatic fertilisers,Farmers,H
+GSFC,Gujarat State Fertilizers & Chemicals,AG_FERT,CH_INTER,,Majority,E,MFG,Fertilisers and industrial chemicals,Farmers; industry,H
+KSCL,Kaveri Seed Company,AG_SEEDS,,,Pure-play,N,MFG,Hybrid seeds,Farmers,H
+BALRAMCHIN,Balrampur Chini Mills,AG_SUGAR,CH_PETRO,,Pure-play,E,MFG,Sugar and ethanol; PLA bioplastics plans,OMCs; consumers,H
+TRIVENI,Triveni Engineering & Industries,AG_SUGAR,CG_HEAVY,,Majority,E,MFG,Sugar / ethanol; power transmission gears; water,OMCs; industry,H
+EIDPARRY,EID Parry (India),AG_SUGAR,AG_FERT,,Significant,E,MFG,Sugar; holds Coromandel,OMCs; consumers,H
+JISLJALEQS,Jain Irrigation Systems,AG_IRRIG,BM_PIPES,,Majority,N,MFG,Micro-irrigation and pipes,Farmers; states,M
+GODREJAGRO,Godrej Agrovet,AG_COMMOD,PH_ANIMAL|CH_AGRO,,Majority,E,MFG,Animal feed; palm oil; dairy; crop protection,Farmers; consumers,H
+LTFOODS,LT Foods,AG_COMMOD,FM_FOOD,,Pure-play,E,MFG,Basmati rice (Daawat),Consumers; exports,H
+KRBL,KRBL,AG_COMMOD,,,Pure-play,E,MFG,Basmati rice (India Gate),Consumers; exports,H
+VENKEYS,Venky's (India),AG_COMMOD,PH_ANIMAL,,Majority,N,MFG,Poultry; feed; animal health,Poultry farmers; consumers,M
+SUNTV,Sun TV Network,MD_BROAD,,,Pure-play,E,SVC,TV broadcasting (South India),Advertisers; subscribers,H
+ZEEL,Zee Entertainment Enterprises,MD_BROAD,MD_DIGITAL,,Pure-play,E,SVC,Broadcasting and OTT (ZEE5),Advertisers; subscribers,H
+PVRINOX,PVR INOX,MD_CINEMA,,,Pure-play,L,SVC,Largest multiplex chain,Movie-goers,H
+SAREGAMA,Saregama India,MD_DIGITAL,,,Pure-play,E,SVC,Music label and content,Streaming platforms,H
+TIPSMUSIC,Tips Music,MD_DIGITAL,,,Pure-play,N,SVC,Music label,Streaming platforms,M
+NAZARA,Nazara Technologies,MD_DIGITAL,,,Pure-play,N,PLAT,Gaming and esports,Gamers,M
+GRASIM,Grasim Industries,DV_CONGLO,BM_CEMENT|BM_PAINTS|TX_YARN|CH_IND|FS_HOLDCO,,Significant,L,HOLD,VSF; chemicals; Birla Opus paints; holds UltraTech and AB Capital,Varied,H
+GODREJIND,Godrej Industries,DV_CONGLO,CH_SPEC,,Significant,E,HOLD,Chemicals and group holdings,Varied,M
+TEAMLEASE,TeamLease Services,DV_EDU,,,Pure-play,E,SVC,Staffing,Enterprises,H
+QUESS,Quess Corp,DV_EDU,,,Pure-play,E,SVC,Staffing and business services,Enterprises,H
+UFLEX,UFlex,DV_PACK,,,Pure-play,E,MFG,Flexible packaging films,FMCG,H
+AGI,AGI Greenpac,DV_PACK,PH_PACK,,Pure-play,N,MFG,Glass containers (beverages / pharma),Beverages; pharma,M
+TCPLPACK,TCPL Packaging,DV_PACK,PH_PACK,,Pure-play,N,MFG,Folding cartons,FMCG; pharma,L
+JKPAPER,JK Paper,DV_PAPER,,,Pure-play,E,MFG,Paper and packaging board,Printing; packaging,H

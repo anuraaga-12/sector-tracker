@@ -1,0 +1,164 @@
+sector:
+  id: INFRA
+  name: Infrastructure & Construction
+  priority: 1
+  benchmark: ^CNXINFRA
+  description: EPC contractors, infrastructure developers / operators, railways ecosystem, ports, airports and construction materials-adjacent services.
+  value_chain: "Government / private capex → Consultancy & design → EPC contractors → Equipment & materials → Asset owners / operators (toll, ports, airports)"
+subsectors:
+  - id: IN_ROADS
+    name: Roads & Highways EPC / HAM
+    what: Highway construction under EPC, HAM and BOT models.
+    chain: EPC / developer
+    customers: NHAI, MoRTH, state agencies
+    inputs: Bitumen, cement, steel, equipment
+    economics: Working-capital intensive; margins 10–15% EPC; HAM needs equity.
+    barriers: Low-moderate.
+    drivers: [Government road capex]
+    nature: Cyclical; ordering slowed in 2024–25.
+    risks: [Award slowdown, Aggressive bidding, Receivables]
+    rate: "growth:M competition:H barriers:L pricing:L margins:M roce:M custconc:H cyclicality:H regulation:M export:L structural:M"
+  - id: IN_RAIL
+    name: Railways — EPC, PSUs & Services
+    what: Railway construction, electrification, PSU operators and services (catering, ticketing, freight infrastructure).
+    chain: EPC / services
+    customers: Indian Railways
+    inputs: Steel, labour
+    economics: Mixed; many listed PSUs.
+    barriers: Moderate.
+    drivers: [Railway capex (~₹2.5 lakh cr/yr), Station redevelopment, Kavach]
+    nature: Structural capex, valuation-sensitive.
+    risks: [Budget allocation, Competitive bidding]
+    rate: "growth:M competition:M barriers:M pricing:L margins:M roce:M custconc:H cyclicality:M regulation:H export:L structural:M"
+  - id: IN_ROLLING
+    name: Railway Rolling Stock & Components
+    what: Wagons, coaches, locomotive / Vande Bharat components, castings, signalling hardware.
+    chain: Equipment
+    customers: Indian Railways, private wagon owners, exports
+    inputs: Steel, castings
+    economics: Order-driven.
+    barriers: RDSO approvals.
+    drivers: [Wagon procurement, Vande Bharat rollout, Dedicated freight corridors]
+    nature: Cyclical government orders.
+    risks: [Order delays, Margin pressure]
+    rate: "growth:M competition:M barriers:M pricing:L margins:M roce:M custconc:H cyclicality:H regulation:H export:L structural:M"
+  - id: IN_SIGNAL
+    name: Railway Signalling & Kavach
+    what: Signalling, train-protection (Kavach) and rail electronics.
+    chain: Systems
+    customers: Indian Railways, metros
+    inputs: Electronics
+    economics: Technology niche.
+    barriers: Approvals.
+    drivers: [Kavach rollout, Automatic signalling]
+    nature: Structural.
+    risks: [Execution]
+    rate: "growth:H competition:M barriers:M pricing:M margins:M roce:M custconc:H cyclicality:M regulation:H export:L structural:H"
+  - id: IN_METRO
+    name: Metro & Urban Infrastructure
+    what: Metro rail, urban transport, smart city and building construction.
+    chain: EPC
+    customers: Metro corporations, urban bodies
+    inputs: Tunnel boring, steel, cement
+    economics: Large-ticket EPC.
+    barriers: Technical capability (tunnelling).
+    drivers: [Metro expansion in tier-2 cities]
+    nature: Structural.
+    risks: [Execution, Funding]
+    rate: "growth:M competition:M barriers:M pricing:M margins:M roce:M custconc:H cyclicality:M regulation:M export:L structural:M"
+  - id: IN_CIVIL
+    name: Diversified Civil Construction & Buildings
+    what: Bridges, buildings, industrial civil works, tunnels and diversified EPC.
+    chain: EPC
+    customers: Government, private developers, industry
+    inputs: Steel, cement, labour
+    economics: Working-capital heavy.
+    barriers: Low-moderate.
+    drivers: [Public and private capex]
+    nature: Cyclical.
+    risks: [Receivables, Commodity costs]
+    rate: "growth:M competition:H barriers:L pricing:L margins:L roce:M custconc:M cyclicality:H regulation:M export:L structural:M"
+  - id: IN_WATER
+    name: Water Infrastructure & Irrigation
+    what: Water supply, sewage, irrigation and desalination EPC / O&M.
+    chain: EPC / O&M
+    customers: State governments, municipal bodies
+    inputs: Pipes, pumps, labour
+    economics: Receivable risk from states.
+    barriers: Low.
+    drivers: [Jal Jeevan Mission, AMRUT, Irrigation projects]
+    nature: Scheme-driven.
+    risks: [State payment delays, Scheme slowdown]
+    rate: "growth:M competition:H barriers:L pricing:L margins:M roce:M custconc:H cyclicality:M regulation:M export:L structural:M"
+  - id: IN_TDEPC
+    name: Transmission & Distribution EPC
+    what: Transmission lines, substations, and distribution EPC (incl. RDSS).
+    chain: EPC
+    customers: PGCIL, TBCB developers, discoms, Middle East / Africa
+    inputs: Towers, conductors, equipment
+    economics: Order-book driven; margins improving.
+    barriers: Moderate.
+    drivers: [Transmission capex, International T&D]
+    nature: Structural.
+    risks: [Commodity costs, Execution]
+    rate: "growth:H competition:M barriers:M pricing:M margins:M roce:M custconc:M cyclicality:M regulation:M export:M structural:H"
+  - id: IN_PORTS
+    name: Ports & Shipping Infrastructure
+    what: Port operators and shipbuilding / repair yards (shipbuilders also appear under Defence).
+    chain: Infrastructure operator
+    customers: Shipping lines, cargo owners
+    inputs: Capital
+    economics: Long-life assets; high margins.
+    barriers: High.
+    drivers: [Trade growth, Shipbuilding policy]
+    nature: Structural.
+    risks: [Trade slowdown]
+    rate: "growth:M competition:M barriers:H pricing:M margins:H roce:M custconc:L cyclicality:M regulation:M export:M structural:H"
+  - id: IN_AIRPORT
+    name: Airports
+    what: Airport developers / operators.
+    chain: Infrastructure operator
+    customers: Airlines, passengers, retail
+    inputs: Capital
+    economics: Regulated aero + unregulated non-aero.
+    barriers: Very high.
+    drivers: [Air traffic growth]
+    nature: Structural.
+    risks: [Tariff regulation]
+    rate: "growth:H competition:L barriers:H pricing:M margins:H roce:M custconc:L cyclicality:M regulation:H export:L structural:H"
+  - id: IN_TOLL
+    name: Infra Developers, Toll & InvITs
+    what: Owners / operators of toll roads and diversified infrastructure developers.
+    chain: Asset owner
+    customers: Road users
+    inputs: Capital
+    economics: Annuity-like.
+    barriers: Capital.
+    drivers: [Asset monetisation]
+    nature: Defensive.
+    risks: [Traffic, Leverage]
+    rate: "growth:M competition:M barriers:M pricing:M margins:H roce:L custconc:L cyclicality:L regulation:M export:L structural:M"
+  - id: IN_CONSULT
+    name: Infrastructure Consultancy & Engineering Services
+    what: Design, project management and engineering consultancy.
+    chain: Services
+    customers: Government agencies, PSUs
+    inputs: Engineers
+    economics: Asset-light.
+    barriers: Track record.
+    drivers: [Capex pipeline]
+    nature: Structural.
+    risks: [Government dependence]
+    rate: "growth:M competition:M barriers:M pricing:M margins:M roce:H custconc:H cyclicality:M regulation:M export:L structural:M"
+  - id: IN_CONSTEQ
+    name: Construction Materials Services (Pipes, Steel Structures)
+    what: Steel / DI / plastic pipes and pre-engineered buildings serving infra projects.
+    chain: Materials
+    customers: Water projects, builders
+    inputs: Steel, PVC
+    economics: Commodity-linked.
+    barriers: Low.
+    drivers: [Water and building infra]
+    nature: Cyclical.
+    risks: [Raw-material volatility]
+    rate: "growth:M competition:H barriers:L pricing:L margins:L roce:M custconc:M cyclicality:H regulation:L export:L structural:M"

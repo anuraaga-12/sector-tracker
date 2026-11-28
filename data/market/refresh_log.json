@@ -1,0 +1,37 @@
+{
+  "prices": {
+    "last_refresh": "2026-11-28T11:48:07+00:00",
+    "status": "ok",
+    "detail": "681/681 symbols returned data; last date 2026-11-27"
+  },
+  "market_cap": {
+    "last_refresh": "2026-11-28T11:49:33+00:00",
+    "status": "ok",
+    "detail": "681/681 market caps"
+  },
+  "fundamentals": {
+    "last_refresh": "2026-11-28T11:49:33+00:00",
+    "status": "error",
+    "detail": "0 refreshed this run; 683 on file"
+  },
+  "nse_symbol_check": {
+    "last_refresh": "2026-11-28T11:48:05+00:00",
+    "status": "ok",
+    "detail": "0 tracked symbols not in NSE's latest bhavcopy"
+  },
+  "nse_fill": {
+    "last_refresh": "2026-11-27T22:16:08+00:00",
+    "status": "ok",
+    "detail": "2026-11-27: 681 stocks, 12 indices"
+  },
+  "isin_reference": {
+    "last_refresh": "2026-11-24T01:10:46+00:00",
+    "status": "ok",
+    "detail": "2643 NSE ISINs"
+  },
+  "funds": {
+    "last_refresh": "2026-11-28T11:50:27+00:00",
+    "status": "ok",
+    "detail": "NAV 47/47 (latest 2026-11-27); holdings as of 2026-10-31: 44/44 funds"
+  }
+}

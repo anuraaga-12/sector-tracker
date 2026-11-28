@@ -1,0 +1,55 @@
+symbol,name,primary,secondary,indirect,exposure,position,model,business,customers,confidence
+MARUTI,Maruti Suzuki India,AU_PV,,,Pure-play,L,MFG,Largest passenger-car maker; exports,Retail buyers; exports,H
+M&M,Mahindra & Mahindra,AU_PV,AU_TRACTOR|AU_CV|AU_EV,FS_VEHFIN|DV_CONGLO,Majority,L,MFG,SUVs; tractors (market leader); LCVs; EVs; group holdings,Retail; farmers,H
+TMPV,Tata Motors Passenger Vehicles,AU_PV,AU_EV,,Pure-play,L,MFG,Jaguar Land Rover and Tata passenger / EV business (post-demerger),Global and Indian retail,M
+TMCV,Tata Motors (Commercial Vehicles),AU_CV,,,Pure-play,L,MFG,Trucks and buses (demerged CV business listed Nov 2025),Fleet operators,M
+HYUNDAI,Hyundai Motor India,AU_PV,,,Pure-play,L,MFG,Passenger cars and SUVs; exports,Retail; exports,H
+ASHOKLEY,Ashok Leyland,AU_CV,AU_EV,FS_VEHFIN,Majority,L,MFG,Trucks and buses; Switch EV buses; Hinduja Leyland Finance stake,Fleet operators; STUs,H
+EICHERMOT,Eicher Motors,AU_2W,AU_CV,,Majority,L,MFG,Royal Enfield motorcycles; VE Commercial Vehicles JV,Retail; fleets,H
+FORCEMOT,Force Motors,AU_CV,AU_PRECISION,,Majority,N,MFG,Vans / LCVs; engines for luxury OEMs,Fleets; OEMs,H
+SMLMAH,SML Mahindra,AU_CV,,,Pure-play,N,MFG,Light / intermediate trucks and buses (formerly SML Isuzu),Fleets,L
+OLECTRA,Olectra Greentech,AU_EV,CG_XFANC,,Majority,N,MFG,Electric buses; composite insulators,STUs,H
+BAJAJ-AUTO,Bajaj Auto,AU_2W,AU_3W|AU_EV,,Majority,L,MFG,Motorcycles; three-wheeler leader; Chetak EV; exports,Retail; exports,H
+HEROMOTOCO,Hero MotoCorp,AU_2W,AU_EV,,Pure-play,L,MFG,Largest two-wheeler maker; Vida EV,Rural / urban retail,H
+TVSMOTOR,TVS Motor Company,AU_2W,AU_EV|AU_3W,,Majority,L,MFG,Two-wheelers incl. iQube EV; exports,Retail; exports,H
+OLAELEC,Ola Electric Mobility,AU_EV,AU_EVCOMP|RE_BESS,,Pure-play,E,MFG,Electric scooters / motorcycles; cell gigafactory,Retail,H
+ATHERENERG,Ather Energy,AU_EV,,,Pure-play,E,MFG,Premium electric scooters,Retail,M
+ATULAUTO,Atul Auto,AU_3W,AU_EV,,Pure-play,N,MFG,Three-wheelers (ICE and EV),Self-employed drivers,M
+SONACOMS,Sona BLW Precision Forgings,AU_EVCOMP,AU_SYSTEMS,,Majority,L,MFG,EV traction motors / differential gears / driveline,Global EV and ICE OEMs,H
+UNOMINDA,UNO Minda,AU_ELEC,AU_INTERIOR|AU_EVCOMP,,Majority,L,MFG,Switches; lighting; alloy wheels; EV components,Two-wheeler and PV OEMs,H
+VARROC,Varroc Engineering,AU_INTERIOR,AU_ELEC,,Majority,N,MFG,Automotive lighting and electronics,Two-wheeler OEMs,M
+LUMAXTECH,Lumax Auto Technologies,AU_INTERIOR,AU_ELEC,,Pure-play,N,MFG,Gear shifters; lighting; interior parts,PV and two-wheeler OEMs,M
+LUMAXIND,Lumax Industries,AU_INTERIOR,,,Pure-play,N,MFG,Automotive lighting,PV OEMs,M
+FIEMIND,Fiem Industries,AU_INTERIOR,,,Pure-play,N,MFG,Two-wheeler lighting and mirrors,Two-wheeler OEMs,M
+SUBROS,Subros,AU_INTERIOR,,,Pure-play,N,MFG,Automotive air-conditioning systems,PV OEMs,M
+BOSCHLTD,Bosch,AU_ELEC,AU_AFTER|AU_SYSTEMS,,Majority,L,MFG,Fuel injection; auto electronics; aftermarket; power tools,OEMs; aftermarket,H
+MOTHERSON,Samvardhana Motherson International,AU_PRECISION,AU_ELEC|AU_INTERIOR|DF_AERO,,Pure-play,L,MFG,Global diversified Tier-1 (wiring harness / mirrors / modules),Global OEMs,H
+MSUMI,Motherson Sumi Wiring India,AU_ELEC,,,Pure-play,L,MFG,Wiring harnesses,Indian OEMs,H
+ENDURANCE,Endurance Technologies,AU_SYSTEMS,AU_FORGE|AU_EVCOMP,,Pure-play,E,MFG,Two-wheeler suspension / braking / castings,Two-wheeler OEMs,H
+SUNDRMFAST,Sundram Fasteners,AU_PRECISION,AU_EVCOMP,,Pure-play,E,MFG,Fasteners; powertrain components,Global OEMs,H
+ZFCVINDIA,ZF Commercial Vehicle Control Systems India,AU_SYSTEMS,,,Pure-play,E,MFG,CV braking and control systems,CV OEMs,H
+GABRIEL,Gabriel India,AU_SYSTEMS,,,Pure-play,N,MFG,Shock absorbers and suspension,Two-wheeler / PV OEMs,M
+SANSERA,Sansera Engineering,AU_PRECISION,DF_AERO,,Majority,N,MFG,Precision forged / machined engine components; aerospace,Global OEMs,M
+CRAFTSMAN,Craftsman Automation,AU_PRECISION,AU_FORGE|CG_FORGE,,Majority,N,MFG,Powertrain machining; aluminium castings; industrial products,OEMs,M
+MINDACORP,Minda Corporation,AU_ELEC,AU_EVCOMP,,Pure-play,N,MFG,Wiring harness; security systems; EV electronics,Two-wheeler OEMs,M
+SHARDAMOTR,Sharda Motor Industries,AU_PRECISION,,,Pure-play,N,MFG,Exhaust systems,OEMs,M
+JKTYRE,JK Tyre & Industries,AU_TYRE,,,Pure-play,E,MFG,Truck / PV tyres,Replacement; OEMs,H
+APOLLOTYRE,Apollo Tyres,AU_TYRE,,,Pure-play,L,MFG,Tyres (India and Europe via Vredestein),Replacement; OEMs,H
+MRF,MRF,AU_TYRE,,,Pure-play,L,MFG,Largest Indian tyre maker,Replacement; OEMs,H
+CEATLTD,CEAT,AU_TYRE,,,Pure-play,E,MFG,Two-wheeler / PV / OHT tyres,Replacement; OEMs,H
+BALKRISIND,Balkrishna Industries,AU_TYRE,,,Pure-play,L,MFG,Off-highway (agri / mining) tyres mainly exported,Global replacement,H
+TVSSRICHAK,TVS Srichakra,AU_TYRE,,,Pure-play,N,MFG,Two-wheeler tyres,Replacement; OEMs,M
+EXIDEIND,Exide Industries,AU_BATT,RE_BESS,FS_LIFE,Majority,L,MFG,Lead-acid batteries; Li-ion cell gigafactory,Aftermarket; OEMs; industrial,H
+ARE&M,Amara Raja Energy & Mobility,AU_BATT,RE_BESS|AU_EVCOMP,,Majority,L,MFG,Lead-acid batteries; Li-ion cells and packs,Aftermarket; OEMs; telecom,H
+BHARATFORG,Bharat Forge,AU_FORGE,DF_PLATFORM|DF_AERO|CG_FORGE,,Significant,L,MFG,Forgings for auto / industrial; defence artillery and systems; aerospace,Global OEMs; Indian armed forces,H
+RKFORGE,Ramkrishna Forgings,AU_FORGE,IN_ROLLING,,Pure-play,E,MFG,CV forgings; railway wheels JV,CV OEMs (India / US / EU),M
+HAPPYFORGE,Happy Forgings,AU_FORGE,CG_FORGE,,Majority,N,MFG,Heavy crankshafts and machined forgings,CV / tractor / industrial OEMs,M
+MMFL,MM Forgings,AU_FORGE,,,Pure-play,N,MFG,Auto forgings,CV OEMs,L
+KIRLFER,Kirloskar Ferrous Industries,AU_FORGE,MT_STEELPROD,,Majority,N,MFG,Grey-iron castings; pig iron; steel tubes,Tractor / auto OEMs,M
+JAMNAAUTO,Jamna Auto Industries,AU_SYSTEMS,,,Pure-play,N,MFG,Leaf / parabolic springs for CVs,CV OEMs,M
+ALICON,Alicon Castalloy,AU_FORGE,,,Pure-play,N,MFG,Aluminium castings,Two-wheeler / PV OEMs,L
+SUPRAJIT,Suprajit Engineering,AU_SYSTEMS,AU_ELEC,,Pure-play,N,MFG,Control cables and halogen lamps,Global OEMs,M
+TIINDIA,Tube Investments of India,AU_PRECISION,AU_EV|CG_FORGE|DF_AERO,,Significant,L,MFG,Precision tubes; chains; metal-formed products; EV CVs / tractors; CG Power holding,OEMs; industry,H
+ESCORTS,Escorts Kubota,AU_TRACTOR,CG_MHE|IN_ROLLING,,Majority,E,MFG,Tractors; construction equipment; railway products,Farmers; railways,H
+VSTTILLERS,V.S.T. Tillers Tractors,AU_TRACTOR,,,Pure-play,N,MFG,Power tillers and compact tractors,Farmers,M
+SWARAJENG,Swaraj Engines,AU_TRACTOR,,,Pure-play,N,MFG,Tractor diesel engines,Mahindra (Swaraj tractors),M

@@ -1,0 +1,56 @@
+sector:
+  id: BANKING
+  name: Banking
+  priority: 1
+  benchmark: ^NSEBANK
+  description: Scheduled commercial banks — private, public sector, small finance and payments banks.
+  value_chain: "Deposits (CASA / term) → Lending (retail, MSME, corporate, agri) → Fee income (cards, bancassurance, wealth)"
+subsectors:
+  - id: BK_PVTLARGE
+    name: Large Private Banks
+    what: Scaled private-sector universal banks.
+    chain: Deposit-taker and lender
+    customers: Retail, SME, corporate
+    inputs: Deposits, branches, technology
+    economics: High ROE (15–18%); NIM, CASA ratio and credit costs drive earnings.
+    barriers: Deposit franchise and brand.
+    drivers: [Credit growth ~ 1.5–2x nominal GDP, Formalisation, Market share gains from PSBs]
+    nature: Structural with rate-cycle NIM swings.
+    risks: [Deposit competition, Unsecured credit stress, Rate cuts compressing NIMs]
+    rate: "growth:M competition:M barriers:H pricing:M margins:M roce:H custconc:L cyclicality:M regulation:H export:L structural:H"
+  - id: BK_PVTMID
+    name: Mid & Small Private Banks
+    what: Regional and mid-sized private banks.
+    chain: Deposit-taker and lender
+    customers: Retail, SME, regional corporates
+    inputs: Deposits, regional franchise
+    economics: Lower ROE; higher cost of deposits than large banks.
+    barriers: Regional franchise.
+    drivers: [Credit growth, Re-rating on ROA improvement]
+    nature: Mixed.
+    risks: [Deposit costs, Asset quality, Governance]
+    rate: "growth:M competition:H barriers:M pricing:L margins:M roce:M custconc:L cyclicality:M regulation:H export:L structural:M"
+  - id: BK_PSU
+    name: Public Sector Banks
+    what: Government-owned banks.
+    chain: Deposit-taker and lender
+    customers: All segments, government
+    inputs: Large branch networks, sovereign backing
+    economics: ROE improved after the NPA cycle; valuations track credit costs and government policy.
+    barriers: Scale, sovereign trust.
+    drivers: [Clean balance sheets, Corporate capex credit]
+    nature: Cyclical.
+    risks: [Government directed lending, Wage revisions, Asset-quality cycles]
+    rate: "growth:M competition:M barriers:H pricing:L margins:M roce:M custconc:L cyclicality:H regulation:H export:L structural:M"
+  - id: BK_SFB
+    name: Small Finance Banks
+    what: Banks focused on underserved segments (micro-loans, MSME, affordable housing, vehicle).
+    chain: Deposit-taker and lender
+    customers: Low-income and MSME borrowers
+    inputs: Deposits at higher cost
+    economics: High yields, high cost of funds, volatile credit costs (microfinance exposure).
+    barriers: Licence.
+    drivers: [Financial inclusion, Transition to universal bank licences]
+    nature: Cyclical (microfinance-linked).
+    risks: [Microfinance stress, Deposit costs]
+    rate: "growth:H competition:H barriers:M pricing:M margins:L roce:M custconc:L cyclicality:H regulation:H export:L structural:M"

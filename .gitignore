@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+# derived artefacts — rebuilt automatically from seed + market files
+data/*.db
+data/*.building
+data/_upload_*.csv
+# synthetic sandbox
+data/demo_market/
+.streamlit/secrets.toml

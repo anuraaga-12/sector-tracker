@@ -1,0 +1,95 @@
+symbol,name,primary,secondary,indirect,exposure,position,model,business,customers,confidence
+SUNPHARMA,Sun Pharmaceutical Industries,PH_DOMF,PH_SPEC|PH_USGEN|PH_EMGEN,,Significant,L,MFG,India's largest pharma company; India branded generics; global specialty (dermatology / oncology / ophthalmology); US generics,Doctors & chemists in India; US specialty & generic channels,H
+DRREDDY,Dr. Reddy's Laboratories,PH_USGEN,PH_DOMF|PH_API|PH_BIO|PH_EMGEN,PH_PEPT|PH_CONS,Significant,L,MFG,North America generics; India & EM branded formulations; PSAI (API); biosimilars; GLP-1 generics pipeline,US wholesalers; Indian doctors; EM markets,H
+CIPLA,Cipla,PH_DOMF,PH_USGEN|PH_CPLX|PH_EMGEN,PH_CONS,Majority,L,MFG,India branded respiratory and chronic therapies; US complex generics incl. inhalation; South Africa,Indian doctors; US channels; South Africa,H
+LUPIN,Lupin,PH_USGEN,PH_DOMF|PH_CPLX|PH_SPEC|PH_BIO,,Significant,L,MFG,US generics incl. inhalation and complex products; India branded formulations; biosimilars,US wholesalers; Indian doctors,H
+AUROPHARMA,Aurobindo Pharma,PH_USGEN,PH_ONCO|PH_BIO|PH_API|PH_EMGEN,PH_CDMO,Majority,L,MFG,Large US generics exporter with backward-integrated APIs; injectables (Eugia); biosimilars (CuraTeQ),US wholesalers; Europe; EM,H
+ZYDUSLIFE,Zydus Lifesciences,PH_USGEN,PH_DOMF|PH_SPEC|PH_BIO|PH_MEDTECH|PH_VACC,PH_CONS,Significant,L,MFG,US generics and specialty; India branded formulations; biosimilars; vaccines; medtech acquisitions,US channels; Indian doctors,H
+DIVISLAB,Divi's Laboratories,PH_CDMO,PH_API,PH_PEPT|PH_CONS,Significant,L,MFG,Custom synthesis (CDMO) for innovators and generic APIs; nutraceutical carotenoids; peptide building blocks,Global innovators and generic formulators,H
+TORNTPHARM,Torrent Pharmaceuticals,PH_DOMF,PH_EMGEN|PH_USGEN,,Majority,L,MFG,India chronic branded formulations (CV / CNS / GI); Brazil; Germany; US,Indian doctors; Brazil; Germany,H
+MANKIND,Mankind Pharma,PH_DOMF,PH_CONS,,Pure-play,L,MFG,Domestic branded formulations with strong tier-2/3 reach; consumer healthcare brands; acquired Bharat Serums,Indian doctors & chemists,H
+ALKEM,Alkem Laboratories,PH_DOMF,PH_USGEN,PH_DCDMO,Majority,L,MFG,India acute-therapy leader (anti-infectives); US generics,Indian doctors; US channels,H
+GLENMARK,Glenmark Pharmaceuticals,PH_DOMF,PH_SPEC|PH_USGEN|PH_EMGEN,PH_ONCO,Significant,E,MFG,India branded (derma / respiratory); specialty respiratory brand Ryaltris; innovation (ISB 2001 oncology licensing),Indian doctors; Europe; US,H
+ABBOTINDIA,Abbott India,PH_DOMF,PH_CONS,,Pure-play,L,MFG,MNC branded formulations in India (Thyronorm / Duphaston etc.),Indian doctors & chemists,H
+PFIZER,Pfizer Ltd (India),PH_DOMF,,,Pure-play,E,MFG,MNC branded formulations in India,Indian doctors,H
+GLAXO,GlaxoSmithKline Pharmaceuticals,PH_DOMF,PH_VACC,,Pure-play,E,MFG,MNC branded formulations and vaccines in India,Indian doctors,H
+SANOFI,Sanofi India,PH_DOMF,,,Pure-play,E,MFG,MNC branded formulations (diabetes / cardio) in India,Indian doctors,H
+SANOFICONR,Sanofi Consumer Healthcare India,PH_CONS,,,Pure-play,E,MFG,OTC and consumer health brands demerged from Sanofi India,Consumers via chemists,M
+PGHL,Procter & Gamble Health,PH_CONS,PH_DOMF,,Pure-play,E,MFG,Vitamins and OTC brands (Neurobion / Evion / Livogen),Consumers & doctors,H
+AMRUTANJAN,Amrutanjan Health Care,PH_CONS,,FM_BEV,Majority,N,MFG,OTC pain-management balms; beverages (Fruitnik),Consumers,H
+BIOCON,Biocon,PH_BIO,PH_PEPT|PH_API,PH_CRDMO,Majority,L,MFG,Biosimilars (insulins / mAbs) via Biocon Biologics; generics incl. GLP-1; holds Syngene stake,Global payers & partners; EM,H
+SYNGENE,Syngene International,PH_CRDMO,PH_CDMO,,Pure-play,L,SVC,Integrated discovery / development / manufacturing services (CRDMO) incl. biologics,Global pharma & biotech,H
+SAILIFE,Sai Life Sciences,PH_CRDMO,PH_CDMO,,Pure-play,E,SVC,Small-molecule CRDMO from discovery to commercial supply,Global innovators & biotech,M
+ANTHEM,Anthem Biosciences,PH_CRDMO,PH_CDMO|PH_PEPT,,Pure-play,E,SVC,CRDMO across small molecules / peptides / biologics; fermentation products,Global innovators & biotech,M
+COHANCE,Cohance Lifesciences,PH_CDMO,PH_API,CH_CRAMS,Majority,E,MFG,Pharma CDMO and API platform formed by merger of Suven Pharmaceuticals with Cohance,Global innovators & generics,M
+NEULANDLAB,Neuland Laboratories,PH_API,PH_CDMO|PH_PEPT,,Majority,N,MFG,Complex APIs and custom manufacturing (CMS) incl. peptides,Generic formulators; innovators,H
+DCAL,Dishman Carbogen Amcis,PH_CDMO,PH_API,,Majority,N,MFG,CDMO with Swiss Carbogen Amcis and Indian plants; high-potency APIs,Global innovators,M
+PPLPHARMA,Piramal Pharma,PH_CDMO,PH_CPLX|PH_CONS,,Majority,E,MFG,Global CDMO; complex hospital generics (anaesthesia / pain); India consumer healthcare,Innovators; hospitals; consumers,H
+JUBLPHARMA,Jubilant Pharmova,PH_CDMO,PH_SPEC|PH_CRDMO|PH_API,,Significant,E,MFG,Radiopharma (specialty); CDMO sterile injectables; CRDMO (drug discovery); generics / API,US hospitals; innovators,H
+ONESOURCE,OneSource Specialty Pharma,PH_CDMO,PH_PEPT|PH_BIO,,Pure-play,M,MFG,Specialty CDMO for biologics / drug-device combinations incl. GLP-1 cartridges; demerged from Strides,Global pharma partners,M
+LAURUSLABS,Laurus Labs,PH_API,PH_CDMO|PH_USGEN,PH_BIO,Majority,E,MFG,ARV and oncology APIs / formulations; fast-growing CDMO (Laurus Synthesis); cell & gene therapy bets,Global generics; innovators,H
+ACUTAAS,Acutaas Chemicals (formerly Ami Organics),PH_INTER,PH_CDMO|CH_ELECTRONIC,,Majority,M,MFG,Advanced pharma intermediates and CDMO; electrolyte additives for batteries,Global pharma; battery makers,M
+BLUEJET,Blue Jet Healthcare,PH_INTER,PH_CDMO,,Majority,N,MFG,Contrast-media intermediates and high-intensity sweeteners for innovators,Global innovators (contrast media),M
+AARTIPHARM,Aarti Pharmalabs,PH_API,PH_INTER|PH_CDMO,,Majority,N,MFG,APIs / intermediates and CDMO; xanthine derivatives (caffeine),Global pharma,M
+CONCORDBIO,Concord Biotech,PH_API,PH_DOMF,,Majority,N,MFG,Fermentation-based APIs (immunosuppressants / oncology / anti-infectives),Generic formulators globally,H
+ALIVUS,Alivus Life Sciences,PH_API,PH_CDMO,,Pure-play,E,MFG,Chronic-therapy APIs and CDMO (formerly Glenmark Life Sciences),Generic formulators,M
+SOLARA,Solara Active Pharma Sciences,PH_API,PH_CDMO,,Pure-play,N,MFG,Generic APIs (ibuprofen etc.) and CRAMS,Generic formulators,H
+SMSPHARMA,SMS Pharmaceuticals,PH_API,,,Pure-play,N,MFG,Generic APIs and intermediates,Generic formulators,M
+AARTIDRUGS,Aarti Drugs,PH_API,PH_DOMF,,Majority,N,MFG,Volume APIs (metformin / ibuprofen / antibiotics) and formulations,Formulators,M
+SUPRIYA,Supriya Lifescience,PH_API,,,Pure-play,N,MFG,Niche APIs (antihistamines / anaesthetics / vitamins),Global formulators,M
+IOLCP,IOL Chemicals & Pharmaceuticals,PH_API,CH_SOLV,,Majority,N,MFG,Ibuprofen and other APIs; specialty chemicals (ethyl acetate),Formulators; chemical users,M
+HIKAL,Hikal,PH_CDMO,CH_CRAMS|PH_API,,Majority,N,MFG,Pharma APIs / CDMO and crop-protection contract manufacturing,Global pharma & agrochem innovators,M
+SHILPAMED,Shilpa Medicare,PH_ONCO,PH_API|PH_BIO|PH_CDMO,,Significant,N,MFG,Oncology APIs and formulations; biologics; transdermals,Global and Indian pharma,M
+GRANULES,Granules India,PH_USGEN,PH_API|PH_CDMO,,Majority,E,MFG,Backward-integrated paracetamol / metformin franchise; US generics; CDMO (Senn Chemicals peptides),US channels; global formulators,H
+APLLTD,Alembic Pharmaceuticals,PH_USGEN,PH_DOMF|PH_API,,Significant,E,MFG,US generics with large ANDA pipeline; India branded formulations; APIs,US channels; Indian doctors,H
+NATCOPHARM,Natco Pharma,PH_CPLX,PH_ONCO|PH_DOMF,CH_AGRO,Majority,N,MFG,Limited-competition / first-to-file US generics (oncology); India oncology; agrochemicals,US partners; Indian oncologists,H
+GLAND,Gland Pharma,PH_ONCO,PH_CPLX|PH_CDMO,,Pure-play,L,MFG,Sterile injectables B2B (US / Europe) incl. Cenexi CDMO,Global generic marketers,H
+STAR,Strides Pharma Science,PH_USGEN,PH_EMGEN,,Majority,E,MFG,Regulated-market generics (US / Europe / Australia) incl. soft-gels and liquids,US / EU channels,H
+MARKSANS,Marksans Pharma,PH_USGEN,PH_CONS,,Majority,N,MFG,OTC and Rx generics for US / UK / Australia,Retailers & wholesalers abroad,H
+CAPLIPOINT,Caplin Point Laboratories,PH_EMGEN,PH_CPLX,,Majority,N,MFG,Generics for Latin America / Africa; US injectables (Caplin Steriles),Distributors in LatAm; US,H
+UNICHEMLAB,Unichem Laboratories,PH_USGEN,PH_API,,Majority,N,MFG,US / EU generics (Ipca subsidiary),US / EU channels,M
+INDOCO,Indoco Remedies,PH_DOMF,PH_USGEN|PH_DCDMO,,Majority,N,MFG,India branded formulations; regulated-market generics and CDMO,Indian doctors; exports,M
+IPCALAB,Ipca Laboratories,PH_DOMF,PH_API|PH_EMGEN,PH_USGEN,Majority,E,MFG,India branded (pain / anti-malarials / cardiac); APIs; Unichem consolidation,Indian doctors; global,H
+AJANTPHARM,Ajanta Pharma,PH_DOMF,PH_EMGEN|PH_USGEN,,Significant,E,MFG,Branded generics in India / Asia / Africa; US generics,Doctors in India & EM,H
+ERIS,Eris Lifesciences,PH_DOMF,PH_CONS,,Pure-play,E,MFG,India chronic branded (diabetes / cardiac) incl. insulins and derma,Indian doctors,H
+EMCURE,Emcure Pharmaceuticals,PH_DOMF,PH_ONCO|PH_EMGEN|PH_CPLX,,Significant,E,MFG,India branded (gynaecology / cardio); injectables; Canada and Europe,Indian doctors; exports,M
+SENORES,Senores Pharmaceuticals,PH_USGEN,PH_EMGEN|PH_CPLX,,Majority,M,MFG,Regulated-market generics incl. critical-care injectables,US channels; EM,L
+RUBICON,Rubicon Research,PH_USGEN,PH_SPEC,,Majority,M,MFG,US specialty and differentiated generics (oral liquids / nasal),US channels,L
+WOCKPHARMA,Wockhardt,PH_SPEC,PH_DOMF|PH_EMGEN,,Significant,N,MFG,Novel antibiotics (Zaynich / WCK 5222) plus UK / India / EM generics,Hospitals; Indian doctors,M
+GUFICBIO,Gufic Biosciences,PH_CPLX,PH_DOMF,,Majority,N,MFG,Lyophilised injectables and critical-care products,Hospitals; India,M
+BLISSGVS,Bliss GVS Pharma,PH_EMGEN,,,Pure-play,N,MFG,Suppositories and generics for Africa,African distributors,L
+PANACEABIO,Panacea Biotec,PH_VACC,PH_DOMF,,Majority,N,MFG,Vaccines (pentavalent / hexavalent / dengue candidate) and formulations,Government / UNICEF; India,M
+WINDLAS,Windlas Biotech,PH_DCDMO,PH_DOMF,,Majority,N,MFG,Domestic formulation CDMO plus trade generics,Indian pharma brand owners,M
+INNOVACAP,Innova Captab,PH_DCDMO,PH_DOMF|PH_EMGEN,,Majority,N,MFG,Domestic formulation CDMO with own branded and export generics,Indian pharma companies,M
+AKUMS,Akums Drugs & Pharmaceuticals,PH_DCDMO,PH_DOMF|PH_API,,Majority,L,MFG,India's largest domestic formulation CDMO,Indian pharma brand owners,M
+ADVENZYMES,Advanced Enzyme Technologies,PH_CONS,CH_SPEC,,Majority,N,MFG,Enzymes for human nutrition / pharma / animal and industrial uses,Nutraceutical & industrial customers,M
+LALPATHLAB,Dr. Lal PathLabs,PH_DIAG,,,Pure-play,L,SVC,Pathology lab chain with strong North-India network,Patients; doctors,H
+METROPOLIS,Metropolis Healthcare,PH_DIAG,,,Pure-play,L,SVC,Pathology lab chain (West / South India),Patients; B2B,H
+THYROCARE,Thyrocare Technologies,PH_DIAG,,,Pure-play,E,SVC,Low-cost centralised pathology (B2B / wellness),B2B partners; patients,H
+VIJAYA,Vijaya Diagnostic Centre,PH_DIAG,,,Pure-play,E,SVC,Integrated pathology + radiology chain (South India),Patients,H
+KRSNAA,Krsnaa Diagnostics,PH_DIAG,,,Pure-play,N,SVC,Radiology / pathology under PPP contracts with state governments,State governments; patients,M
+SURAKSHA,Suraksha Diagnostic,PH_DIAG,,,Pure-play,N,SVC,Pathology and radiology chain (East India),Patients,L
+APOLLOHOSP,Apollo Hospitals Enterprise,PH_HOSP,PH_HSVC,FS_GENINS,Majority,L,SVC,Largest private hospital chain; Apollo HealthCo (pharmacy distribution / digital); insurance distribution,Patients; insurers,H
+MAXHEALTH,Max Healthcare Institute,PH_HOSP,,,Pure-play,L,SVC,North-India focused hospital chain with high ARPOB,Patients; insurers,H
+FORTIS,Fortis Healthcare,PH_HOSP,PH_DIAG,,Majority,L,SVC,Hospital chain; Agilus Diagnostics,Patients,H
+NH,Narayana Hrudayalaya,PH_HOSP,FS_GENINS,,Pure-play,L,SVC,Cost-efficient hospital chain in India and Cayman Islands; health insurance initiative,Patients,H
+MEDANTA,Global Health (Medanta),PH_HOSP,,,Pure-play,E,SVC,Medanta super-speciality hospitals,Patients,H
+KIMS,Krishna Institute of Medical Sciences,PH_HOSP,,,Pure-play,E,SVC,Hospital chain in Telangana / AP / Karnataka / Maharashtra,Patients,H
+RAINBOW,Rainbow Children's Medicare,PH_HOSP,,,Pure-play,N,SVC,Paediatric and maternity hospital chain,Patients,H
+ASTERDM,Aster DM Healthcare,PH_HOSP,,,Pure-play,E,SVC,South-India hospital chain (merging with Quality Care India),Patients,H
+HCG,HealthCare Global Enterprises,PH_HOSP,PH_ONCO,,Pure-play,N,SVC,Oncology-focused hospital chain,Cancer patients,H
+YATHARTH,Yatharth Hospital & Trauma Care,PH_HOSP,,,Pure-play,M,SVC,NCR / UP hospital chain,Patients,H
+JLHL,Jupiter Life Line Hospitals,PH_HOSP,,,Pure-play,M,SVC,West-India tertiary hospitals,Patients,H
+SHALBY,Shalby,PH_HOSP,PH_MEDTECH,,Majority,N,SVC,Orthopaedic-focused hospitals; joint implants,Patients,M
+AGARWALEYE,Dr. Agarwal's Health Care,PH_HOSP,,,Pure-play,M,SVC,Eye-care hospital chain,Patients,L
+MEDPLUS,MedPlus Health Services,PH_HSVC,,,Pure-play,E,DIST,Pharmacy retail chain,Consumers,H
+ENTERO,Entero Healthcare Solutions,PH_HSVC,,,Pure-play,M,DIST,Pharma and medical-device distribution,Pharmacies; hospitals,M
+SAGILITY,Sagility India,PH_HSVC,,,Pure-play,E,SVC,Healthcare BPM for US payers and providers,US payers / providers,M
+INDGN,Indegene,PH_HSVC,,,Pure-play,E,SVC,Life-sciences commercialisation and medical services,Global pharma,M
+IKS,Inventurus Knowledge Solutions,PH_HSVC,,,Pure-play,E,SVC,Revenue-cycle management and care-enablement for US health systems,US providers,L
+POLYMED,Poly Medicure,PH_MEDTECH,,,Pure-play,L,MFG,Medical disposables (infusion / dialysis / blood management) with exports,Hospitals; distributors globally,H
+LAXMIDENTL,Laxmi Dental,PH_MEDTECH,,,Pure-play,M,MFG,Dental aligners / crowns and dental products,Dentists; exports,L
+TARSONS,Tarsons Products,PH_MEDTECH,,,Pure-play,N,MFG,Lab plasticware and consumables,Research & diagnostic labs,M
+HESTERBIO,Hester Biosciences,PH_ANIMAL,,,Pure-play,N,MFG,Poultry and animal vaccines and health products,Poultry & livestock farmers,M
+VIYASH,Viyash Scientific (formerly Sequent Scientific),PH_ANIMAL,PH_API,,Majority,N,MFG,Animal-health APIs and formulations (merging with Viyash),Global animal-health companies,L
+BOROSCI,Borosil Scientific,PH_PACK,,,Pure-play,N,MFG,Laboratory glassware and pharma primary packaging (vials),Labs; pharma,L

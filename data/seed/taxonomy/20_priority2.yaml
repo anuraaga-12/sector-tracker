@@ -1,0 +1,520 @@
+# Priority-2 sectors: taxonomy + compact profiles. Extend 'what / drivers / risks' over time.
+sectors:
+  - sector:
+      id: METALS
+      name: Metals & Mining
+      priority: 2
+      benchmark: ^CNXMETAL
+      description: Ferrous and non-ferrous metals, mining and metal products.
+      value_chain: "Ore / scrap → Primary metal → Rolled / downstream products → Construction, auto, capital goods"
+    subsectors:
+      - id: MT_STEEL
+        name: "Integrated Steel"
+        what: "Large integrated steel producers."
+        nature: "Cyclical."
+        rate: "growth:M competition:M barriers:H pricing:L margins:L roce:M custconc:L cyclicality:H regulation:M export:M structural:M"
+        drivers: ["Infra and construction demand", "Safeguard duties"]
+        risks: ["Chinese exports", "Coking-coal prices"]
+      - id: MT_STEELPROD
+        name: "Steel Products, Pipes & Long Products"
+        what: "Secondary steel, pipes, TMT, stainless steel and steel products."
+        nature: "Cyclical."
+        rate: "growth:M competition:H barriers:L pricing:L margins:L roce:M custconc:L cyclicality:H regulation:L export:M structural:M"
+        drivers: ["Water and gas pipelines", "Construction"]
+        risks: ["Spread volatility"]
+      - id: MT_ALU
+        name: "Aluminium"
+        what: "Primary aluminium and downstream rolled products."
+        nature: "Cyclical."
+        rate: "growth:M competition:L barriers:H pricing:L margins:M roce:M custconc:L cyclicality:H regulation:M export:M structural:H"
+        drivers: ["Electrification", "Lightweighting"]
+        risks: ["LME prices", "Power costs"]
+      - id: MT_NONFERROUS
+        name: "Copper, Zinc & Other Non-ferrous"
+        what: "Copper, zinc, lead, silver smelting and refining."
+        nature: "Cyclical."
+        rate: "growth:M competition:L barriers:H pricing:L margins:M roce:M custconc:L cyclicality:H regulation:M export:M structural:H"
+        drivers: ["Electrification demand for copper", "Silver prices"]
+        risks: ["Commodity prices", "TC/RC"]
+      - id: MT_MINING
+        name: "Iron Ore & Minerals Mining"
+        what: "Iron ore, manganese and mineral miners."
+        nature: "Cyclical."
+        rate: "growth:M competition:L barriers:H pricing:L margins:M roce:M custconc:M cyclicality:H regulation:H export:L structural:M"
+        drivers: ["Steel demand"]
+        risks: ["Royalty / regulation", "Prices"]
+      - id: MT_FERRO
+        name: "Ferro Alloys, Graphite Electrodes & Refractories"
+        what: "Inputs to steelmaking \u2014 ferro alloys, graphite electrodes, refractories."
+        nature: "Cyclical."
+        rate: "growth:M competition:M barriers:M pricing:L margins:L roce:M custconc:M cyclicality:H regulation:L export:H structural:M"
+        drivers: ["Electric-arc furnace adoption"]
+        risks: ["Steel cycle"]
+  - sector:
+      id: CEMENT
+      name: Cement & Building Materials
+      priority: 2
+      benchmark: ^CRSLDX
+      description: Cement, pipes, tiles, sanitaryware, plywood / laminates, paints and other building products.
+      value_chain: "Limestone / wood / clay → Manufacturing → Dealers → Construction / home owners"
+    subsectors:
+      - id: BM_CEMENT
+        name: "Cement"
+        what: "Cement manufacturers."
+        nature: "Cyclical."
+        rate: "growth:M competition:H barriers:H pricing:M margins:M roce:M custconc:L cyclicality:H regulation:M export:L structural:M"
+        drivers: ["Housing and infra", "Consolidation"]
+        risks: ["Price wars", "Fuel costs"]
+      - id: BM_PIPES
+        name: "Plastic Pipes & Fittings"
+        what: "PVC / CPVC pipes and fittings."
+        nature: "Mixed."
+        rate: "growth:M competition:H barriers:M pricing:M margins:M roce:H custconc:L cyclicality:M regulation:L export:L structural:M"
+        drivers: ["Housing", "Agriculture", "Water"]
+        risks: ["PVC price volatility"]
+      - id: BM_PAINTS
+        name: "Paints & Coatings"
+        what: "Decorative and industrial paints."
+        nature: "Structural with competition shock."
+        rate: "growth:M competition:H barriers:H pricing:M margins:M roce:H custconc:L cyclicality:L regulation:L export:L structural:M"
+        drivers: ["Repainting cycles", "Housing"]
+        risks: ["New entrants", "Crude-linked inputs"]
+      - id: BM_TILES
+        name: "Tiles, Sanitaryware & Bath Fittings"
+        what: "Ceramic tiles, sanitaryware, faucets."
+        nature: "Cyclical."
+        rate: "growth:M competition:H barriers:L pricing:L margins:M roce:M custconc:L cyclicality:M regulation:L export:M structural:M"
+        drivers: ["Housing", "Exports"]
+        risks: ["Gas prices", "Morbi competition"]
+      - id: BM_WOOD
+        name: "Plywood, Laminates & Panels"
+        what: "Plywood, MDF, laminates."
+        nature: "Cyclical."
+        rate: "growth:M competition:H barriers:M pricing:M margins:M roce:M custconc:L cyclicality:M regulation:L export:L structural:M"
+        drivers: ["Housing", "Furniture"]
+        risks: ["Timber costs", "MDF capacity"]
+      - id: BM_GLASS
+        name: "Glass & Building Glass"
+        what: "Float, architectural and container glass."
+        nature: "Cyclical."
+        rate: "growth:M competition:M barriers:H pricing:M margins:M roce:M custconc:L cyclicality:M regulation:L export:L structural:M"
+        drivers: ["Construction", "Solar glass"]
+        risks: ["Imports", "Energy costs"]
+  - sector:
+      id: EMS
+      name: Electronics Manufacturing & Components
+      priority: 2
+      benchmark: ^CRSLDX
+      description: Electronics manufacturing services (EMS / ODM), PCBs, components and semiconductor ecosystem.
+      value_chain: "Components (PCB, passives, chips) → EMS / ODM assembly → Brands (phones, appliances, industrial, auto) → Consumers / industry"
+    subsectors:
+      - id: EM_EMS
+        name: "EMS / ODM"
+        what: "Contract electronics manufacturing and design for brands."
+        nature: "Structural."
+        rate: "growth:H competition:H barriers:M pricing:L margins:L roce:M custconc:H cyclicality:M regulation:M export:M structural:H"
+        drivers: ["PLI for mobiles / IT hardware", "China+1", "ECMS component scheme"]
+        risks: ["Thin margins", "Customer concentration"]
+      - id: EM_PCB
+        name: "PCBs & Electronic Components"
+        what: "Printed circuit boards, passives, connectors, displays."
+        nature: "Structural."
+        rate: "growth:H competition:M barriers:M pricing:M margins:M roce:M custconc:M cyclicality:M regulation:M export:M structural:H"
+        drivers: ["Electronics Component Manufacturing Scheme"]
+        risks: ["Chinese competition"]
+      - id: EM_SEMI
+        name: "Semiconductors & OSAT"
+        what: "Chip design, OSAT / assembly and fab ecosystem."
+        nature: "Emerging."
+        rate: "growth:H competition:M barriers:H pricing:M margins:M roce:L custconc:M cyclicality:M regulation:H export:M structural:H"
+        drivers: ["India Semiconductor Mission"]
+        risks: ["Execution", "Technology"]
+  - sector:
+      id: CONSDUR
+      name: Consumer Durables
+      priority: 2
+      benchmark: ^CRSLDX
+      description: Appliances, electricals (fans, lighting, wires-retail), air conditioners and kitchenware.
+      value_chain: "Components → OEM / EMS → Brands → Dealers / e-commerce → Consumers"
+    subsectors:
+      - id: CD_AC
+        name: "Air Conditioners & Cooling"
+        what: "Room ACs, coolers, refrigeration."
+        nature: "Seasonal / structural."
+        rate: "growth:H competition:H barriers:M pricing:M margins:M roce:M custconc:L cyclicality:M regulation:M export:L structural:H"
+        drivers: ["Low AC penetration", "Heatwaves"]
+        risks: ["Weather", "Competition"]
+      - id: CD_ELEC
+        name: "Consumer Electricals (Fans, Lighting, Appliances)"
+        what: "Fans, lighting, small appliances, water heaters."
+        nature: "Mixed."
+        rate: "growth:M competition:H barriers:M pricing:M margins:M roce:M custconc:L cyclicality:M regulation:L export:L structural:M"
+        drivers: ["Premiumisation", "Housing"]
+        risks: ["Price competition"]
+      - id: CD_KITCHEN
+        name: "Kitchen Appliances & Housewares"
+        what: "Cookware, kitchen appliances, housewares."
+        nature: "Mixed."
+        rate: "growth:M competition:H barriers:M pricing:M margins:M roce:M custconc:L cyclicality:M regulation:L export:L structural:M"
+        drivers: ["Urbanisation"]
+        risks: ["Competition"]
+      - id: CD_BRAND
+        name: "Consumer Electronics Brands & White Goods"
+        what: "TVs, washing machines, refrigerators."
+        nature: "Cyclical."
+        rate: "growth:M competition:H barriers:M pricing:L margins:L roce:M custconc:L cyclicality:M regulation:L export:L structural:M"
+        drivers: ["Replacement and penetration"]
+        risks: ["Imports", "Pricing"]
+  - sector:
+      id: FMCG
+      name: FMCG
+      priority: 2
+      benchmark: ^CNXFMCG
+      description: Packaged foods, personal care, home care, beverages and tobacco.
+      value_chain: "Agri / chemical inputs → Manufacturing → Distributors → Kirana / modern trade / quick commerce → Consumers"
+    subsectors:
+      - id: FM_HPC
+        name: "Personal & Home Care"
+        what: "Soaps, detergents, hair / skin care."
+        nature: "Defensive."
+        rate: "growth:M competition:H barriers:H pricing:M margins:H roce:H custconc:L cyclicality:L regulation:L export:L structural:M"
+        drivers: ["Rural recovery", "Premiumisation"]
+        risks: ["D2C competition", "Input costs"]
+      - id: FM_FOOD
+        name: "Packaged Foods & Staples"
+        what: "Biscuits, noodles, edible oil, staples, dairy."
+        nature: "Defensive."
+        rate: "growth:M competition:H barriers:M pricing:M margins:M roce:H custconc:L cyclicality:L regulation:L export:L structural:M"
+        drivers: ["Formalisation", "Quick commerce"]
+        risks: ["Commodity inflation"]
+      - id: FM_BEV
+        name: "Beverages & Alcobev"
+        what: "Soft drinks, tea / coffee, spirits and beer."
+        nature: "Defensive."
+        rate: "growth:M competition:M barriers:H pricing:M margins:M roce:H custconc:L cyclicality:L regulation:H export:L structural:M"
+        drivers: ["Premiumisation"]
+        risks: ["State excise policy"]
+      - id: FM_TOBACCO
+        name: "Tobacco & Diversified FMCG"
+        what: "Cigarettes and diversified FMCG conglomerates."
+        nature: "Defensive."
+        rate: "growth:L competition:L barriers:H pricing:H margins:H roce:H custconc:L cyclicality:L regulation:H export:L structural:M"
+        drivers: ["Pricing power"]
+        risks: ["Taxation"]
+  - sector:
+      id: CONSDISC
+      name: Consumer Discretionary & Services
+      priority: 2
+      benchmark: ^CRSLDX
+      description: Retail, apparel, footwear, jewellery, QSR, hotels, travel, e-commerce and consumer internet.
+      value_chain: "Brands / supply chain → Stores / platforms → Consumers"
+    subsectors:
+      - id: DS_RETAIL
+        name: "Organised Retail & Value Fashion"
+        what: "Department stores, value fashion, grocery retail."
+        nature: "Structural."
+        rate: "growth:H competition:H barriers:M pricing:M margins:M roce:M custconc:L cyclicality:M regulation:L export:L structural:H"
+        drivers: ["Formalisation of retail"]
+        risks: ["Competition", "Quick commerce"]
+      - id: DS_JEWEL
+        name: "Jewellery"
+        what: "Organised jewellery retail."
+        nature: "Structural."
+        rate: "growth:H competition:M barriers:M pricing:M margins:M roce:M custconc:L cyclicality:M regulation:M export:L structural:H"
+        drivers: ["Shift from unorganised", "Gold prices"]
+        risks: ["Gold volatility"]
+      - id: DS_QSR
+        name: "QSR & Restaurants"
+        what: "Quick-service restaurant chains."
+        nature: "Mixed."
+        rate: "growth:M competition:H barriers:M pricing:M margins:M roce:M custconc:L cyclicality:M regulation:L export:L structural:M"
+        drivers: ["Eating out", "Delivery"]
+        risks: ["Demand slowdown"]
+      - id: DS_HOTEL
+        name: "Hotels & Hospitality"
+        what: "Hotel owners and operators."
+        nature: "Cyclical."
+        rate: "growth:H competition:M barriers:M pricing:H margins:M roce:M custconc:L cyclicality:H regulation:L export:L structural:M"
+        drivers: ["Domestic travel", "Supply shortfall"]
+        risks: ["Cyclicality"]
+      - id: DS_TRAVEL
+        name: "Travel, Aviation & Leisure"
+        what: "Airlines, travel platforms, leisure."
+        nature: "Cyclical."
+        rate: "growth:H competition:H barriers:M pricing:L margins:L roce:M custconc:L cyclicality:H regulation:M export:L structural:M"
+        drivers: ["Air travel growth"]
+        risks: ["Fuel costs"]
+      - id: DS_INTERNET
+        name: "Consumer Internet & Quick Commerce"
+        what: "Food delivery, quick commerce, e-commerce platforms."
+        nature: "Structural."
+        rate: "growth:H competition:H barriers:M pricing:L margins:L roce:L custconc:L cyclicality:M regulation:M export:L structural:H"
+        drivers: ["Digital adoption"]
+        risks: ["Competition", "Cash burn"]
+      - id: DS_APPAREL
+        name: "Apparel & Footwear Brands"
+        what: "Branded apparel, innerwear and footwear."
+        nature: "Mixed."
+        rate: "growth:M competition:H barriers:M pricing:M margins:M roce:M custconc:L cyclicality:M regulation:L export:L structural:M"
+        drivers: ["Premiumisation"]
+        risks: ["Inventory"]
+  - sector:
+      id: REALTY
+      name: Real Estate
+      priority: 2
+      benchmark: ^CNXREALTY
+      description: Residential developers, commercial / office REIT-like owners, and data-centre / industrial parks.
+      value_chain: "Land → Approvals → Construction → Sales / leasing → Occupiers"
+    subsectors:
+      - id: RL_RESI
+        name: "Residential Developers"
+        what: "Housing developers."
+        nature: "Cyclical."
+        rate: "growth:M competition:M barriers:M pricing:M margins:M roce:M custconc:L cyclicality:H regulation:H export:L structural:M"
+        drivers: ["Upcycle in housing", "Consolidation to listed developers"]
+        risks: ["Rate cycle", "Inventory"]
+      - id: RL_COMM
+        name: "Commercial, Office & Retail Assets"
+        what: "Office, mall and flex-space owners / operators."
+        nature: "Mixed."
+        rate: "growth:M competition:M barriers:H pricing:M margins:H roce:L custconc:M cyclicality:M regulation:M export:L structural:M"
+        drivers: ["GCC office demand"]
+        risks: ["Occupancy"]
+  - sector:
+      id: LOGISTICS
+      name: Logistics & Transportation
+      priority: 2
+      benchmark: ^CRSLDX
+      description: Logistics services, express, shipping, container rail, warehousing.
+      value_chain: "Shippers → Freight forwarders / 3PL → Transport modes (road, rail, sea, air) → Warehousing → Last mile"
+    subsectors:
+      - id: LG_3PL
+        name: "3PL, Express & Warehousing"
+        what: "Third-party logistics, express delivery, warehousing."
+        nature: "Structural."
+        rate: "growth:M competition:H barriers:L pricing:L margins:L roce:M custconc:L cyclicality:M regulation:L export:L structural:M"
+        drivers: ["Formalisation post GST", "E-commerce"]
+        risks: ["Competition"]
+      - id: LG_RAIL
+        name: "Container Rail & CFS"
+        what: "Container train operators, CFS / ICD."
+        nature: "Structural."
+        rate: "growth:M competition:M barriers:M pricing:M margins:M roce:M custconc:L cyclicality:M regulation:M export:L structural:M"
+        drivers: ["Dedicated freight corridors"]
+        risks: ["Haulage charges"]
+      - id: LG_SHIP
+        name: "Shipping"
+        what: "Tanker, dry-bulk and gas shipping."
+        nature: "Cyclical."
+        rate: "growth:L competition:M barriers:M pricing:L margins:M roce:M custconc:L cyclicality:H regulation:L export:H structural:L"
+        drivers: ["Freight rates"]
+        risks: ["Freight cycles"]
+  - sector:
+      id: IT
+      name: Information Technology
+      priority: 2
+      benchmark: ^CNXIT
+      description: IT services, engineering R&D services, software products and digital platforms.
+      value_chain: "Talent → Delivery centres → Services / products → Global enterprise clients"
+    subsectors:
+      - id: IT_LARGE
+        name: "Large-cap IT Services"
+        what: "Scaled IT services exporters."
+        nature: "Mixed."
+        rate: "growth:M competition:M barriers:M pricing:M margins:H roce:H custconc:L cyclicality:M regulation:L export:H structural:M"
+        drivers: ["Cloud", "AI services", "Cost take-out"]
+        risks: ["US tech spending", "AI deflation of services"]
+      - id: IT_MID
+        name: "Mid-tier IT Services"
+        what: "Mid-sized IT services exporters."
+        nature: "Mixed."
+        rate: "growth:M competition:H barriers:M pricing:M margins:M roce:H custconc:M cyclicality:M regulation:L export:H structural:M"
+        drivers: ["Vendor consolidation wins"]
+        risks: ["Client concentration"]
+      - id: IT_ERD
+        name: "Engineering R&D Services"
+        what: "Outsourced product engineering for auto, aerospace, telecom, semis."
+        nature: "Structural."
+        rate: "growth:H competition:M barriers:M pricing:M margins:M roce:H custconc:M cyclicality:M regulation:L export:H structural:H"
+        drivers: ["Software-defined vehicles", "Semis"]
+        risks: ["Auto R&D cuts"]
+      - id: IT_PRODUCT
+        name: "Software Products & SaaS"
+        what: "Banking software, SaaS, platforms."
+        nature: "Structural."
+        rate: "growth:H competition:M barriers:M pricing:M margins:M roce:M custconc:M cyclicality:M regulation:L export:M structural:H"
+        drivers: ["Digitisation"]
+        risks: ["Competition"]
+      - id: IT_DC
+        name: "Data Centres & Cloud Infrastructure"
+        what: "Data-centre operators and IT infrastructure."
+        nature: "Structural."
+        rate: "growth:H competition:M barriers:H pricing:M margins:M roce:L custconc:M cyclicality:L regulation:M export:L structural:H"
+        drivers: ["AI compute", "Data localisation"]
+        risks: ["Capital intensity"]
+  - sector:
+      id: TELECOM
+      name: Telecom
+      priority: 2
+      benchmark: ^CRSLDX
+      description: Telecom operators, tower companies and telecom equipment.
+      value_chain: "Equipment / fibre → Towers → Operators → Subscribers"
+    subsectors:
+      - id: TC_OPER
+        name: "Telecom Operators"
+        what: "Wireless and broadband operators."
+        nature: "Structural."
+        rate: "growth:M competition:M barriers:H pricing:M margins:M roce:M custconc:L cyclicality:L regulation:H export:L structural:H"
+        drivers: ["Tariff hikes", "Data growth"]
+        risks: ["AGR dues", "Competition"]
+      - id: TC_TOWER
+        name: "Towers & Fibre Infrastructure"
+        what: "Passive tower and fibre infrastructure."
+        nature: "Structural."
+        rate: "growth:M competition:L barriers:H pricing:M margins:H roce:M custconc:H cyclicality:L regulation:M export:L structural:M"
+        drivers: ["5G densification"]
+        risks: ["Tenant concentration"]
+      - id: TC_EQUIP
+        name: "Telecom Equipment & Optical Fibre"
+        what: "Network equipment, optical fibre and cables."
+        nature: "Cyclical."
+        rate: "growth:M competition:H barriers:M pricing:L margins:M roce:M custconc:H cyclicality:H regulation:M export:M structural:M"
+        drivers: ["BharatNet", "5G", "Data-centre interconnect"]
+        risks: ["Order cycles", "Chinese competition"]
+  - sector:
+      id: TEXTILES
+      name: Textiles
+      priority: 2
+      benchmark: ^CRSLDX
+      description: Cotton / synthetic yarn, fabrics, home textiles and garment exporters.
+      value_chain: "Fibre → Yarn → Fabric → Garments / home textiles → Brands / retailers"
+    subsectors:
+      - id: TX_YARN
+        name: "Yarn, Fibre & Fabric"
+        what: "Spinning, man-made fibre, fabrics."
+        nature: "Cyclical."
+        rate: "growth:L competition:H barriers:L pricing:L margins:L roce:L custconc:L cyclicality:H regulation:M export:H structural:L"
+        drivers: ["China+1"]
+        risks: ["Cotton prices"]
+      - id: TX_HOME
+        name: "Home Textiles"
+        what: "Towels, bed linen exporters."
+        nature: "Cyclical."
+        rate: "growth:M competition:H barriers:L pricing:L margins:M roce:M custconc:H cyclicality:M regulation:L export:H structural:M"
+        drivers: ["US sourcing shift"]
+        risks: ["US tariffs", "Customer concentration"]
+      - id: TX_GARMENT
+        name: "Garment Exporters"
+        what: "Apparel manufacturing for global brands."
+        nature: "Cyclical."
+        rate: "growth:M competition:H barriers:L pricing:L margins:L roce:M custconc:H cyclicality:M regulation:L export:H structural:M"
+        drivers: ["China+1", "FTAs"]
+        risks: ["Tariffs", "Wages"]
+  - sector:
+      id: AGRI
+      name: Agriculture, Fertilisers & Agri Inputs
+      priority: 2
+      benchmark: ^CRSLDX
+      description: Fertilisers, seeds, sugar & ethanol, agri commodities, irrigation.
+      value_chain: "Inputs (seeds, fertiliser, crop protection, irrigation) → Farmers → Processors (sugar, edible oil) → Consumers / ethanol blending"
+    subsectors:
+      - id: AG_FERT
+        name: "Fertilisers"
+        what: "Urea, DAP, complex fertilisers and specialty nutrients."
+        nature: "Regulated."
+        rate: "growth:L competition:M barriers:H pricing:L margins:L roce:M custconc:H cyclicality:M regulation:H export:L structural:M"
+        drivers: ["Subsidy regime", "Nano / specialty fertilisers"]
+        risks: ["Subsidy delays", "Gas prices"]
+      - id: AG_SEEDS
+        name: "Seeds & Agri Biotech"
+        what: "Hybrid seeds."
+        nature: "Mixed."
+        rate: "growth:M competition:M barriers:M pricing:M margins:M roce:M custconc:L cyclicality:M regulation:H export:L structural:M"
+        drivers: ["Yield improvement"]
+        risks: ["Monsoon", "Regulation"]
+      - id: AG_SUGAR
+        name: "Sugar & Ethanol"
+        what: "Sugar mills with distillery / ethanol."
+        nature: "Regulated cyclical."
+        rate: "growth:M competition:M barriers:M pricing:L margins:L roce:L custconc:M cyclicality:H regulation:H export:L structural:M"
+        drivers: ["Ethanol blending (E20+)"]
+        risks: ["Cane pricing", "Export curbs"]
+      - id: AG_IRRIG
+        name: "Micro-irrigation & Agri Equipment"
+        what: "Drip / sprinkler irrigation."
+        nature: "Scheme-driven."
+        rate: "growth:M competition:M barriers:L pricing:L margins:L roce:L custconc:H cyclicality:M regulation:M export:M structural:M"
+        drivers: ["Water efficiency subsidies"]
+        risks: ["Receivables from states"]
+      - id: AG_COMMOD
+        name: "Agri Commodities, Edible Oil & Animal Feed"
+        what: "Edible oils, rice, feed."
+        nature: "Cyclical."
+        rate: "growth:M competition:H barriers:L pricing:L margins:L roce:M custconc:L cyclicality:M regulation:M export:M structural:M"
+        drivers: ["Branded staples"]
+        risks: ["Commodity prices"]
+  - sector:
+      id: MEDIA
+      name: Media & Entertainment
+      priority: 2
+      benchmark: ^CNXMEDIA
+      description: Broadcasting, film exhibition, digital media and gaming.
+      value_chain: "Content creation → Distribution (TV, OTT, cinema) → Advertisers / subscribers"
+    subsectors:
+      - id: MD_BROAD
+        name: "Broadcasting & Content"
+        what: "TV broadcasters and studios."
+        nature: "Structural decline for linear TV."
+        rate: "growth:L competition:H barriers:M pricing:L margins:M roce:M custconc:L cyclicality:M regulation:M export:L structural:L"
+        drivers: ["Digital transition"]
+        risks: ["Ad slowdown", "Cord-cutting"]
+      - id: MD_CINEMA
+        name: "Film Exhibition"
+        what: "Multiplex chains."
+        nature: "Cyclical (content)."
+        rate: "growth:M competition:L barriers:M pricing:M margins:M roce:L custconc:L cyclicality:H regulation:L export:L structural:M"
+        drivers: ["Content pipeline"]
+        risks: ["OTT windows"]
+      - id: MD_DIGITAL
+        name: "Digital Media, Music & Gaming"
+        what: "Music labels, digital publishers, gaming."
+        nature: "Structural."
+        rate: "growth:H competition:M barriers:M pricing:M margins:H roce:H custconc:M cyclicality:L regulation:H export:L structural:H"
+        drivers: ["Streaming monetisation"]
+        risks: ["Regulation (gaming)"]
+  - sector:
+      id: DIVERSIFIED
+      name: Diversified Conglomerates & Others
+      priority: 2
+      benchmark: ^CRSLDX
+      description: Conglomerates and businesses that do not fit a single sector; also packaging and miscellaneous industries.
+      value_chain: "Varies"
+    subsectors:
+      - id: DV_CONGLO
+        name: "Diversified Conglomerates"
+        what: "Multi-business groups."
+        nature: "Mixed."
+        rate: "growth:M competition:M barriers:H pricing:M margins:M roce:M custconc:L cyclicality:M regulation:M export:M structural:M"
+        drivers: ["Portfolio value unlocking"]
+        risks: ["Holding discount"]
+      - id: DV_PACK
+        name: "Packaging"
+        what: "Flexible, rigid, paper and glass packaging."
+        nature: "Cyclical."
+        rate: "growth:M competition:H barriers:L pricing:L margins:L roce:M custconc:M cyclicality:M regulation:M export:M structural:M"
+        drivers: ["FMCG / pharma volumes", "Sustainable packaging"]
+        risks: ["Polymer prices"]
+      - id: DV_PAPER
+        name: "Paper & Forest Products"
+        what: "Paper and paperboard."
+        nature: "Cyclical."
+        rate: "growth:L competition:M barriers:M pricing:L margins:M roce:M custconc:L cyclicality:H regulation:M export:L structural:L"
+        drivers: ["Packaging board demand"]
+        risks: ["Imports", "Pulp prices"]
+      - id: DV_EDU
+        name: "Education, Staffing & Business Services"
+        what: "Staffing, facility management, education."
+        nature: "Structural."
+        rate: "growth:M competition:H barriers:L pricing:L margins:L roce:H custconc:L cyclicality:M regulation:M export:L structural:M"
+        drivers: ["Formal employment"]
+        risks: ["Thin margins"]

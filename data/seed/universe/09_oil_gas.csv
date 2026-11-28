@@ -1,0 +1,23 @@
+symbol,name,primary,secondary,indirect,exposure,position,model,business,customers,confidence
+RELIANCE,Reliance Industries,OG_REFINE,CH_PETRO|TC_OPER|DS_RETAIL|OG_UPSTREAM|RE_MODULE|RE_BESS|RE_H2|MD_BROAD,,Significant,L,MIX,Oil-to-chemicals; Jio telecom; retail; new energy giga-factories,Consumers; industry,H
+ONGC,Oil and Natural Gas Corporation,OG_UPSTREAM,OG_REFINE,,Majority,L,MFG,Largest upstream oil & gas producer; owns HPCL / MRPL stakes,Refiners; gas marketers,H
+OIL,Oil India,OG_UPSTREAM,OG_REFINE,,Majority,E,MFG,Upstream oil & gas (Assam); Numaligarh refinery,Refiners,H
+IOC,Indian Oil Corporation,OG_REFINE,CH_PETRO|OG_GASTRANS,,Majority,L,MFG,Largest refiner and fuel marketer,Consumers; industry,H
+BPCL,Bharat Petroleum Corporation,OG_REFINE,,,Pure-play,L,MFG,Refining and fuel marketing,Consumers,H
+HINDPETRO,Hindustan Petroleum Corporation,OG_REFINE,,,Pure-play,L,MFG,Refining and fuel marketing,Consumers,H
+MRPL,Mangalore Refinery and Petrochemicals,OG_REFINE,,,Pure-play,E,MFG,Standalone refinery,OMCs; exports,H
+CHENNPETRO,Chennai Petroleum Corporation,OG_REFINE,,,Pure-play,N,MFG,Standalone refinery (IOC subsidiary),IOC,H
+GAIL,GAIL (India),OG_GASTRANS,CH_PETRO|OG_CGD,,Majority,L,UTIL,Gas transmission and marketing; petrochemicals,Fertiliser; power; CGD,H
+PETRONET,Petronet LNG,OG_GASTRANS,,,Pure-play,L,UTIL,LNG regasification terminals,Gas marketers,H
+GSPLTRANS,GSPL Transmission (pipelines demerged from GSPL; listed Sep 2026),OG_GASTRANS,,,Pure-play,E,UTIL,Gujarat gas transmission pipelines,Gas shippers,M
+IGL,Indraprastha Gas,OG_CGD,,,Pure-play,L,UTIL,CGD in Delhi-NCR,Vehicles; households,H
+MGL,Mahanagar Gas,OG_CGD,,,Pure-play,E,UTIL,CGD in Mumbai,Vehicles; households,H
+GUJENERGY,Gujarat Energy (formerly Gujarat Gas; absorbed GSPL May 2026),OG_CGD,,,Pure-play,L,UTIL,Largest CGD by volume (industrial heavy),Industry (Morbi); vehicles,H
+ATGL,Adani Total Gas,OG_CGD,AU_EVCOMP,,Majority,E,UTIL,CGD and EV charging,Vehicles; households,H
+COALINDIA,Coal India,OG_COAL,,,Pure-play,L,MFG,Largest coal producer,Power utilities,H
+CASTROLIND,Castrol India,OG_LUBE,,,Pure-play,L,MFG,Automotive and industrial lubricants,Retail; OEMs,H
+GULFOILLUB,Gulf Oil Lubricants India,OG_LUBE,AU_EVCOMP,,Majority,N,MFG,Lubricants; EV chargers,Retail; OEMs,M
+SOTL,Savita Oil Technologies,OG_LUBE,CG_XFANC,,Majority,N,MFG,Transformer oils; lubricants; specialty oils,Transformer OEMs; retail,M
+AEGISLOG,Aegis Logistics,OG_GASTRANS,LG_3PL,,Majority,E,UTIL,LPG / chemical tank terminals and LPG distribution,Oil companies; chemical traders,H
+DEEPINDS,Deep Industries,OG_SERV,,,Pure-play,N,SVC,Oilfield services (gas compression / drilling),ONGC; Oil India,M
+JINDRILL,Jindal Drilling & Industries,OG_SERV,,,Pure-play,N,SVC,Offshore drilling rigs,ONGC,L

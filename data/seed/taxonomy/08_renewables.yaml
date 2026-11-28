@@ -1,0 +1,116 @@
+sector:
+  id: RENEW
+  name: Renewable Energy
+  priority: 1
+  benchmark: ^CNXENERGY
+  description: Solar and wind manufacturing, renewable IPPs, EPC, storage and green hydrogen.
+  value_chain: "Polysilicon → Wafer → Cell → Module → EPC → IPP / C&I offtaker; Wind: components → turbines → EPC → IPP; Storage: cells → BESS integration"
+subsectors:
+  - id: RE_MODULE
+    name: Solar Module Manufacturers
+    what: PV module assembly (often integrating into cells).
+    chain: Mid-stream manufacturing
+    customers: IPPs, EPCs, rooftop, US exports
+    inputs: Cells (imported or in-house), glass, frames, EVA
+    economics: Low barriers for modules alone; margins boosted by ALMM / duties and US export pricing.
+    barriers: Low (modules) to moderate (integrated).
+    drivers: [500 GW non-fossil target, ALMM List-II for cells, PM Surya Ghar rooftop]
+    nature: Policy-protected boom — high risk of overcapacity.
+    risks: [Massive capacity additions, Chinese price declines, US trade actions]
+    rate: "growth:H competition:H barriers:L pricing:L margins:M roce:M custconc:M cyclicality:H regulation:H export:M structural:H"
+  - id: RE_CELL
+    name: Solar Cell & Wafer Manufacturing
+    what: Solar cells (TOPCon / HJT) and upstream wafer / polysilicon.
+    chain: Upstream manufacturing
+    customers: Module makers (incl. captive)
+    inputs: Wafers, silver paste, chemicals
+    economics: Capital- and technology-intensive.
+    barriers: Moderate-high.
+    drivers: [ALMM-II cell mandate (June 2026), PLI]
+    nature: Policy-driven structural.
+    risks: [Technology obsolescence, Chinese pricing]
+    rate: "growth:H competition:M barriers:M pricing:M margins:M roce:M custconc:M cyclicality:H regulation:H export:M structural:H"
+  - id: RE_EPC
+    name: Solar EPC & Rooftop
+    what: Engineering, procurement and construction of solar plants, including rooftop.
+    chain: Downstream services
+    customers: IPPs, C&I, households
+    inputs: Modules, inverters, labour
+    economics: Thin margins, working-capital heavy.
+    barriers: Low.
+    drivers: [Utility-scale and rooftop solar additions]
+    nature: Cyclical within structural growth.
+    risks: [Fixed-price contract losses, Module price swings]
+    rate: "growth:H competition:H barriers:L pricing:L margins:L roce:M custconc:M cyclicality:M regulation:M export:L structural:H"
+  - id: RE_IPP
+    name: Renewable IPPs (Developers / Owners)
+    what: Own and operate solar, wind and hybrid capacity selling under long-term PPAs.
+    chain: Generation
+    customers: SECI, discoms, C&I
+    inputs: Capital, land, equipment
+    economics: Capital-intensive, leveraged; returns depend on tariffs and cost of capital.
+    barriers: Capital and land.
+    drivers: [RE capacity tenders, C&I green power demand, Data centres]
+    nature: Structural.
+    risks: [Interest rates, PPA signing delays, Transmission curtailment]
+    rate: "growth:H competition:H barriers:M pricing:L margins:H roce:L custconc:H cyclicality:L regulation:H export:L structural:H"
+  - id: RE_WIND
+    name: Wind Turbines & Components
+    what: Wind turbine OEMs, towers, blades, gearboxes and castings.
+    chain: Equipment
+    customers: IPPs, C&I
+    inputs: Steel, castings, composites
+    economics: Order-book driven; historically boom-bust.
+    barriers: Moderate-high.
+    drivers: [Hybrid RE tenders, Repowering]
+    nature: Cyclical.
+    risks: [Execution, Balance-sheet history]
+    rate: "growth:H competition:M barriers:M pricing:M margins:M roce:M custconc:M cyclicality:H regulation:H export:M structural:H"
+  - id: RE_BESS
+    name: Battery Energy Storage & Cells
+    what: Grid-scale BESS integration and advanced chemistry cell manufacturing.
+    chain: Storage
+    customers: Utilities, IPPs, C&I
+    inputs: Li-ion cells
+    economics: Early-stage; VGF-supported.
+    barriers: Moderate.
+    drivers: [Storage tenders with VGF, Firm RE requirement]
+    nature: Structural, early.
+    risks: [Chinese cell dependence, Price declines]
+    rate: "growth:H competition:H barriers:M pricing:L margins:L roce:L custconc:M cyclicality:M regulation:H export:L structural:H"
+  - id: RE_H2
+    name: Green Hydrogen & Electrolysers
+    what: Electrolyser manufacturing and green hydrogen / ammonia projects.
+    chain: Emerging
+    customers: Refineries, fertiliser, steel, exports
+    inputs: Renewable power, electrolysers
+    economics: Pre-commercial; subsidy dependent.
+    barriers: Technology.
+    drivers: [National Green Hydrogen Mission, SIGHT incentives]
+    nature: Long-dated, speculative.
+    risks: [Cost competitiveness, Offtake]
+    rate: "growth:H competition:M barriers:M pricing:L margins:L roce:L custconc:H cyclicality:M regulation:H export:M structural:M"
+  - id: RE_ANC
+    name: Renewable Ancillaries (Solar Glass, Inverters, Mounting, Wires)
+    what: Solar glass, inverters, mounting structures, solar cables and balance-of-system.
+    chain: Component suppliers
+    customers: Module makers, EPCs
+    inputs: Soda ash, electronics, steel
+    economics: Moderate; anti-dumping duty dependent.
+    barriers: Moderate.
+    drivers: [Module capacity build-out]
+    nature: Rides the solar cycle.
+    risks: [Chinese imports]
+    rate: "growth:H competition:H barriers:M pricing:L margins:M roce:M custconc:M cyclicality:H regulation:M export:L structural:M"
+  - id: RE_RENFIN
+    name: Renewable Energy Financiers
+    what: Specialised lenders to renewable projects.
+    chain: Finance
+    customers: RE developers
+    inputs: Borrowings
+    economics: Spread business.
+    barriers: Sovereign-backed funding.
+    drivers: [RE capex]
+    nature: Structural.
+    risks: [Concentration]
+    rate: "growth:H competition:M barriers:M pricing:L margins:M roce:M custconc:H cyclicality:M regulation:M export:L structural:H"
